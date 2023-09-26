@@ -1,0 +1,150 @@
+.head {
+    padding-top: 0.5em;
+    @media (min-width: 768px) {
+        padding-top: 0;
+    }
+
+    .section__title {
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: left;
+        }
+    }
+
+    &__top {
+        position: relative;
+        overflow: hidden;
+        padding: 1.5em 0.75em 1.25em;
+        border-radius: 0.625em;
+
+        @media (min-width: 768px) {
+            padding: 6.25em 3.125em 3.125em 6.875em;
+            border-radius: 2.25em;
+
+            .head_breadcrumbs & {
+                padding-top: 4.0625em;
+            }
+        }
+
+    }
+
+    &__bottom {
+        margin-top: 1.25em;
+        @media (min-width: 768px) {
+            margin-top: 8.4375em;
+        }
+    }
+
+    &__breadcrumbs {
+        position: relative;
+        margin-bottom: 1.5em;
+        @media (min-width: 768px) {
+            margin-bottom: 4.6875em;
+
+        }
+    }
+
+    &__inner {
+        position: relative;
+
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            min-height: 43.75em;
+        }
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            width: 53.75em;
+        }
+    }
+
+    &__desc {
+        font-size: 0.75em;
+        line-height: 1.5;
+        margin-top: 1.17em;
+        text-align: center;
+        @media (min-width: 768px) {
+            font-size: 1.5em;
+            line-height: 1.4;
+            margin-top: 2.33334em;
+            text-align: left;
+
+        }
+    }
+
+    &__btns {
+        margin-top: 0.75em;
+        @media (max-width: 767px) {
+            .btn {
+                &:nth-child(2) {
+                    margin-top: 0.75em;
+                }
+            }
+        }
+        @media (min-width: 768px) {
+            margin-top: 3.5em;
+            display: flex;
+            align-items: center;
+            gap: 1.5em;
+        }
+
+    }
+
+    &__video {
+        width: 25.9375em;
+        margin: 28.82em auto 0;
+
+        font-size: 0.5em;
+        @media (min-width: 768px) {
+            margin: auto 0 0;
+            font-size: 1em;
+        }
+
+        .video {
+            width: 25.9375em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.375em;
+            border-radius: 1.25em;
+            padding: 0.625em 0.625em 0.625em 2.1875em;
+
+            background-color: $color_white;
+
+            &__text {
+                font-size: 1.25em;
+            }
+
+            &__preview {
+                position: relative;
+            }
+
+            &__img {
+                width: 8.75em;
+                height: 8.75em;
+                border-radius: 1.25em;
+                overflow: hidden;
+            }
+
+            &__play {
+                position: absolute;
+                bottom: 0.875em;
+                left: 0.875em;
+
+                @media (max-width: 767px) {
+                    bottom: 50%;
+                    left: 50%;
+                    transform: translate(-50%, 50%);
+                }
+
+                .play {
+                    font-size: 0.65em;
+                }
+            }
+
+        }
+    }
+
+}

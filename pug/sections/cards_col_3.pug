@@ -1,0 +1,19 @@
+// begin cards col_3
+//- img 530/600
+section.cards.col_3.section
+    .container_center
+        h2.section__title <b>Панический страх перед зубной болью сменяется на восторг от профессионализма </b>
+
+        ul.cards__list
+            each item in [{img: '3', content: 'Соблюдаем все необходимые протоколы и стандарты, связанные с лечением зубов во сне'}, {img: '4', content: 'Проведём тщательное медицинское обследование перед процедурой'}, {img: '5', content: 'Используем оборудование мониторинга, которое позволяет контролировать состояние пациента во время процедуры'},]
+
+                // begin .cards__item
+                .cards__item
+                    .cards__img.img
+                        img(src=path +"img/card_"+item.img+".png" alt="image" loading="lazy")
+                    .cards__content
+                        p!=item.content
+
+                // end .cards__item
+
+// end cards

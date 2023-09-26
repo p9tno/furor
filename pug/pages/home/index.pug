@@ -1,0 +1,207 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+    //- path +"img/head_main.png"
+
+
+block content
+    // begin head
+    section#head.head.section
+        .container_center
+            .head__top
+                .head__bg.img_bg
+                    img.desktop(src=path +"img/head_main.png" alt="image" loading="lazy")
+                    img.mobile(src=path +"img/head_main_m.png" alt="image" loading="lazy")
+
+                .head__inner
+                    .head__content
+                        h2.section__title <b>Безболезненные стоматологические услуги</b> с использованием самых современных методов лечения
+                        .head__desc <b>Прозрачный договор</b> на все виды услуг без скрытых платежей 
+                        .head__btns
+                            a.btn.btn_danger.btn_lg(href="#") 
+                                span Записаться на <br> первичный приём
+                            a.btn.btn_lg(href="#") 
+                                span Узнать стоимость <br>по WhatsApp
+                                span время ответа около 10 минут
+
+                    .head__video
+                        .video
+                            .video__text <b>Посмотрите прямо сейчас общее видео о клинике</b> и о нашем подходе к работе
+                            .video__preview
+                                .video__img.img
+                                    img(src=path +"img/head_video.png" alt="image" loading="lazy")
+
+                                .video__play
+                                    .play.youtubeModal_js#rsDoGqnPE4c
+                                        i.icon_play
+
+            .head__bottom
+                .miniCards
+                    ul.miniCards__list
+                        each item in [{img: '1', content: 'Собственная зуботехническая <b>лаборатория</b>'}, {img: '2', content: 'Только <b>стерильные инструменты</b> проходящие полный цикл обработки'},{img: '3', content: 'Личный <b>куратор</b> на весь процесс лечения в нашей клинике'},{img: '4', content: 'Беспроцентная <b>рассрочка</b> сроком на 12 месяцев'},]
+
+                            // begin .bottom__item
+                            .miniCards__item
+                                .miniCards__img.img
+                                    img(src=path +"img/card_sm_"+item.img+".png" alt="image" loading="lazy")
+                                .miniCards__title!=item.content 
+
+                            // end .bottom__item
+
+    // end head
+
+
+    include ../../sections/information.pug
+    include ../../sections/team.pug
+
+    //- include ../../sections/cards_col_2.pug
+    //- include ../../sections/cards_col_3.pug
+    //- include ../../sections/cards_col_4.pug
+    //- include ../../sections/cards_grid.pug
+
+
+
+
+
+
+
+
+    // begin form
+    //- section#form.form.section
+    //-     .container_center
+    //-         .form__content
+    //-             h1.form__title Подать заявку на лизинг
+    //-             i.icon_close    
+    //-             form.form.form_grid(action="send.php")
+    //-                 //- из какой формы на сайте
+    //-                 input(type="hidden" name="subject" value="форма в футоре")
+    //-                 //- проверка спама
+    //-                 input(type="hidden" name="notspam" value="")
+    //-                 .form__row
+    //-                     input(type="text", required placeholder="Предмет лизинга*")
+    //-                 .form__row
+    //-                     input(type="number", placeholder="ИНН")
+    //-                 .form__row
+    //-                     input(type="number", placeholder="Стоимость")
+    //-                 .form__row
+    //-                     input(type="text", placeholder="Контактное лицо")
+    //-                 .form__row
+    //-                     input(type="number", placeholder="Колличество")
+    //-                 .form__row
+    //-                     input(type="text", required placeholder="Телефон*")
+    //-                 .form__row
+    //-                     input(type="number", placeholder="Аванс")
+    //-                 .form__label
+    //-                 .form__row
+    //-                     select.select(data-placeholder="Выбор")
+    //-                         option(value="")
+    //-                         option(value="Значение 1") Значение 1
+    //-                         option(value="Значение 2") Значение 2
+    //-                         option(value="Значение 3") Значение 3
+    //-                         option(value="Значение 4") Значение 4
+    //-                 .form__row
+    //-                     input(type="email", placeholder="E-mail")
+    //-                 .form__row
+    //-                     input(type="text", placeholder="Местонахождение")
+    //-                 .form__row.form__row_full
+    //-                     textarea(type="text", placeholder="Дополнительная информация")
+    //-                 .form__row.form__row_full
+    //-                     .form__grup
+    //-                         label.form__check
+    //-                             input(type="radio" name="test" checked="checked" value="test")
+    //-                             span radio 1
+    //-                         label.form__check
+    //-                             input(type="radio" name="test" value="test_2")
+    //-                             span radio 2
+    //- 
+    //-                 .form__row
+    //-                     span.form__text Поля, помеченные *, обязательны к заполнения
+    //-                 .form__row
+    //-                     .button
+    //-                         button.btn#btn_didisabled_js(type="submit") Отправить
+    //-                 .form__row.form__row_full
+    //-                     .form__privacy
+    //-                         label.form__check
+    //-                             input#check_checked(type="checkbox" checked="checked")
+    //-                             span Прочитал(-а) Пользовательское соглашение и соглашаюсь с <a href="#" target="_blank">политикой обработки персональных данных</a>
+    // end form
+
+    // begin faq
+    //- section#faq.faq.section
+    //-     .container_center
+    //-         h2.section__title F.A.Q.
+    //-         .faq__content
+    //-             .collapse(data-collapse-wrapper="")
+    //-                 .collapse__title.open(data-collapse="") 
+    //-                     span Вопрос о школе
+    //-                 // Добавить класс open для открытого состояния
+    //-                 .collapse__body.open(data-collapse-body="")
+    //-                     p Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.
+    //- 
+    //-                     p В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.
+    //- 
+    //-             each title in ['Структура рынка нейтрализует повторный контакт, не считаясь с затратами', 'Потребительский рынок упорядочивает рейтинг']
+    //- 
+    //-                 .collapse(data-collapse-wrapper="")
+    //-                     .collapse__title(data-collapse="")
+    //-                         span= title
+    //-                     .collapse__body(data-collapse-body="")
+    //-                         p Ежегодно на несколько дней Санкт‑Петербург становится столицей российского образования, открытой площадкой для дискуссий, обмена опытом, откровенного профессионального диалога ведущих специалистов в области просвещения.
+    //- 
+    //-                         p В рамках форума запланировано около 300 мероприятий: конференции, семинары, круглые столы, мастер-классы, дискуссионные площадки, форсайт‑сессии, педагогические олимпиады, конкурсы, квесты, презентации.
+
+    // end faq
+
+    // begin tabsPreview
+    //- section#tabsPreview.tabsPreview.section
+    //-     .container_center
+    //-         h2.section__title tabs Preview
+    //-         .tabsPreview__content
+    //-             .tabs__wrapper
+    //-                 .tabs
+    //-                     .tab Вкладка 1
+    //-                     .tab Вкладка 2
+    //-                     .tab Вкладка 3
+    //-                 .tabs__content
+    //-                     .tab__item Содержимое 1
+    //-                     .tab__item Содержимое 2
+    //-                     .tab__item Содержимое 3
+
+    // end tabsPreview
+
+    // begin dropPreview
+    //- section#dropPreview.dropPreview.section
+    //-     .container_center
+    //-         h2.section__title drop Preview
+    //-         .dropPreview__content
+    //-             .drop
+    //-                 .drop__toggle Click me
+    //-                 .drop__list
+    //-                     .drop__item Item 1
+    //-                     .drop__item Item 2
+    //-                     .drop__item Item 3
+    //-                     .drop__item Item 4
+    //- 
+    //-             .drop
+    //-                 .drop__toggle Click me
+    //-                 .drop__list
+    //-                     .drop__item Item 1
+    //-                     .drop__item Item 2
+    //-                     .drop__item Item 3
+    //-                     .drop__item Item 4
+
+    // end dropPreview
+
+    // begin programsInfo
+    //- section.section
+    //-     .container_center
+    //-         .programsInfo
+    //-             each item in [{num: '12', text: 'Программ'},{num: '25', text: 'Компетенций'},{num: '29', text: 'Преподавателей <br>и экспертов'}]
+    //-                 .programsInfo__item
+    //-                     .programsInfo__number=item.num
+    //-                     .programsInfo__text!=item.text
+
+
+    // end programsInfo

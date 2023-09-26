@@ -1,0 +1,36 @@
+block variable
+    -var path = '';
+    //- -var page = true;
+    //- -var pageClass = 'bg';
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+
+        link(rel="stylesheet", type="text/css", href=path +"css/aos.css")
+        link(rel="stylesheet", type="text/css", href=path +"css/fancybox.min.css")
+        link(rel="stylesheet", type="text/css", href=path +"css/jquery-ui.css")
+        link(rel="stylesheet", type="text/css", href=path +"css/swiper-bundle.min.css")
+        link(rel="stylesheet", type="text/css", href=path +"css/twentytwenty.css")
+
+        link(rel="stylesheet", type="text/css", href=path + "css/style.css")
+    body
+        //- include preloader.pug
+
+        .wrapper#wrapper
+            include header.pug
+
+            main.main_content
+                block content
+
+            include footer.pug
+
+            //- include widget.pug
+
+            include modal.pug
+
+            include scripts.pug

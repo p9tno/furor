@@ -1,0 +1,20 @@
+// begin cards grid
+//- img 530/600 530/200
+section.cards.grid.section
+    .container_center
+        h2.section__title <b>Никакой боли</b> до, во время и после имплантации
+
+        ul.cards__list
+            each item in [{img: '10', title: 'Безболезненные уколы', content: 'Карпульные шприцы — тонкие, прочные, острые, гибкие. Сокращют болезненные ощущения, исключают развитие инфекций'}, {img: '11', title: 'Комфорт', content: 'Думаем о вашем комфорте на уровне ощущений. Минимизируем даже время с открытым ртом'}, {img: '13', title: 'Легкие обезболивающие', content: 'По показаниям после операции'}, {img: '12', title: 'Мягкая седация', content: 'А не полный наркоз. Вы всегда находись в сознании под присмотром анестезиолога. При этом не ощущаете боли и стресса'}, ]
+
+                // begin .cards__item
+                .cards__item
+                    .cards__img.img
+                        img(src=path +"img/card_"+item.img+".png" alt="image" loading="lazy")
+                    .cards__content
+                        .cards__title!=item.title
+                        p!=item.content
+
+                // end .cards__item
+
+// end cards

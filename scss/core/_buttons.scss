@@ -1,0 +1,214 @@
+// Style for button and pseudo button for input and link
+
+.btn {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5em;
+	border-radius: 0.625em;
+	width: 100%;
+	min-height: 3.125em;
+	border: none;
+	outline: none;
+
+	font-family: $main_font_family;
+	font-size: 1em;
+	font-weight: 700;
+	text-decoration: none;
+	text-align: center;
+
+	color: $color_white;
+	background-color: $color_success;
+	box-shadow: 0 3px 0 0 #159E6F, 0 0 13px 0 rgba(255, 255, 255, 0.25) inset;
+
+	cursor: pointer;
+	transition: 0.3s;
+
+	@media (min-width: 768px) {
+		padding: 1.745em 4.5em;
+		border-radius: 1.25em;
+		width: auto;
+		min-height: auto;
+	}
+
+	span {
+		font-size: 0.75em;
+		@media (min-width: 768px) {
+			font-size: 1em;
+		}
+
+		&:nth-child(2) {
+			font-size: 0.5em;
+			font-weight: 400;
+			margin-top: 0.5em;
+			@media (min-width: 768px) {
+				margin-top: 0.25em;
+				font-size: 0.8125em;
+			}
+		}
+
+	}
+
+	br {
+		display: none;
+		@media (min-width: 768px) {
+			display: inline;
+		}
+	}
+
+	@media (min-width: 768px) {
+		position: relative;
+		overflow: hidden;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -150%;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			transform: skewX(-45deg);
+			background: linear-gradient(90deg, rgba($color_white, 0.2), rgba($color_white, 1));
+			box-shadow: 10px 0 20px -10px #fff;
+			animation: flare 5s infinite linear;
+		}
+	}
+
+	&:hover {
+		background-color: darken($color_success, 3%);
+	}
+
+	&:active {
+		background-color: $color_success;
+	}
+
+	&:disabled {
+		background-color: lighten($color_success, 8%);
+		cursor: not-allowed;
+	}
+
+	&_danger {
+		background-color: $color_danger;
+		box-shadow: 0 3px 0 0 #DB4E4E, 0 0 13px 0 rgba(255, 255, 255, 0.25) inset;
+
+		&:hover {
+			background-color: #DB4E4E;
+		}
+
+		&:active {
+			background-color: $color_danger;
+		}
+
+		&:disabled {
+			background-color: lighten($color_danger, 8%);
+			cursor: not-allowed;
+		}
+	}
+
+	&_sm {
+		min-height: auto;
+		border-radius: 0.3125em;
+		padding: 0.638em 1.181em;
+		@media (min-width: 768px) {
+			border-radius: 1.25em;
+			padding: 1.201em 2em;
+		}
+
+		span {
+			font-size: 0.5em;
+			@media (min-width: 768px) {
+				font-size: 1.125em;
+			}
+		}
+	}
+
+	&_lg {
+
+		min-height: 3.125em;
+		padding: 0.5em 1.5em;
+
+		@media (min-width: 768px) {
+			border-radius: 1.5625em;
+			min-height: 6.25em;
+			min-width: 21.625em;
+			padding: 0.5em 2.25em;
+		}
+
+		span {
+			@media (min-width: 768px) {
+				font-size: 1.25em;
+			}
+
+			&:nth-child(2) {
+				@media (min-width: 768px) {
+					margin-top: 0.25em;
+					font-size: 0.8125em;
+				}
+			}
+
+		}
+
+	}
+
+}
+
+@media (min-width: 768px) {
+	// START flare
+	@-webkit-keyframes flare {
+		0% {
+			left: -150%;
+		}
+
+		80% {
+			left: -150%;
+		}
+
+		100% {
+			left: 150%;
+		}
+	}
+	@-moz-keyframes flare {
+		0% {
+			left: -150%;
+		}
+
+		80% {
+			left: -150%;
+		}
+
+		100% {
+			left: 150%;
+		}
+	}
+
+	@-o-keyframes flare {
+		0% {
+			left: -150%;
+		}
+
+		80% {
+			left: -150%;
+		}
+
+		100% {
+			left: 150%;
+		}
+	}
+
+	@keyframes flare {
+		0% {
+			left: -150%;
+		}
+
+		80% {
+			left: -150%;
+		}
+
+		100% {
+			left: 150%;
+		}
+	}
+	// END flare
+}

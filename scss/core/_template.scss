@@ -1,0 +1,271 @@
+// Main wrappers =====================================
+
+body {
+	font-family: $main_font_family;
+	color: $main_color;
+	line-height: $main_line_height;
+	font-size: calc(.05 * 100vw + 0px);
+
+	@media (min-width: 768px) {
+		font-size: calc(.00833333334 * 100vw + 0px);
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	min-height: 100%;
+	font-size: $main_font_size;
+
+	&:after {
+		content: '';
+		display: block;
+		position: fixed;
+		bottom: -100vh;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+
+		background-color: rgba($color_black, 0.65);
+		// backdrop-filter: blur(4px);
+		z-index: 1;
+		transition: opacity 0.5s;
+		opacity: 0;
+
+	}
+
+	&.blur {
+		&:after {
+			bottom: 0;
+			opacity: 1;
+		}
+	};
+}
+
+/* Middle
+ ----------------------------------------------------------------------------- */
+.main_content {
+	flex-grow: 1;
+	padding-top: 4.25em;
+	@media (min-width: 768px) {
+		padding-top: 13.1875em;
+	}
+}
+
+.container_center {
+	max-width: $container_width;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 1.375em;
+}
+
+.section {
+	padding: 1.0625em 0;
+	@media (min-width: 768px) {
+		padding: 4.25em 0;
+
+	}
+
+	&__title {
+		font-size: 1.5em;
+		margin: 0;
+		font-weight: 400;
+		line-height: 1.33;
+
+		@media (min-width: 768px) {
+			font-size: 4.375em;
+			line-height: 1.143;
+		}
+	}
+
+	&__desc {
+		color: #4C5355;
+		margin-top: 1em;
+		line-height: 1.5;
+		font-size: 0.75em;
+
+		@media (min-width: 768px) {
+			margin-top: 1.5625em;
+			line-height: 1.4;
+			font-size: 2em;
+
+		}
+
+	}
+}
+
+.desktop {
+	@media (max-width: 767px) {
+		display: none !important;
+	}
+}
+
+.mobile {
+	@media (min-width: 768px) {
+		display: none !important;
+	}
+}
+
+.d-none {
+	display: none;
+}
+
+.d-block {
+	display: block!important;
+}
+
+.bg {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.img {
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.img_bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+}
+
+a {
+	&.snakeline {
+		position: relative;
+		text-decoration: none;
+
+		&:after {
+			content: '';
+			position: absolute;
+			display: inline-block;
+			width: 100%;
+			left: 0;
+			bottom: -1px;
+			border-bottom: 1px solid;
+			border-color: inherit;
+
+			@media (min-width: 768px) {
+				transition: width 0.3s;
+			}
+		}
+
+		@media (min-width: 768px) {
+			&:hover {
+				&:after {
+					width: 65%;
+				}
+			}
+		}
+	}
+
+}
+
+.list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.counter-wrap {
+	counter-reset: line var(--line-num, 0);
+}
+
+.counter-item {
+	counter-increment: line;
+
+	&:nth-child(n+10) {
+		.counter-el {
+			&:before {
+				content: none;
+
+			}
+		}
+	}
+
+	.counter-el {
+		&:before {
+			content: '0';
+
+		}
+
+		&:after {
+			content: counter(line) ' ';
+		}
+
+	}
+}
+
+// По счетчикам элементов с нулям впереди на будущее
+// li:before {
+//   counter-increment: li;
+//   content: counter(item, decimal-leading-zero);
+// }
+
+// При чем есть варинаты через :nth-child(-n+9) сделать
+
+/*
+	<div class="video-wrap">
+		<div class="video-play" style="background-image: url('img.png')">
+			<video width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+			  <source src="video.mp4" type="video/mp4"/>
+			</video>
+		</div>
+		<div class="video-content">
+			content
+		</div>
+	</div>
+*/
+.video-wrap {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.video-play {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	// background-image: url("img.webp");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	video {
+		display: block;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+		// border-radius: 0.625em;
+		// @media (min-width: 768px) {
+		// 	border-radius: 3.125em;
+		// }
+	}
+
+}
+
+.video-content {
+	position: relative;
+}
+
+// * {
+// 	border: 1px solid #000;
+// }

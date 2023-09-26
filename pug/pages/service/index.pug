@@ -1,0 +1,67 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+    //- path +"img/head_main.png"
+
+
+block content
+    // begin head
+    section#head.head.head_breadcrumbs.section
+        .container_center
+            .head__top
+                .head__bg.img_bg
+                    img.desktop(src=path +"img/head_service.png" alt="image" loading="lazy")
+                    img.mobile(src=path +"img/head_main_m.png" alt="image" loading="lazy")
+
+                .head__breadcrumbs
+                    .kama_breadcrumbs
+                        span
+                            a(href="#")
+                                span Главная
+                        span.kb_sep 
+                        span
+                            a(href="#")
+                                span Услуги
+                        span.kb_sep 
+
+                        span.kb_title Все-на-4
+
+                .head__inner
+                    .head__content
+                        h2.section__title <b>Верните зубы всего за 1 день по технологии Все-на-4</b> с пожизненной гарантией
+                        .head__desc <b>Восстановим верхнюю и нижнюю челюсть за 1 день</b> — и даже не вспомните, что у вас не свои зубы 
+                        .head__btns
+                            a.btn.btn_danger.btn_lg(href="#") 
+                                span Записаться на <br> первичный приём
+                            a.btn.btn_lg(href="#") 
+                                span Узнать стоимость <br>по WhatsApp
+                                span время ответа около 10 минут
+
+                    .head__video
+                        .video
+                            .video__text <b>Рассказывает о Все-на-4</b> Айк Оганесович Буйбурцян, кандидат медицинских наук
+                            .video__preview
+                                .video__img.img
+                                    img(src=path +"img/head_video.png" alt="image" loading="lazy")
+
+                                .video__play
+                                    .play.youtubeModal_js#rsDoGqnPE4c
+                                        i.icon_play
+
+            .head__bottom
+                .miniCards
+                    ul.miniCards__list
+                        each item in [{img: '1', content: 'Собственная зуботехническая <b>лаборатория</b>'}, {img: '2', content: 'Только <b>стерильные инструменты</b> проходящие полный цикл обработки'},{img: '3', content: 'Личный <b>куратор</b> на весь процесс лечения в нашей клинике'},{img: '4', content: 'Беспроцентная <b>рассрочка</b> сроком на 12 месяцев'},]
+
+                            // begin .bottom__item
+                            .miniCards__item
+                                .miniCards__img.img
+                                    img(src=path +"img/card_sm_"+item.img+".png" alt="image" loading="lazy")
+                                .miniCards__title!=item.content 
+
+                            // end .bottom__item
+
+
+    // end head

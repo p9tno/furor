@@ -1,0 +1,149 @@
+header.header
+    .header__content
+        // start .header__row desktop
+        .header__row
+            .header__col.header__col_logo
+                a.logo.img(href="/")
+                    img(src="/img/logo.png")
+                span.desktop Предоставляем <b>все виды стоматологических услуг</b> в Москве с 2014 года 
+
+            .header__col.header__col_location.desktop
+                i.icon_location
+                div
+                    span <b>2 клиники</b> в Москве
+                    a.snakeline(href="#") Смотреть адреса на карте
+
+            .header__col.header__col_rating.desktop
+                span 4.9
+                span <b>Рейтинг</b> <a href="#" class="snakeline">Яндекс</a> на основе 20 000+ оказанных услуг
+
+            .header__col.header__col_phone
+                i.icon_phone.desktop
+                div 
+                    span Ежедневно с 10:00 до 21:00
+                    a(href="tel:+7 (926) 146-00-88") +7 (926) 146-00-88
+                    a.mobile(href="tel:+7 (926) 146-00-88") +7 (926) 146-00-88
+
+            .header__col.desktop
+                a.btn.btn_sm.show_js(href="#show_js")
+                    span Заказать консультацию
+
+            .header__toggle.mobile
+
+        // end .header__row
+
+        // start .header__nav
+        .header__nav
+            nav.navbar#navbar
+                ul.menu
+                    li.menu-item.menu-item-has-children.menu-item-services
+                        a(href="../pages/service/") Услуги
+                            i.icon_burger
+                            i.icon_caret_bottom
+                        ul.sub-menu
+                            li.menu-item.menu-item-has-children
+                                a Восстановить зуб
+                                    i.icon_caret_bottom
+                                ul.sub-menu
+                                    li.menu-item
+                                        a(href="#") Имплантация зубов
+                                    li.menu-item
+                                        a(href="#") Реставрация зубов
+                                    li.menu-item
+                                        a(href="#") Коронки
+                                    li.menu-item
+                                        a(href="#") Протезирование зубов
+
+                            li.menu-item.menu-item-has-children
+                                a Вставить все зубы
+                                    i.icon_caret_bottom
+                                ul.sub-menu
+                                    li.menu-item
+                                        a(href="#") Все-на-4
+                                    li.menu-item
+                                        a(href="#") Несъемные протезы
+                                    li.menu-item
+                                        a(href="#") Съемные зубные протезы
+
+                            li.menu-item.menu-item-has-children
+                                a Вылечить зубы
+                                    i.icon_caret_bottom
+                                ul.sub-menu
+                                    li.menu-item
+                                        a(href="#") Диагностика зубов
+                                    li.menu-item
+                                        a(href="#") Лечение зубов
+                                    li.menu-item
+                                        a(href="#") Лечение кариеса
+                                    li.menu-item
+                                        a(href="#") Лечение пульпита
+                                    li.menu-item
+                                        a(href="#") Лечение десен
+                                    li.menu-item
+                                        a(href="#") Лечение периодонтита
+                                    li.menu-item
+                                        a(href="#") Лечение зубов во сне
+                                    li.menu-item
+                                        a(href="#") Удаление зуба мудрости
+                                    li.menu-item
+                                        a(href="#") Удаление зубов
+
+                            li.menu-item.menu-item-has-children
+                                a Красивая улыбка
+                                    i.icon_caret_bottom
+                                ul.sub-menu
+                                    li.menu-item
+                                        a(href="#") Чистка зубов
+                                    li.menu-item
+                                        a(href="#") Отбеливание зубов
+                                    li.menu-item
+                                        a(href="#") Виниры
+                                    li.menu-item
+                                        a(href="#") Элайнеры
+                                    li.menu-item
+                                        a(href="#") Брекеты
+                                    li.menu-item
+                                        a(href="#") Исправление прикуса
+                                    li.menu-item
+                                        a(href="#") Хирургическое лечение
+
+                    li.menu-item.current-menu-item.stock
+                        a(href="#") Акции
+                            span 12
+                    li.menu-item
+                        a(href="#") Врачи
+                    li.menu-item
+                        a(href="#") Цены
+                    li.menu-item
+                        a(href="#") О клинике
+                    li.menu-item
+                        a(href="#") Наши работы
+                    li.menu-item.success
+                        a(href="#") Отзывы
+                            span 510 +
+                    li.menu-item
+                        a(href="#") Статьи
+                    li.menu-item
+                        a(href="#") Контакты
+
+                .navbar__calback.mobile
+                    a.btn.show_js(href="#show_js") Заказать консультацию
+
+                .header__dropmenu.desktop
+                    .dropmenu
+                        ul.menu_drop
+                            li.menu-item
+                                a(href="#") Лечение зубов во сне
+                            li.menu-item.current-menu-item
+                                a(href="#") Имплантация зубов
+
+                            each item in ['Все-на-4', 'Отбеливание зубов', 'Исправление прикуса', 'Элайнеры', 'Брекеты', 'Лечение дёсен', 'Лечение зубов', 'Лечение кариеса', 'Лечение пульпита', 'Лечение периодонтита', 'Чистка зубов' ]
+                                li.menu-item
+                                    a(href="#")=item
+
+                        ul.menu_drop
+                            each item in ['Удаление зубов', 'Удаление зуба мудрости', 'Хирургическое лечение', 'Протезирование зубов', 'Съёмные зубные протезы', 'Несъёмные протезы', 'Реставрация зубов', 'Виниры', 'Коронки', 'Диагностика зубов',]
+                                li.menu-item
+                                    a(href="#")=item
+
+        // end .header__nav

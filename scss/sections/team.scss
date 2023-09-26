@@ -1,0 +1,147 @@
+.team {
+    &__content {
+        position: relative;
+
+        margin-top: 0.75em;
+        height: 11.875em;
+
+        @media (min-width: 768px) {
+            margin-top: 3.4375em;
+            height: auto;
+
+            padding: 2.8125em 2.5em;
+        }
+    }
+
+    &__bg {
+        overflow: hidden;
+        border-radius: 0.625em;
+        @media (min-width: 768px) {
+            border-radius: 3.125em;
+        }
+    }
+
+    &__aside {
+        background-color: $color_white;
+
+        border-radius: 0.625em;
+        width: 15.375em;
+        padding: 0.625em;
+
+        @media (max-width: 767px) {
+            position: absolute;
+            bottom: -2.313em;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media (min-width: 768px) {
+            position: relative;
+            border-radius: 2.188em;
+            width: 18.125em;
+            padding: 2.8125em 2em 2em;
+
+            margin-left: auto;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            border: 1px dashed #E4F0EC;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 96.8%;
+            height: 92%;
+            border-radius: 0.625em;
+            @media (min-width: 768px) {
+                width: 93.2%;
+                height: 97%;
+                border-radius: 2.188em;
+
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        @media (min-width: 768px) {
+            display: block;
+            text-align: left;
+            margin-left: 0.5em;
+        }
+    }
+
+    &__item {
+        width: 33.3%;
+        @media (min-width: 768px) {
+            width: auto;
+            margin-bottom: 1.975em;
+        }
+    }
+
+    &__top {
+        font-weight: 700;
+        @media (min-width: 768px) {
+            margin-bottom: 0.375em;
+        }
+
+        span {
+            font-size: 1.5em;
+            @media (min-width: 768px) {
+                font-size: 4em;
+            }
+        }
+
+        small {
+            font-size: 0.625em;
+            @media (min-width: 768px) {
+                font-size: 2em;
+            }
+        }
+    }
+
+    &__bottom {
+        color: #4C5355;
+
+        font-size: 0.4375em;
+        @media (min-width: 768px) {
+            font-size: 1.25em;
+            line-height: 1.4;
+        }
+
+        br {
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    &__btn {
+        margin: 3.125em auto 0;
+        width: 15.375em;
+        @media (min-width: 768px) {
+            margin: 0;
+            width: auto;
+        }
+
+        .btn {
+
+            @media (min-width: 768px) {
+                font-size: 1.5em;
+                padding: 0.884em 0;
+                border-radius: 1em;
+                width: 100%;
+
+            }
+
+        }
+    }
+
+}

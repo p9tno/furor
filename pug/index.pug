@@ -1,0 +1,85 @@
+extends layout/layout.pug
+
+block content
+    // begin projectNaw
+    section#projectNaw.projectNaw.section
+        .container_center
+            h2.section__title
+                span Навигация по проекту
+            ul(style="font-size:1.25em;")
+                li
+                    a(href="../pages/home/") Главная (в работе)
+                li
+                    a(href="../pages/service/") Страница одной услуги (в работе)
+                //- li
+                //-     a(href="../pages/contacts/") Контакты 
+
+    // end projectNaw
+
+
+    // begin projectBtn
+    section#projectBtn.projectBtn.section
+        .container_center
+            h2.section__title
+                span Кнопки
+            .section__content
+
+                h3  .btn
+                a.btn(href="#") 
+                    span Подробнее о враче
+                br
+                br
+
+
+                h3  .btn_sm
+                a.btn.btn_sm(href="#") 
+                    span Заказать консультацию
+                br
+                br
+                a.btn.btn_sm.btn_danger(href="#") 
+                    span Участвовать в акции
+                br
+                br
+                a.btn.btn_sm(href="#") 
+                    span Узнать больше
+                br
+                br
+
+                h3  .btn_lg
+                a.btn.btn_lg(href="#") 
+                    span Оставить заявку на рассрочку
+                br
+                br
+                a.btn.btn_danger.btn_lg(href="#") 
+                    span Записаться на <br> первичный приём
+                br
+                br
+                a.btn.btn_lg(href="#") 
+                    span Узнать стоимость <br>по WhatsApp
+                    span время ответа около 10 минут
+                br
+                br
+
+
+
+    // end projectBtn
+
+    // begin projectModal
+    section#projectModal.projectModal.section
+        .container_center
+            h2.section__title
+                span Модальные окна
+            .section__content
+                a.btn.show_modal_js(href="#info") 
+                    span Собщение
+                br
+                br
+                .play.youtubeModal_js#rsDoGqnPE4c
+                    i.icon_play
+
+
+
+
+
+
+    // end projectModal

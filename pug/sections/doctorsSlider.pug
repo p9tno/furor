@@ -1,0 +1,25 @@
+// begin doctorsSlider
+section#doctorsSlider.doctorsSlider.section
+    .container_center
+        h2.section__title <b>Познакомьтесь подробнее с теми,</b> кто позаботится о красоте вашей улыбки
+        .doctorsSlider__slider.swiper.swiper_doctors_js
+            .doctorsSlider__nav
+                .swiper-fraction
+                .swiper-label  Листайте, чтобы просмотреть информацию о каждом враче
+                .swiper-arrows
+                    i.icon_caret_right
+                    i.icon_caret_left
+
+
+            .swiper-wrapper
+                each item in [1,2,3,4,5]
+
+                    .swiper-slide
+                        .doctorsSlider__content
+                            h1=item
+
+        .doctorsSlider__link
+            a.snakeline(href="#") Смотреть всех врачей
+
+
+// end doctorsSlider

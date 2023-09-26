@@ -1069,10 +1069,10 @@ a.snakeline:after {
   .header__col_phone {
     width: auto;
   }
-}
-.header__col_phone i {
-  font-size: 1.25em;
-  color: #26966E;
+  .header__col_phone a i {
+    font-size: 0.8em;
+    color: #26966E;
+  }
 }
 @media (max-width: 767px) {
   .header__col_phone div {

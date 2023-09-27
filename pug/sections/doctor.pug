@@ -1,0 +1,34 @@
+// begin doctor
+section#doctor.doctor.section
+    .container_center
+        h2.section__title <b>Познакомьтесь подробнее с теми,</b> кто позаботится о красоте вашей улыбки
+        .doctor__slider.swiper.swiper_doctor_js
+            .doctor__nav
+                .swiper-fraction
+                .swiper-label  Листайте, чтобы просмотреть информацию о каждом враче
+                .swiper-arrows
+                    i.icon_arrow_left
+                    i.icon_arrow_right
+
+
+            .swiper-wrapper
+                each item in [ {img: '1', name : 'Айк Оганесович Байбурцян'}, {img: '2', name : 'Магомед Зубайруевич Магомедов'},{img: '3', name : 'Александр Викторович Красов'}, {img: '1', name : 'Айк Оганесович Байбурцян'}, {img: '2', name : 'Магомед Зубайруевич Магомедов'},{img: '3', name : 'Александр Викторович Красов'}, {img: '1', name : 'Айк Оганесович Байбурцян'}, {img: '2', name : 'Магомед Зубайруевич Магомедов'},{img: '3', name : 'Александр Викторович Красов'}, {img: '1', name : 'Айк Оганесович Байбурцян'}, {img: '2', name : 'Магомед Зубайруевич Магомедов'},{img: '3', name : 'Александр Викторович Красов'}, {img: '1', name : 'Айк Оганесович Байбурцян'}, {img: '2', name : 'Магомед Зубайруевич Магомедов'},{img: '3', name : 'Александр Викторович Красов'}, ]
+
+                    .swiper-slide
+                        .doctor__slide
+                            .doctor__preview
+                                .doctor__img.img
+                                    img(src=path +"img/doctor_"+item.img+".png" alt="image" loading="lazy")
+                                .doctor__play
+                                    .play.youtubeModal_js#rsDoGqnPE4c
+                                        i.icon_play
+                            .doctor__info
+                                .doctor__name=item.name
+                                .doctor__specializing Эксперт в области имплантации и протезирования
+                                .doctor__experience Опыт работы 17 лет
+
+        .doctor__all
+            a.snakeline.arrow(href="#") Смотреть всех врачей
+
+
+// end doctor

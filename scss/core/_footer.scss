@@ -1,14 +1,40 @@
 /* Footer
  ----------------------------------------------------------------------------- */
-.footer {
-	position: relative;
-	padding: 1em 0;
-	background-color: #ddd;
 
+.footer {
 	&__content {
 		@extend .container_center;
+	}
+
+	&__row {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
 	}
+
+	&__col {
+		.logo {
+			display: block;
+			width: 10.625em;
+			height: 3.75em;
+		}
+	}
+
+	&__col_logo {}
+
+	&__messenger {}
+
+	&__label {}
+
+	&__menu {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__phone {}
+
+	&__btn {}
+
+	&__question {}
+
 }

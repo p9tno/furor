@@ -8,6 +8,7 @@
 @import 'core/preloader';
 @import 'core/play';
 @import 'core/widget';
+@import 'core/messenger';
 
 @import 'core/header';
 @import 'core/navbar';
@@ -18,6 +19,7 @@
 @import 'sections/cards';
 @import 'sections/information';
 @import 'sections/team';
+@import 'sections/doctor';
 
 @import 'core/footer';
 
@@ -34,3 +36,4 @@
 @import 'core/drop';
 
 @import 'vendor/modal';
+@import 'vendor/swiper';

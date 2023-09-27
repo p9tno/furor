@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
 
-    const doctors = new Swiper('.swiper_doctors_js', {
-        slidesPerView: 2,
-        spaceBetween: 10,
+    const doctors = new Swiper('.swiper_doctor_js', {
+        slidesPerView: 1,
+        spaceBetween: 8,
         speed: 500,
         loop: true,
         autoplay: {
@@ -11,8 +11,8 @@ $(document).ready(function() {
         },
 
         navigation: {
-            nextEl: '.icon_caret_right',
-            prevEl: '.icon_caret_left',
+            prevEl: '.icon_arrow_left',
+            nextEl: '.icon_arrow_right',
         },
 
         pagination: {
@@ -23,8 +23,8 @@ $(document).ready(function() {
 
         breakpoints: {
             768: {
-                spaceBetween: 24,
-                slidesPerView: 3,
+                spaceBetween: 43,
+                slidesPerView: 4,
             },
 
         }

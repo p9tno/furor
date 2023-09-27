@@ -1,0 +1,26 @@
+@media (min-width: 768px) {
+  .doctor__slide {
+    width: 100%;
+  }
+}
+.doctor__preview {
+  position: relative;
+}
+.doctor__img {
+  overflow: hidden;
+  width: 100%;
+  height: 21.5625em;
+  border-radius: 0.625em;
+}
+@media (min-width: 768px) {
+  .doctor__img {
+    height: 31.25em;
+    border-radius: 3.125em;
+  }
+}
+.doctor__play {
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+  font-size: 0.75em;
+}

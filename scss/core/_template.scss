@@ -177,6 +177,22 @@ a {
 
 }
 
+a {
+	&.arrow {
+		position: relative;
+
+		&:before {
+			font-family: 'icon';
+			content: '\e914';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: -3.5em;
+			font-size: 0.6246em;
+		}
+	}
+}
+
 .list {
 	margin: 0;
 	padding: 0;

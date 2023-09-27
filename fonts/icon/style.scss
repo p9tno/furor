@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?6frh4a');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?6frh4a#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?6frh4a') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?6frh4a') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?6frh4a##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?s3dfma');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?s3dfma#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?s3dfma') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?s3dfma') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?s3dfma##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -62,9 +62,14 @@
     content: $icon_caret_bottom; 
   }
 }
-.icon_arrow {
+.icon_arrow_left {
   &:before {
-    content: $icon_arrow; 
+    content: $icon_arrow_left; 
+  }
+}
+.icon_arrow_right {
+  &:before {
+    content: $icon_arrow_right; 
   }
 }
 .icon_burger {
@@ -85,11 +90,6 @@
 .icon_info {
   &:before {
     content: $icon_info; 
-  }
-}
-.icon_insta {
-  &:before {
-    content: $icon_insta; 
   }
 }
 .icon_location {
@@ -115,11 +115,6 @@
 .icon_succes {
   &:before {
     content: $icon_succes; 
-  }
-}
-.icon_vk {
-  &:before {
-    content: $icon_vk; 
   }
 }
 .icon_whatsApp {

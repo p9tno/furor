@@ -8,6 +8,7 @@ footer.footer.desktop
                 span.desktop Предоставляем <b>все виды стоматологических услуг</b> в Москве с 2014 года 
 
                 .footer__messenger.desktop
+                    .footer__label Мы в соцсетях
                     .messenger
                         .messenger__list
                             .messenger__item
@@ -22,108 +23,111 @@ footer.footer.desktop
 
             .footer__col
                 .footer__label Навигация по сайту
-
-                ul.footer__menu
-                    each item in ['Главная', 'Акции', 'Врачи', 'Цены', 'О нас', 'Наши работы', 'Отзывы', 'Статьи', 'Контакты']
-                        li.menu-item
-                            a(href="#")=item
+                .footer__menu
+                    ul.menu
+                        each item in ['Главная', 'Акции', 'Врачи', 'Цены', 'О нас', 'Наши работы', 'Отзывы', 'Статьи', 'Контакты']
+                            li.menu-item
+                                a(href="#")=item
 
 
 
             .footer__col
                 .footer__label Услуги
-                ul.footer__menu
-                    li.menu-item.menu-item-has-children
-                        span Восстановить зуб
-                        ul.sub-menu
-                            li.menu-item
-                                a(href="#") Имплантация зубов
-                            li.menu-item
-                                a(href="#") Реставрация зубов
-                            li.menu-item
-                                a(href="#") Коронки
-                            li.menu-item
-                                a(href="#") Протезирование зубов
+                .footer__menu
+                    ul.menu
+                        li.menu-item.menu-item-has-children
+                            span Восстановить зуб
+                            ul.sub-menu
+                                li.menu-item
+                                    a(href="#") Имплантация зубов
+                                li.menu-item
+                                    a(href="#") Реставрация зубов
+                                li.menu-item
+                                    a(href="#") Коронки
+                                li.menu-item
+                                    a(href="#") Протезирование зубов
 
-                    li.menu-item.menu-item-has-children
-                        span Вылечить зубы
-                        ul.sub-menu
-                            li.menu-item
-                                a(href="#") Диагностика зубов
-                            li.menu-item
-                                a(href="#") Лечение зубов
-                            li.menu-item
-                                a(href="#") Лечение кариеса
-                            li.menu-item
-                                a(href="#") Лечение пульпита
-                            li.menu-item
-                                a(href="#") Лечение десен
-                            li.menu-item
-                                a(href="#") Лечение периодонтита
-                            li.menu-item
-                                a(href="#") Лечение зубов во сне
-                            li.menu-item
-                                a(href="#") Удаление зуба мудрости
-                            li.menu-item
-                                a(href="#") Удаление зубов
+                        li.menu-item.menu-item-has-children
+                            span Вылечить зубы
+                            ul.sub-menu
+                                li.menu-item
+                                    a(href="#") Диагностика зубов
+                                li.menu-item
+                                    a(href="#") Лечение зубов
+                                li.menu-item
+                                    a(href="#") Лечение кариеса
+                                li.menu-item
+                                    a(href="#") Лечение пульпита
+                                li.menu-item
+                                    a(href="#") Лечение десен
+                                li.menu-item
+                                    a(href="#") Лечение периодонтита
+                                li.menu-item
+                                    a(href="#") Лечение зубов во сне
+                                li.menu-item
+                                    a(href="#") Удаление зуба мудрости
+                                li.menu-item
+                                    a(href="#") Удаление зубов
 
 
 
             .footer__col
                 .footer__label 
-                ul.footer__menu
-                    li.menu-item.menu-item-has-children
-                        span Вставить все зубы
-                        ul.sub-menu
-                            li.menu-item
-                                a(href="#") Все-на-4
-                            li.menu-item
-                                a(href="#") Несъемные протезы
-                            li.menu-item
-                                a(href="#") Съемные зубные протезы
+                .footer__menu
+                    ul.menu
+                        li.menu-item.menu-item-has-children
+                            span Вставить все зубы
+                            ul.sub-menu
+                                li.menu-item
+                                    a(href="#") Все-на-4
+                                li.menu-item
+                                    a(href="#") Несъемные протезы
+                                li.menu-item
+                                    a(href="#") Съемные зубные протезы
 
-                    li.menu-item.menu-item-has-children
-                        span Красивая улыбка
-                        ul.sub-menu
-                            li.menu-item
-                                a(href="#") Чистка зубов
-                            li.menu-item
-                                a(href="#") Отбеливание зубов
-                            li.menu-item
-                                a(href="#") Виниры
-                            li.menu-item
-                                a(href="#") Элайнеры
-                            li.menu-item
-                                a(href="#") Брекеты
-                            li.menu-item
-                                a(href="#") Исправление прикуса
-                            li.menu-item
-                                a(href="#") Хирургическое лечение
+                        li.menu-item.menu-item-has-children
+                            span Красивая улыбка
+                            ul.sub-menu
+                                li.menu-item
+                                    a(href="#") Чистка зубов
+                                li.menu-item
+                                    a(href="#") Отбеливание зубов
+                                li.menu-item
+                                    a(href="#") Виниры
+                                li.menu-item
+                                    a(href="#") Элайнеры
+                                li.menu-item
+                                    a(href="#") Брекеты
+                                li.menu-item
+                                    a(href="#") Исправление прикуса
+                                li.menu-item
+                                    a(href="#") Хирургическое лечение
 
             .footer__col
                 .footer__label Контакты
 
                 .footer__phone
-                    a.desktop(href="tel:+7 (926) 146-00-88")
+                    a(href="tel:+7 (926) 146-00-88")
                         i.icon_phone
-                    div 
-                        span Ежедневно с 10:00 до 21:00
-                        a(href="tel:+7 (926) 146-00-88") +7 (926) 146-00-88
-                        a.mobile(href="tel:+7 (926) 146-00-88") +7 (926) 146-00-88
+                        div 
+                            span Ежедневно с 10:00 до 21:00
+                            span +7 (926) 146-00-88
+
 
                 .footer__btn
                     a.btn.btn_sm.show_js(href="#show_js")
                         span Заказать консультацию
 
-                .footer__question
-                    i.icon_whatsApp
-                    span Задайте нам вопрос, мы всегда онлайн
+                .footer__whatsapp
+                    a(href="#")
+                        i.icon_whatsApp
+                    span <b>Задайте нам вопрос,</b> мы всегда онлайн
 
 
 
         .footer__row
             .footer__col
-                span FUROR 2014-2023
+                span FUROR 2014-<script type="text/javascript">document.write(new Date().getFullYear());</script>
                 a(href="#") Лицензия на осуществление медицинской деятельности
             .footer__col
                 a(href="#") Политика конфиденциальности

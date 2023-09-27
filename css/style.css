@@ -2190,19 +2190,186 @@ a.arrow:before {
 /* Footer
  ----------------------------------------------------------------------------- */
 .footer__row {
+  border-top: 1px solid #F1F1F1;
   display: flex;
   justify-content: space-between;
+}
+.footer__row:first-child {
+  padding-top: 4.125em;
+  padding-bottom: 2.1875em;
+}
+.footer__row:first-child .footer__col:first-child span {
+  display: block;
+  width: 13.15em;
+  font-size: 0.875em;
+  line-height: 1.4;
+}
+.footer__row:first-child .footer__col:last-child > * {
+  margin-top: 2.25em;
+}
+.footer__row:first-child .footer__col:last-child > *:first-child {
+  margin-top: 0;
+}
+.footer__row:last-child {
+  padding-top: 2.1875em;
+  padding-bottom: 3.75em;
+}
+.footer__row:last-child .footer__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+}
+.footer__row:last-child .footer__col:first-child {
+  text-align: left;
+}
+.footer__row:last-child .footer__col:last-child {
+  text-align: right;
+}
+.footer__row:last-child a,
+.footer__row:last-child span {
+  font-size: 0.875em;
+  line-height: 1;
+  margin-top: 0.7143em;
+}
+.footer__row:last-child a:first-child,
+.footer__row:last-child span:first-child {
+  margin-top: 0;
+}
+.footer__row:last-child a {
+  color: #26966E;
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+}
+.footer__row:last-child a:after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  left: 0;
+  bottom: -1px;
+  border-bottom: 1px solid;
+  border-color: inherit;
+}
+@media (min-width: 768px) {
+  .footer__row:last-child a:after {
+    transition: width 0.3s;
+  }
+}
+@media (min-width: 768px) {
+  .footer__row:last-child a:hover:after {
+    width: 65%;
+  }
+}
+.footer__row:last-child span {
+  color: #4C5355;
 }
 .footer__col .logo {
   display: block;
   width: 10.625em;
   height: 3.75em;
+  margin-bottom: 1.625em;
 }
-.footer__menu {
+.footer__messenger {
+  margin-top: 3.5em;
+}
+.footer__messenger .messenger {
+  margin-top: 1em;
+}
+.footer__label {
+  font-size: 1.25em;
+  font-weight: 700;
+  height: 1.2em;
+}
+.footer__menu ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+.footer__menu .menu {
+  margin-top: 2.25em;
+}
+.footer__menu .menu-item {
+  margin-bottom: 0.663em;
+}
+.footer__menu .menu-item:last-child {
+  margin-bottom: 0;
+}
+.footer__menu .menu-item a {
+  text-decoration: none;
+  color: #4C5355;
+  font-size: 1.125em;
+}
+@media (min-width: 768px) {
+  .footer__menu .menu-item-has-children span {
+    display: none;
+  }
+}
+.footer__phone a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.footer__phone a i {
+  color: #26966E;
+  font-size: 1.25em;
+}
+.footer__phone a div {
+  color: #2A2A2A;
+  margin-left: 0.75em;
+}
+.footer__phone a div span {
+  display: block;
+}
+.footer__phone a div span:first-child {
+  font-size: 0.875em;
+}
+.footer__phone a div span:last-child {
+  margin-top: 0.125em;
+  font-size: 1.375em;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .footer__phone a div span:last-child {
+    transition: 0.3s;
+  }
+}
+@media (min-width: 768px) {
+  .footer__phone a:hover div span:last-child {
+    color: #26966E;
+  }
+}
+.footer__whatsapp {
+  display: flex;
+  gap: 0.9375em;
+  align-items: center;
+}
+.footer__whatsapp a {
+  text-decoration: none;
+}
+.footer__whatsapp i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1875em;
+  height: 2.1875em;
+  border-radius: 100%;
+  background-color: #26966E;
+  color: #ffffff;
+}
+.footer__whatsapp i:before {
+  font-size: 0.875em;
+}
+.footer__whatsapp span {
+  width: 10.5em;
+  font-size: 0.875em;
+  line-height: 1.4;
+}
+
 .form_grid {
   display: flex;
   flex-wrap: wrap;

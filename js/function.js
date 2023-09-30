@@ -97,6 +97,7 @@ $(document).ready(function() {
     } else {
         console.log('mobile');
         toggleMobileSubMenu();
+        toggleServicesMenu();
     }
 
     // only desktop function
@@ -156,6 +157,14 @@ $(document).ready(function() {
         })
     }
 
+    // only mobile function
+    function toggleServicesMenu() {
+        $('.services__toggle').click(function(event) {
+            let menu = $(this).closest('.services__col').find('.services__menu').eq(0);
+            $(this).toggleClass('active');
+            menu.slideToggle();
+        })
+    }
 
     function scrollPage () {
         $('.scroll_js').on('click', function (e) {

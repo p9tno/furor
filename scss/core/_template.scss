@@ -148,25 +148,23 @@ body {
 
 a {
 	&.snakeline {
-		position: relative;
-		text-decoration: none;
+		@media (min-width: 768px) {
+			position: relative;
+			text-decoration: none;
 
-		&:after {
-			content: '';
-			position: absolute;
-			display: inline-block;
-			width: 100%;
-			left: 0;
-			bottom: -1px;
-			border-bottom: 1px solid;
-			border-color: inherit;
+			&:after {
+				content: '';
+				position: absolute;
+				display: inline-block;
+				width: 100%;
+				left: 0;
+				bottom: -1px;
+				border-bottom: 1px solid;
+				border-color: inherit;
 
-			@media (min-width: 768px) {
 				transition: width 0.3s;
 			}
-		}
 
-		@media (min-width: 768px) {
 			&:hover {
 				&:after {
 					width: 65%;

@@ -1,0 +1,44 @@
+// begin services
+section#services.services.section
+    .container_center
+        h2.section__title <b>Все стоматологические услуги</b> для взрослых и детей в одном месте 24/7
+        .section__desc Помогаем решить любые проблемы по лечению и восстановлению зубов 
+        .services__row
+            .services__col
+                .services__label
+                    span Восстановить зуб
+                    .services__toggle.mobile
+                        i.icon_caret_bottom
+                ul.services__menu.list
+                    each item in ['Имплантация зубов', 'Реставрация зубов', 'Коронки', 'Протезирование зубов' ]
+                        li.services__item
+                            a.services__link.snakeline(href="#")=item
+            .services__col
+                .services__label
+                    span Вставить все зубы
+                    .services__toggle.mobile
+                        i.icon_caret_bottom
+                ul.services__menu.list
+                    each item in ['Все-на-4', 'Несъемные протезы', 'Съемные зубные протезы' ]
+                        li.services__item
+                            a.services__link.snakeline(href="#")=item
+            .services__col
+                .services__label
+                    span Вылечить зубы
+                    .services__toggle.mobile
+                        i.icon_caret_bottom
+                ul.services__menu.list
+                    each item in ['Диагностика зубов', 'Лечение зубов', 'Лечение кариеса', 'Лечение пульпита', 'Лечение десен', 'Лечение периодонтита', 'Лечение зубов во сне', 'Удаление зуба мудрости', 'Удаление зубов']
+                        li.services__item
+                            a.services__link.snakeline(href="#")=item
+            .services__col
+                .services__label
+                    span Красивая улыбка
+                    .services__toggle.mobile
+                        i.icon_caret_bottom
+                ul.services__menu.list
+                    each item in ['Чистка зубов', 'Отбеливание зубов', 'Виниры', 'Элайнеры', 'Брекеты', 'Исправление прикуса', 'Хирургическое лечение' ]
+                        li.services__item
+                            a.services__link.snakeline(href="#")=item
+
+// end services

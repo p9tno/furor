@@ -638,26 +638,22 @@ body {
   object-fit: cover;
 }
 
-a.snakeline {
-  position: relative;
-  text-decoration: none;
-}
-a.snakeline:after {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  width: 100%;
-  left: 0;
-  bottom: -1px;
-  border-bottom: 1px solid;
-  border-color: inherit;
-}
 @media (min-width: 768px) {
+  a.snakeline {
+    position: relative;
+    text-decoration: none;
+  }
   a.snakeline:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+    border-bottom: 1px solid;
+    border-color: inherit;
     transition: width 0.3s;
   }
-}
-@media (min-width: 768px) {
   a.snakeline:hover:after {
     width: 65%;
   }
@@ -2293,6 +2289,95 @@ a.arrow:before {
   .instruction__label {
     font-size: 2em;
     text-align: left;
+  }
+}
+
+.services__row {
+  margin: 1.5em -1.375em 0;
+}
+@media (min-width: 768px) {
+  .services__row {
+    margin: 4.875em 0 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 767px) {
+  .services__col {
+    padding: 0 1.375em;
+    border-bottom: 1px solid #F1F1F1;
+  }
+  .services__col:first-child {
+    border-top: 1px solid #F1F1F1;
+  }
+}
+@media (max-width: 767px) {
+  .services__label {
+    padding: 0.75em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  .services__label {
+    margin-bottom: 1.875em;
+  }
+}
+.services__label span {
+  font-weight: 700;
+  font-size: 1.125em;
+}
+@media (min-width: 768px) {
+  .services__label span {
+    font-size: 2em;
+  }
+}
+@media (max-width: 767px) {
+  .services__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5em;
+    height: 1.5em;
+    transform: scale(1);
+    transition: transform 0.3s;
+  }
+  .services__toggle.active {
+    transform: scale(-1);
+  }
+  .services__toggle i {
+    color: #26966E;
+    font-size: 1.5em;
+  }
+}
+.services__menu {
+  display: none;
+}
+@media (min-width: 768px) {
+  .services__menu {
+    display: block;
+  }
+}
+.services__item {
+  margin-bottom: 0.75em;
+}
+@media (min-width: 768px) {
+  .services__item {
+    margin-bottom: 1.875em;
+  }
+  .services__item:last-child {
+    margin-bottom: 0;
+  }
+}
+.services__link {
+  color: #517DC0;
+  font-weight: 500;
+  font-size: 0.875em;
+}
+@media (min-width: 768px) {
+  .services__link {
+    font-size: 1.4375em;
   }
 }
 

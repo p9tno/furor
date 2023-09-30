@@ -87,6 +87,10 @@
 	&:disabled {
 		background-color: lighten($color_success, 8%);
 		cursor: not-allowed;
+
+		&:before {
+			content: none;
+		}
 	}
 
 	&_danger {
@@ -104,6 +108,10 @@
 		&:disabled {
 			background-color: lighten($color_danger, 8%);
 			cursor: not-allowed;
+
+			&:before {
+				content: none;
+			}
 		}
 	}
 
@@ -150,6 +158,13 @@
 
 		}
 
+	}
+
+	&_form {
+		@media (max-width: 767px) {
+			min-height: 3.75em;
+			border-radius: 0.9375em;
+		}
 	}
 
 }

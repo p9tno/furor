@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon';
-  src:  url('fonts/icon.eot?s3dfma');
-  src:  url('fonts/icon.eot?s3dfma#iefix') format('embedded-opentype'),
-    url('fonts/icon.ttf?s3dfma') format('truetype'),
-    url('fonts/icon.woff?s3dfma') format('woff'),
-    url('fonts/icon.svg?s3dfma#icon') format('svg');
+  src:  url('fonts/icon.eot?m30qyg');
+  src:  url('fonts/icon.eot?m30qyg#iefix') format('embedded-opentype'),
+    url('fonts/icon.ttf?m30qyg') format('truetype'),
+    url('fonts/icon.woff?m30qyg') format('woff'),
+    url('fonts/icon.svg?m30qyg#icon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon_youtube:before {
+  content: "\e909";
+}
+.icon_vk:before {
+  content: "\e90f";
+}
+.icon_Insta:before {
+  content: "\e915";
+}
 .icon_arrow_sm_left:before {
   content: "\e900";
 }
@@ -45,6 +54,9 @@
 }
 .icon_caret_bottom:before {
   content: "\e913";
+}
+.icon_select:before {
+  content: "\e916";
 }
 .icon_arrow_left:before {
   content: "\e904";
@@ -79,6 +91,12 @@
 .icon_succes:before {
   content: "\e90e";
 }
-.icon_whatsApp:before {
+.icon_whatsapp:before {
   content: "\e910";
+}
+.icon_viber:before {
+  content: "\e917";
+}
+.icon_telegram:before {
+  content: "\e918";
 }

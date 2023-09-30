@@ -1,25 +1,14 @@
-footer.footer.desktop
+footer.footer
     .footer__content
         .footer__row
             .footer__col
                 a.logo.img(href="/")
                     img(src="/img/logo.png")
 
-                span.desktop Предоставляем <b>все виды стоматологических услуг</b> в Москве с 2014 года 
+                span Предоставляем <b>все виды стоматологических услуг</b> в Москве с 2014 года 
 
                 .footer__messenger.desktop
-                    .footer__label Мы в соцсетях
-                    .messenger
-                        .messenger__list
-                            .messenger__item
-                                a.messenger__link(href="#" target="_blank")
-                                    img(src="/img/vk.svg" alt="image" loading="lazy")
-                            .messenger__item
-                                a.messenger__link(href="#" target="_blank")
-                                    img(src="/img/insta.svg" alt="image" loading="lazy")
-                            .messenger__item
-                                a.messenger__link(href="#" target="_blank")
-                                    img(src="/img/youtube.svg" alt="image" loading="lazy")
+                    include ../parts/messenger.pug
 
             .footer__col
                 .footer__label Навигация по сайту
@@ -32,7 +21,7 @@ footer.footer.desktop
 
 
             .footer__col
-                .footer__label Услуги
+                .footer__label.desktop Услуги
                 .footer__menu
                     ul.menu
                         li.menu-item.menu-item-has-children
@@ -72,7 +61,7 @@ footer.footer.desktop
 
 
             .footer__col
-                .footer__label 
+                .footer__label.desktop
                 .footer__menu
                     ul.menu
                         li.menu-item.menu-item-has-children
@@ -122,6 +111,10 @@ footer.footer.desktop
                     a(href="#")
                         i.icon_whatsApp
                     span <b>Задайте нам вопрос,</b> мы всегда онлайн
+
+
+        .footer__messenger.mobile
+            include ../parts/messenger.pug
 
 
 

@@ -341,7 +341,7 @@ $(document).ready(function() {
         $('.select').select2({
             placeholder: $(this).data('placeholder'),
             minimumResultsForSearch: Infinity,
-            // templateSelection: addIcon,
+            templateSelection: addIcon,
         });
 
         // $('.select').on('change',function() {
@@ -368,9 +368,9 @@ $(document).ready(function() {
     }
     initSelect2();
 
-    // $(function(){
-    //     $(".tel").mask("+7 ( 9 9 9 ) - 9 9 9 - 9 9 - 9 9");
-    // });
+    $(function(){
+        $(".phone").mask("+7 ( 9 9 9 ) 9 9 9 - 9 9 - 9 9");
+    });
 
     function initTwentytwenty () {
         $(".twentytwenty-container").twentytwenty({

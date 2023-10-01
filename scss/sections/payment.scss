@@ -1,0 +1,146 @@
+.payment {
+    &__content {
+        background-color: #123327;
+        border-radius: 0.625em;
+        padding: 1.5625em 0.9375em 2.1875em;
+        margin-top: 0.625em;
+
+        @media (min-width: 768px) {
+            border-radius: 3.125em;
+            padding: 2.875em 3.125em 2.875em 6.875em;
+            margin-top: 3.125em;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+    }
+
+    &__left {
+        color: $color_white;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            text-align: left;
+            width: 28.5em;
+        }
+    }
+
+    &__right {
+        background-color: $color_white;
+
+        border-radius: 0.625em;
+        padding: 0.75em 0.625em;
+        margin-top: 0.75em;
+
+        @media (min-width: 768px) {
+            margin-top: 0;
+            border-radius: 3.125em;
+            padding: 3.625em 5.75em 4.125em;
+
+            width: 64.375em;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 1.25em;
+        @media (min-width: 768px) {
+            font-size: 4.375em;
+            line-height: 1.143;
+        }
+    }
+
+    &__desc {
+        margin-top: 1em;
+        font-size: 0.75em;
+        @media (min-width: 768px) {
+            margin-top: 1.5625em;
+            line-height: 1.4;
+            font-size: 2em;
+
+        }
+    }
+
+    &__btn {
+        margin-top: 1.25em;
+        @media (min-width: 768px) {
+            margin-top: 2.875em;
+
+        }
+    }
+
+    &__label {
+        text-align: center;
+        color: #4C5355;
+        font-size: 0.75em;
+
+        @media (min-width: 768px) {
+            width: 26.4875em;
+            margin: 0 auto;
+            font-size: 1.5em;
+            font-weight: 500;
+            line-height: 1.5;
+
+        }
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-top: 1.25em;
+        @media (min-width: 768px) {
+            margin-top: 2em;
+        }
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:first-child {
+            span {
+                &:first-child {
+                    color: $color_success;
+
+                    &:after {
+                        content: '%';
+
+                    }
+                }
+            }
+        }
+
+        span {
+            &:first-child {
+                font-size: 4.17em;
+                line-height: 0.75;
+                font-weight: 700;
+
+                @media (min-width: 768px) {
+                    font-size: 17em;
+                    line-height: 0.75;
+
+                }
+            }
+
+            &:last-child {
+                margin-top: 0.8em;
+                letter-spacing: 0.25em;
+                line-height: 1.75;
+                text-transform: uppercase;
+
+                font-size: 0.75em;
+                @media (min-width: 768px) {
+                    font-size: 3em;
+
+                }
+            }
+        }
+    }
+
+}

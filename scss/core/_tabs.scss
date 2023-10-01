@@ -1,58 +1,96 @@
 .tabs__wrapper {}
 
-.tabs__content{}
-
-.tabs {
-    display: flex;
-    // justify-content: space-between;
-    // margin-bottom: 0.75em;
-
-    @media (max-width: 767px) {
-        overflow-x: auto;
-        overflow-y: hidden;
-        padding-bottom: 0.75em;
-        margin-left: -1.25em;
-        margin-right: -1.25em;
-    }
-
+.tabs__content {
+    margin-top: 0.875em;
     @media (min-width: 768px) {
-        margin-bottom: 4.375em;
+        margin-top: 3.125em;
     }
-
-
 }
 
-
-
-.tab {
-    position: relative;
-    width: fit-content;
-    flex: none;
-    margin-right: 2em;
-    cursor: pointer;
-
-    &:first-child {
-        margin-left: 1em;
-    }
-
-    &:last-child {
-        margin-right: 2em;
-    }
-
+.tabs {
     @media (min-width: 768px) {
-        margin-right: 6.5em;
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 1.625em;
+    }
 
-        &:first-child {
-            margin-left: 0;
+    &__label {
+        color: #4C5355;
+        font-size: 0.75em;
+        margin-bottom: 1em;
+        @media (min-width: 768px) {
+            font-size: 1.25em;
+            margin-bottom: 0.875em;
+
         }
     }
 
+}
+
+.tab {
+    position: relative;
+
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 1.263em 2.5em 1.263em 5.838em;
+    border-radius: 1.5625em;
+    min-height: 6.25em;
+    border: 1px solid;
+
+    color: #4C5355;
+    background-color: $color_white;
+
+    transition: 0.3s;
+    cursor: pointer;
+
+    font-size: 0.5em;
+    width: 100%;
+    margin-bottom: 1.5em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @media (min-width: 768px) {
+        font-size: 1em;
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    span {
+        font-size: 1.5em;
+
+        &:first-child {
+            font-weight: 700;
+        }
+
+        span {
+            font-size: 1em;
+            text-decoration: underline;
+        }
+    }
+
+    &:before {
+        content: '\e90b';
+        font-family: 'icon';
+
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1em;
+
+        font-size: 2.5em;
+        font-weight: 400;
+    }
 
     &.active {
-        color: red;
+        background-color: $color_success;
+        color: $color_white;
     }
 
     &:hover {
-        color: red;
+        background-color: $color_success;
+        color: $color_white;
     }
 }

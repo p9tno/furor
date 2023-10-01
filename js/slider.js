@@ -30,6 +30,78 @@ $(document).ready(function() {
         }
     });
 
+    const advantages = new Swiper('.swiper_advantages_js', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        speed: 500,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+
+        navigation: {
+            prevEl: '.icon_arrow_left',
+            nextEl: '.icon_arrow_right',
+        },
+
+        pagination: {
+            el: '.swiper-fraction',
+            clickable: true,
+            type: "fraction",
+        },
+
+        breakpoints: {
+            768: {
+                spaceBetween: 20,
+                slidesPerView: 1,
+                loop: false,
+                grid: {
+                  rows: 2,
+                  fill: "col",
+              },
+            },
+
+        }
+    });
+
+    const location = new Swiper('.swiper_location_js', {
+        slidesPerView: 2,
+        spaceBetween: 12,
+        speed: 500,
+        loop: false,
+        autoplay: {
+          delay: 5000,
+        },
+
+        grid: {
+          rows: 2,
+          fill: "col",
+      },
+
+        navigation: {
+            prevEl: '.icon_arrow_left',
+            nextEl: '.icon_arrow_right',
+        },
+
+        pagination: {
+            el: '.swiper-fraction',
+            clickable: true,
+            type: "fraction",
+        },
+
+        breakpoints: {
+            768: {
+                spaceBetween: 43,
+                slidesPerView: 4,
+                loop: true,
+                grid: {
+                  rows: 1,
+              },
+            },
+
+        }
+    });
+
     const certificate = new Swiper('.certificate-swiper-js', {
         slidesPerView: 2,
         spaceBetween: 10,

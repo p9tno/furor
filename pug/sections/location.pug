@@ -1,0 +1,70 @@
+// begin location
+section#location.location.section
+    .container_center
+        h2.section__title <b>Просторные и всегда чистые кабинеты</b> в шаговой доступности от метро
+        .location__tabs
+            .tabs__wrapper
+                .tabs__label Выберите адрес клиники, чтобы узнать больше о каждой из них
+                .tabs
+
+                    .tab
+                        span Москва, метро <span>Сокол</span>
+                        span Ленинградский проспект, 77к2
+                    .tab
+                        span Москва, метро <span>Перово</span>
+                        span ул. Перовская, д. 66, корп. 6
+
+                .tabs__content
+                    each item in ['', '', ]
+                        .tab__item 
+                            .location__item 
+                                .location__row
+                                    .location__col
+                                        .location__img.img_bg
+                                            img(src="../../img/location_1.png" loading="lazy" alt="img")
+
+                                        .location__content
+                                            span
+                                            .location__tour
+                                                span Furor - это комфортное пространство, где главное — забота о здоровье пациентов. 
+                                                a.btn.btn_lg.btn_danger(href="#")
+                                                    span Смотреть 3D - тур по клинике
+
+
+                                    .location__col
+                                        .location__img.img_bg
+                                            img(src="../../img/location_2.png" loading="lazy" alt="img")
+
+                                        .location__content
+                                            .location__play
+                                                .play.youtubeModal_js#rsDoGqnPE4c
+                                                    i.icon_play
+
+                                            .location__metro
+                                                span Как добраться<br> к нам от метро
+                                                span Посмотрите видео, где мы подробно объяснили и сняли как нас быстро найти. 
+
+
+                                .location__slider.swiper.swiper_location_js
+                                    .location__naw
+                                        .location__naw_col
+                                            .swiper-fraction
+                                            .swiper-label  Листайте, чтобы просмотреть больше фотографий
+                                        .location__naw_col
+                                            .swiper-arrows
+                                                i.icon_arrow_left
+                                                i.icon_arrow_right
+
+                                    .swiper-wrapper
+                                        each item in [1,2,3,4,4,3,2,1,1,2,3,4]
+                                            .swiper-slide
+                                                .location__slide.img
+                                                    img(src="../../img/location_sm_"+item+".png" loading="lazy" alt="img")
+
+
+
+
+// end location
+
+
+//- <iframe width="100%" height="100%" src="https://my.matterport.com/show/?m=4yL4DcALngT&play=1&wh=0" frameborder="0" allowfullscreen allow='vr'></iframe>

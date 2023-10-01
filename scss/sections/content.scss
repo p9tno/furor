@@ -1,0 +1,50 @@
+.content {
+    &__title {
+        font-weight: 700;
+        margin: 0;
+        letter-spacing: 0.01em;
+
+        font-size: 1em;
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: left;
+            font-size: 3em;
+
+        }
+    }
+
+    &__preview {
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            background: linear-gradient(to top, $color_white 5%, rgba($color_white, 0.3));
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+
+        &.open {
+            &:after {
+                opacity: 0;
+            }
+        }
+
+        p {
+            font-size: 0.625em;
+            @media (min-width: 768px) {
+                font-size: 1em;
+            }
+        }
+    }
+
+    &__collapse {}
+
+    &__content {
+        }
+}

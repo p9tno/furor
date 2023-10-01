@@ -22,6 +22,11 @@
 @import 'sections/doctor';
 @import 'sections/instruction';
 @import 'sections/services';
+@import 'sections/payment';
+@import 'sections/advantages';
+@import 'sections/location';
+
+@import 'sections/content';
 
 @import 'core/footer';
 
@@ -35,7 +40,7 @@
 
 @import 'core/collapse';
 @import 'core/tabs';
-@import 'core/drop';
+// @import 'core/drop';
 
 @import 'vendor/modal';
 @import 'vendor/swiper';

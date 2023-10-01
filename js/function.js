@@ -58,38 +58,36 @@ window.onload = function () {
 $(document).ready(function() {
     console.log('ready');
 
-    window.addEventListener('resize', () => {
-        // Запрещаем выполнение скриптов при смене только высоты вьюпорта (фикс для скролла в IOS и Android >=v.5)
-        if (app.resized == screen.width) { return; }
-        app.resized = screen.width;
-        // console.log('resize');
-        console.log(screen.width);
-        checkOnResize();
-    });
-
-    function checkOnResize() {
-        if (isLgWidth()) {
-            console.log('isLgWidth');
-        } else {
-            console.log('isLgWidth else');
-        }
-        // или создаем функцию
-        // test();
-    }
-
-
-
-    function test() {
-        if (isLgWidth()) {
-            console.log('isLgWidth');
-        } else {
-            console.log('isLgWidth else');
-        }
-    }
+    // window.addEventListener('resize', () => {
+    //     // Запрещаем выполнение скриптов при смене только высоты вьюпорта (фикс для скролла в IOS и Android >=v.5)
+    //     if (app.resized == screen.width) { return; }
+    //     app.resized = screen.width;
+    //     // console.log('resize');
+    //     console.log(screen.width);
+    //     checkOnResize();
+    // });
+    //
+    // function checkOnResize() {
+    //     if (isLgWidth()) {
+    //         console.log('isLgWidth');
+    //     } else {
+    //         console.log('isLgWidth else');
+    //     }
+    //     // или создаем функцию
+    //     // test();
+    // }
+    //
+    // function test() {
+    //     if (isLgWidth()) {
+    //         console.log('isLgWidth');
+    //     } else {
+    //         console.log('isLgWidth else');
+    //     }
+    // }
 
     let mediaQuerySize = 768;
     let windowWidth = screen.width;
-    console.log(windowWidth);
+    // console.log(windowWidth);
     if (windowWidth >= mediaQuerySize) {
         console.log('desktop');
         toggleDesktopMenu();
@@ -235,7 +233,6 @@ $(document).ready(function() {
     }
     showModal();
 
-
     function openMobileNav() {
         $('.header__toggle').click(function(event) {
             // console.log('Показ меню');
@@ -245,9 +242,6 @@ $(document).ready(function() {
         });
     };
     openMobileNav();
-
-
-
 
 
     function showMore(classItem, btn) {
@@ -291,12 +285,14 @@ $(document).ready(function() {
         toggle.on('click', function() {
             let id = $(this).data('collapse'),
             body = $('[data-collapse-body="'+id+'"]'),
-            wrap = body.closest('[data-collapse-wrapper]');
+            wrap = body.closest('[data-collapse-wrapper]'),
+            preview = $('.content__preview');
 
             if (!id) {
                 // $('[data-collapse-wrapper]').removeClass('open');
                 body = $(this).parent().find('[data-collapse-body]');
                 $(this).toggleClass('open');
+                preview.toggleClass('open');
                 if ($(this).hasClass('open')) {
                     body.slideDown();
                 } else {
@@ -304,9 +300,11 @@ $(document).ready(function() {
                 }
             } else if (id === 'all') {
                 body.slideDown();
+                preview.addClass('open');
                 toggle.addClass('open');
             } else {
                 body.slideToggle();
+                preview.toggleClass('open');
                 $(this).toggleClass('open');
             }
         });
@@ -474,48 +472,55 @@ $(document).ready(function() {
     };
     uploadYoutubeVideoForModal();
 
+    function initonVisible() {
+        function onVisible( selector, callback, repeat = false ) {
 
-    // start animate numbers
-    function onVisible( selector, callback, repeat = false ) {
+            let options = {
+                threshold: [ 0.5 ]
+            };
+            let observer = new IntersectionObserver( onEntry, options );
+            let elements = document.querySelectorAll( selector );
 
-    let options = {
-        threshold: [ 0.5 ]
-    };
-    let observer = new IntersectionObserver( onEntry, options );
-    let elements = document.querySelectorAll( selector );
-
-    for ( let elm of elements ) {
-        observer.observe( elm );
-    }
-
-    function onEntry( entry ) {
-        entry.forEach( change => {
-            let elem = change.target;
-            // console.log(change);
-            // console.log(elem.innerHTML);
-            if ( change.isIntersecting ) {
-                if ( !elem.classList.contains( 'show' ) || repeat ) {
-                    elem.classList.add( 'show' );
-                    callback( elem );
-                }
+            for ( let elm of elements ) {
+                observer.observe( elm );
             }
+
+            function onEntry( entry ) {
+                entry.forEach( change => {
+                    let elem = change.target;
+                    // console.log(change);
+                    // console.log(elem.innerHTML);
+                    if ( change.isIntersecting ) {
+                        if ( !elem.classList.contains( 'show' ) || repeat ) {
+                            elem.classList.add( 'show' );
+                            callback( elem );
+                        }
+                    }
+                } );
+            }
+        }
+
+        onVisible( '.animate-number-js', function ( e ) {
+            animateNumber( e, e.innerHTML );
         } );
-    }
-    }
 
-    onVisible( '.programsInfo__number', function ( e ) {
-        animateNumber( e, e.innerHTML );
-    } );
 
-    function animateNumber( elem, final, duration = 1000 ) {
-        let start = 0;
-        // console.log('init');
-        setInterval( function () {
-            if ( final > start ) {
-                elem.innerHTML = start++;
+        function animateNumber( elem, final, duration = 1000 ) {
+            let start = 1;
+            if (+final > 400) {
+                start = (+final) - 300 ;
             }
-        }, duration / final );
+            setInterval( function () {
+                if ( final >= start ) {
+                    elem.innerHTML = start++;
+                }
+            }, duration / final );
+        }
+
     }
+    initonVisible();
+
+
 
     function initAOS () {
         // https://github.com/michalsnik/aos

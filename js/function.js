@@ -314,12 +314,20 @@ $(document).ready(function() {
     function doTabs () {
         $('.tabs__wrapper').each(function() {
             let ths = $(this);
+            // let slider = ths.find('.swiper_location_js').eq(0);
+            // console.log(slider);
+
             ths.find('.tab__item').not(':first').hide();
             ths.find('.tab').click(function() {
                 ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-                ths.find('.tab__item').hide().eq($(this).index()).fadeIn()
+                ths.find('.tab__item').hide().eq($(this).index()).fadeIn();
+                initLocationSlider();
+
             }).eq(0).addClass('active');
+
+
         });
+
     }
     doTabs();
 
@@ -637,5 +645,121 @@ $(document).ready(function() {
 
 
 
+    const doctors = new Swiper('.swiper_doctor_js', {
+        slidesPerView: 1,
+        spaceBetween: 8,
+        speed: 500,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+
+        navigation: {
+            prevEl: '.icon_arrow_left',
+            nextEl: '.icon_arrow_right',
+        },
+
+        pagination: {
+            el: '.swiper-fraction',
+            clickable: true,
+            type: "fraction",
+        },
+
+        breakpoints: {
+            768: {
+                spaceBetween: 43,
+                slidesPerView: 4,
+            },
+
+        }
+    });
+
+    const advantages = new Swiper('.swiper_advantages_js', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        speed: 500,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+
+        navigation: {
+            prevEl: '.icon_arrow_left',
+            nextEl: '.icon_arrow_right',
+        },
+
+        pagination: {
+            el: '.swiper-fraction',
+            clickable: true,
+            type: "fraction",
+        },
+
+        breakpoints: {
+            768: {
+                spaceBetween: 20,
+                slidesPerView: 1,
+                loop: false,
+                grid: {
+                  rows: 2,
+                  fill: "col",
+              },
+            },
+
+        }
+    });
+
+    function initLocationSlider() {
+        const location = new Swiper('.swiper_location_js', {
+            slidesPerView: 2,
+            spaceBetween: 12,
+            speed: 500,
+            loop: false,
+            autoplay: {
+                delay: 5000,
+            },
+
+            grid: {
+                rows: 2,
+                fill: "col",
+            },
+
+            navigation: {
+                prevEl: '.location__naw_col .icon_arrow_left',
+                nextEl: '.location__naw_col .icon_arrow_right',
+            },
+
+            pagination: {
+                el: '.swiper-fraction',
+                clickable: true,
+                type: "fraction",
+            },
+
+            breakpoints: {
+                768: {
+                    spaceBetween: 43,
+                    slidesPerView: 4,
+                    // loop: true,
+                    grid: {
+                        rows: 1,
+                    },
+                },
+
+            },
+
+            on: {
+                init: function (e) {
+                    // do something
+                    console.log('init');
+                    console.log(e);
+                },
+                // click: function () {
+                //     // do something
+                //     console.log('click');
+                // },
+            }
+        });
+    }
+    initLocationSlider();
+
+
 })
-// end animate numbers

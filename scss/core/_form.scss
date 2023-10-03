@@ -18,6 +18,25 @@
 		}
 	}
 
+	&__title {
+		font-weight: 500;
+		line-height: 1.3;
+
+		font-size: 0.875em;
+		text-align: center;
+		margin-bottom: 0.875em;
+
+		@media (min-width: 768px) {
+			font-size: 2em;
+			text-align: left;
+			margin-bottom: 0.65em;
+		}
+
+		.light & {
+			color: $color_white;
+		}
+	}
+
 	&__row {
 		margin-bottom: 0.75em;
 		@media (min-width: 768px) {
@@ -48,7 +67,7 @@
 			resize: vertical;
 		}
 
-		&.phone_icon {
+		.phone_icon {
 			position: relative;
 
 			&:after {
@@ -73,15 +92,18 @@
 	}
 
 	&__label {
-		color: $color_white;
-		line-height: 1.1;
+		line-height: 1;
 
 		font-size: 0.625em;
 		margin-bottom: 0.75em;
+
 		@media (min-width: 768px) {
 			font-size: 1em;
 			margin-bottom: 0.625em;
+		}
 
+		.light & {
+			color: $color_white;
 		}
 	}
 
@@ -90,7 +112,6 @@
 		align-items: center;
 
 		span {
-			color: $color_white;
 			margin-left: 0.875em;
 			font-size: 0.625em;
 			@media (min-width: 768px) {
@@ -100,12 +121,11 @@
 
 			a {
 				font-size: 1em;
-				color: $color_white;
 				font-weight: 500;
+				color: $main_color;
 				@media (min-width: 768px) {
 					position: relative;
 					text-decoration: none;
-					// font-weight: 400;
 
 					&:after {
 						content: '';
@@ -127,6 +147,14 @@
 
 				}
 
+			}
+
+			.light & {
+				color: $color_white;
+
+				a {
+					color: $color_white;
+				}
 			}
 		}
 	}

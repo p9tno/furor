@@ -6,28 +6,28 @@ section#instruction.instruction.section
                 h2.section__title Скачайте прямо сейчас инструкцию, как правильно выбрать хорошую клинику
                 .section__desc.desktop Разработали бесплатный файл, в котором рассказываем, на что обращать внимание при выборе клиники и специалиста, чтобы не разочароваться в результате 
             .instruction__form
-                .instruction__label Просто оставьте контакты — отправим бесплатный файл в любой мессенджер 
                 // begin form
-                form.form(action="send.php")
+                form.form.light(action="send.php")
                     //- из какой формы на сайте
                     input(type="hidden" name="subject" value="форма в футоре")
                     //- проверка спама
                     input(type="hidden" name="notspam" value="")
 
+                    .form__title Просто оставьте контакты — отправим бесплатный файл в любой мессенджер 
 
-                    .form__label Куда вам удобнее отправить?
+
                     .form__row
+                        .form__label Куда вам удобнее отправить?
                         select.select(data-placeholder="Whatsapp" name="select")
                             option(value="")
                             option(value="whatsApp" selected="selected") WhatsApp
                             option(value="viber") Viber
                             option(value="telegram") Telegram
 
-
-
-                    .form__label Введите номер телефона
-                    .form__row.phone_icon
-                        input(type="text" name="phone" required placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _")
+                    .form__row
+                        .form__label Введите номер телефона
+                        .phone_icon
+                            input.phone(type="text" name="phone" required placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _")
 
                     .form__row
                         button.btn.btn_form.btn_danger.btn_lg.btn_didisabled_js(type="submit") 

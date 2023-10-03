@@ -1,0 +1,49 @@
+// begin feedback
+section#feedback.feedback.section
+    .container_center
+
+        .feedback__wrap
+            .feedback__bg.img_bg
+                img.desktop(src="../../img/feedback_bg.png" alt="image" loading="lazy")
+                img.mobile(src="../../img/feedback_bg_m.png" alt="image" loading="lazy")
+            .feedback__content
+                .feedback__caption
+                    h2.section__title.desktop <b>Один визит в клинику приблизит</b> вас к решению проблемы
+                    .section__desc Запишитесь на бесплатный прием к профильному стоматологу, чтобы узнать: 
+                    .feedback__label Стоимость  «под ключ» и несколько вариантов плана лечения под вашу ситуацию и бюджет 
+                .feedback__form
+                    // begin form
+                    .form__title Просто оставьте контакты — мы свяжемся и подберем удобное время
+                    form.form(action="send.php")
+                        //- из какой формы на сайте
+                        input(type="hidden" name="subject" value="форма в футоре")
+                        //- проверка спама
+                        input(type="hidden" name="notspam" value="")
+
+
+                        .form__row
+                            .form__label Введите номер телефона
+                            .phone_icon
+                                input.phone(type="text" name="phone" required placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _")
+
+                        .form__row
+                            button.btn.btn_form.btn_danger.btn_lg.btn_didisabled_js(type="submit") 
+                                span Получить Pdf файл сейчас
+                                span размер файла 2 Mb
+
+                        .form__row.form__row_full
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span Даю согласие на обработку моих <a href="#" target="_blank">персональных данных</a>
+
+                    // end form
+
+                .feedback__manager
+                    .manager
+                        .manager__name Александр<br> Викторович<br> Красов
+                        .manager__info Куратор лечения
+
+
+
+// end feedback

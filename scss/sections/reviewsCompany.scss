@@ -1,0 +1,134 @@
+.reviewsCompany {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 0.75em;
+        grid-auto-rows: 5em;
+
+        margin-top: 0.75em;
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(6,1fr);
+            grid-gap: 2.125em;
+            grid-auto-rows: 9.375em;
+
+            margin-top: 3.75em;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border: 1px solid;
+        border-color: $color_primary;
+
+        border-radius: 0.625em;
+
+        @media (min-width: 768px) {
+            border-radius: 3.125em;
+        }
+
+        &:hover {
+            border-color: $color_success;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__logo {
+        min-height: 2.25em;
+        display: flex;
+        align-items: center;
+
+        font-size: 0.45em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &_zoon {
+            width: 9.0625em;
+        }
+
+        &_doctor {
+            width: 11.875em;
+        }
+
+        &_2gis {
+            width: 6.8125em;
+        }
+
+        &_yandex {
+            width: 7.625em;
+        }
+
+        &_google {
+            width: 6.6875em;
+        }
+
+        &_logoy {
+            width: 2.375em;
+        }
+    }
+
+    &__rating {
+        @media (min-width: 768px) {
+            margin-top: 0.75em;
+            margin-bottom: 0.5em;
+        }
+
+        span {
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            line-height: 1;
+            color: #B5D4C4;
+
+            font-size: 0.875em;
+            @media (min-width: 768px) {
+                font-size: 1.5em;
+            }
+
+            &:first-child {
+                color: $color_success;
+                font-weight: 700;
+            }
+
+            &:nth-child(2) {
+                margin: 0 0.25em;
+            }
+        }
+    }
+
+    &__quantity {
+        color: $main_color;
+
+        span {
+            font-weight: 500;
+            font-size: 0.625em;
+            @media (min-width: 768px) {
+                font-size: 1em;
+                line-height: 1.3;
+
+            }
+
+            &:last-child {
+                margin-left: 0.25em;
+            }
+        }
+    }
+
+}

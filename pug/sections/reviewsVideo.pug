@@ -1,0 +1,21 @@
+// begin reviewsVideo
+section#reviewsVideo.reviewsVideo.section
+    .container_center
+        h2.section__title <b>Лучше всего о нас скажут отзывы пациентов</b>
+        .section__desc Помогли более 2 000 человек решить проблемы с зубами в 2022 году 
+        .reviewsVideo__grid
+            each item in [1,2,3,4,1]
+                .reviewsVideo__preview.video-wrap
+                    .reviewsVideo__video.video-play(style="background-image: url('../../img/reviewsVideo_"+item+".png')")
+                        video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
+                            source(src="../../media/information.mp4" type="video/mp4")
+
+                    .reviewsVideo__content.video-content
+                        .reviewsVideo__play
+                            .play.youtubeModal_js#rsDoGqnPE4c
+                                i.icon_play
+                        .reviewsVideo__text
+                            span Анна Ивановна Троценко
+                            span “Благодарю за высокий профессионализм и грамотную понятную консультацию” 
+
+// end reviewsVideo

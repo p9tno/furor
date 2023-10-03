@@ -487,13 +487,13 @@
                 <div class="section__desc desktop">Разработали бесплатный файл, в котором рассказываем, на что обращать внимание при выборе клиники и специалиста, чтобы не разочароваться в результате </div>
               </div>
               <div class="instruction__form">
-                <div class="instruction__label">Просто оставьте контакты — отправим бесплатный файл в любой мессенджер </div>
                 <!-- begin form-->
-                <form class="form" action="send.php">
+                <form class="form light" action="send.php">
                   <input type="hidden" name="subject" value="форма в футоре"/>
                   <input type="hidden" name="notspam" value=""/>
-                  <div class="form__label">Куда вам удобнее отправить?</div>
+                  <div class="form__title">Просто оставьте контакты — отправим бесплатный файл в любой мессенджер </div>
                   <div class="form__row">
+                    <div class="form__label">Куда вам удобнее отправить?</div>
                     <select class="select" data-placeholder="Whatsapp" name="select">
                       <option value=""></option>
                       <option value="whatsApp" selected="selected">WhatsApp</option>
@@ -501,9 +501,11 @@
                       <option value="telegram">Telegram</option>
                     </select>
                   </div>
-                  <div class="form__label">Введите номер телефона</div>
-                  <div class="form__row phone_icon">
-                    <input type="text" name="phone" required="required" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"/>
+                  <div class="form__row">
+                    <div class="form__label">Введите номер телефона</div>
+                    <div class="phone_icon">
+                      <input class="phone" type="text" name="phone" required="required" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"/>
+                    </div>
                   </div>
                   <div class="form__row">
                     <button class="btn btn_form btn_danger btn_lg btn_didisabled_js" type="submit"> <span>Получить Pdf файл сейчас</span><span>размер файла 2 Mb</span></button>
@@ -714,7 +716,7 @@
                         <div class="location__col">
                           <div class="location__img img_bg"><img src="../../img/location_1.png" loading="lazy" alt="img"/></div>
                           <div class="location__content"><span></span>
-                            <div class="location__tour"><span>Furor - это комфортное пространство, где главное — забота о здоровье пациентов. </span><a class="btn btn_lg btn_danger" href="#"><span>Смотреть 3D - тур по клинике</span></a></div>
+                            <div class="location__tour"><span>Furor - это комфортное пространство, где главное — забота о здоровье пациентов. </span><a class="btn btn_lg btn_danger" href="https://stred.ru/panorama/kafe/shtof/" target="_blank"><span>Смотреть 3D - тур по клинике</span></a></div>
                           </div>
                         </div>
                         <div class="location__col">
@@ -784,7 +786,7 @@
                         <div class="location__col">
                           <div class="location__img img_bg"><img src="../../img/location_1.png" loading="lazy" alt="img"/></div>
                           <div class="location__content"><span></span>
-                            <div class="location__tour"><span>Furor - это комфортное пространство, где главное — забота о здоровье пациентов. </span><a class="btn btn_lg btn_danger" href="#"><span>Смотреть 3D - тур по клинике</span></a></div>
+                            <div class="location__tour"><span>Furor - это комфортное пространство, где главное — забота о здоровье пациентов. </span><a class="btn btn_lg btn_danger" href="https://stred.ru/panorama/kafe/shtof/" target="_blank"><span>Смотреть 3D - тур по клинике</span></a></div>
                           </div>
                         </div>
                         <div class="location__col">
@@ -854,6 +856,168 @@
           </div>
         </section>
         <!-- end location-->
+        <!-- begin feedback-->
+        <section class="feedback section" id="feedback">
+          <div class="container_center">
+            <div class="feedback__wrap">
+              <div class="feedback__bg img_bg"><img class="desktop" src="../../img/feedback_bg.png" alt="image" loading="lazy"/><img class="mobile" src="../../img/feedback_bg_m.png" alt="image" loading="lazy"/></div>
+              <div class="feedback__content">
+                <div class="feedback__caption">
+                  <h2 class="section__title desktop"><b>Один визит в клинику приблизит</b> вас к решению проблемы</h2>
+                  <div class="section__desc">Запишитесь на бесплатный прием к профильному стоматологу, чтобы узнать: </div>
+                  <div class="feedback__label">Стоимость  «под ключ» и несколько вариантов плана лечения под вашу ситуацию и бюджет </div>
+                </div>
+                <div class="feedback__form">
+                  <!-- begin form-->
+                  <div class="form__title">Просто оставьте контакты — мы свяжемся и подберем удобное время</div>
+                  <form class="form" action="send.php">
+                    <input type="hidden" name="subject" value="форма в футоре"/>
+                    <input type="hidden" name="notspam" value=""/>
+                    <div class="form__row">
+                      <div class="form__label">Введите номер телефона</div>
+                      <div class="phone_icon">
+                        <input class="phone" type="text" name="phone" required="required" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"/>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <button class="btn btn_form btn_danger btn_lg btn_didisabled_js" type="submit"> <span>Получить Pdf файл сейчас</span><span>размер файла 2 Mb</span></button>
+                    </div>
+                    <div class="form__row form__row_full">
+                      <div class="form__privacy">
+                        <label class="form__check">
+                          <input class="check_checked_js" type="checkbox" checked="checked"/><span>Даю согласие на обработку моих <a href="#" target="_blank">персональных данных</a></span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                  <!-- end form-->
+                </div>
+                <div class="feedback__manager">
+                  <div class="manager">
+                    <div class="manager__name">Александр<br> Викторович<br> Красов</div>
+                    <div class="manager__info">Куратор лечения</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end feedback-->
+        <!-- begin reviewsVideo-->
+        <section class="reviewsVideo section" id="reviewsVideo">
+          <div class="container_center">
+            <h2 class="section__title"><b>Лучше всего о нас скажут отзывы пациентов</b></h2>
+            <div class="section__desc">Помогли более 2 000 человек решить проблемы с зубами в 2022 году </div>
+            <div class="reviewsVideo__grid">
+              <div class="reviewsVideo__preview video-wrap">
+                <div class="reviewsVideo__video video-play" style="background-image: url('../../img/reviewsVideo_1.png')">
+                  <video width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+                    <source src="../../media/information.mp4" type="video/mp4"/>
+                  </video>
+                </div>
+                <div class="reviewsVideo__content video-content">
+                  <div class="reviewsVideo__play">
+                    <div class="play youtubeModal_js" id="rsDoGqnPE4c"><i class="icon_play"></i></div>
+                  </div>
+                  <div class="reviewsVideo__text"><span>Анна Ивановна Троценко</span><span>“Благодарю за высокий профессионализм и грамотную понятную консультацию” </span></div>
+                </div>
+              </div>
+              <div class="reviewsVideo__preview video-wrap">
+                <div class="reviewsVideo__video video-play" style="background-image: url('../../img/reviewsVideo_2.png')">
+                  <video width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+                    <source src="../../media/information.mp4" type="video/mp4"/>
+                  </video>
+                </div>
+                <div class="reviewsVideo__content video-content">
+                  <div class="reviewsVideo__play">
+                    <div class="play youtubeModal_js" id="rsDoGqnPE4c"><i class="icon_play"></i></div>
+                  </div>
+                  <div class="reviewsVideo__text"><span>Анна Ивановна Троценко</span><span>“Благодарю за высокий профессионализм и грамотную понятную консультацию” </span></div>
+                </div>
+              </div>
+              <div class="reviewsVideo__preview video-wrap">
+                <div class="reviewsVideo__video video-play" style="background-image: url('../../img/reviewsVideo_3.png')">
+                  <video width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+                    <source src="../../media/information.mp4" type="video/mp4"/>
+                  </video>
+                </div>
+                <div class="reviewsVideo__content video-content">
+                  <div class="reviewsVideo__play">
+                    <div class="play youtubeModal_js" id="rsDoGqnPE4c"><i class="icon_play"></i></div>
+                  </div>
+                  <div class="reviewsVideo__text"><span>Анна Ивановна Троценко</span><span>“Благодарю за высокий профессионализм и грамотную понятную консультацию” </span></div>
+                </div>
+              </div>
+              <div class="reviewsVideo__preview video-wrap">
+                <div class="reviewsVideo__video video-play" style="background-image: url('../../img/reviewsVideo_4.png')">
+                  <video width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+                    <source src="../../media/information.mp4" type="video/mp4"/>
+                  </video>
+                </div>
+                <div class="reviewsVideo__content video-content">
+                  <div class="reviewsVideo__play">
+                    <div class="play youtubeModal_js" id="rsDoGqnPE4c"><i class="icon_play"></i></div>
+                  </div>
+                  <div class="reviewsVideo__text"><span>Анна Ивановна Троценко</span><span>“Благодарю за высокий профессионализм и грамотную понятную консультацию” </span></div>
+                </div>
+              </div>
+              <div class="reviewsVideo__preview video-wrap">
+                <div class="reviewsVideo__video video-play" style="background-image: url('../../img/reviewsVideo_1.png')">
+                  <video width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop">
+                    <source src="../../media/information.mp4" type="video/mp4"/>
+                  </video>
+                </div>
+                <div class="reviewsVideo__content video-content">
+                  <div class="reviewsVideo__play">
+                    <div class="play youtubeModal_js" id="rsDoGqnPE4c"><i class="icon_play"></i></div>
+                  </div>
+                  <div class="reviewsVideo__text"><span>Анна Ивановна Троценко</span><span>“Благодарю за высокий профессионализм и грамотную понятную консультацию” </span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end reviewsVideo-->
+        <!-- begin reviewsCompany-->
+        <section class="reviewsCompany section" id="reviewsCompany">
+          <div class="container_center">
+            <h2 class="section__title"><b>Мы искренне заинтересованы в том, чтобы помочь вам</b> и сделать это лучше всех</h2>
+            <div class="section__desc">Отзывы с независимых источников </div>
+            <div class="reviewsCompany__list"><a class="reviewsCompany__link" href="#">
+                <div class="reviewsCompany__content">
+                  <div class="reviewsCompany__logo reviewsCompany__logo_zoon"><img src="../../img/zoon.svg" alt="logo" loading="lazy"/></div>
+                  <div class="reviewsCompany__rating"><span>4,9</span><span>из</span><span>5</span></div>
+                  <div class="reviewsCompany__quantity"><span class="animate-number-js">125</span><span>оценок</span></div>
+                </div></a><a class="reviewsCompany__link" href="#">
+                <div class="reviewsCompany__content">
+                  <div class="reviewsCompany__logo reviewsCompany__logo_doctor"><img src="../../img/doctor.svg" alt="logo" loading="lazy"/></div>
+                  <div class="reviewsCompany__rating"><span>4,9</span><span>из</span><span>5</span></div>
+                  <div class="reviewsCompany__quantity"><span class="animate-number-js">75</span><span>оценок</span></div>
+                </div></a><a class="reviewsCompany__link" href="#">
+                <div class="reviewsCompany__content">
+                  <div class="reviewsCompany__logo reviewsCompany__logo_2gis"><img src="../../img/2gis.svg" alt="logo" loading="lazy"/></div>
+                  <div class="reviewsCompany__rating"><span>4,9</span><span>из</span><span>5</span></div>
+                  <div class="reviewsCompany__quantity"><span class="animate-number-js">200</span><span>оценок</span></div>
+                </div></a><a class="reviewsCompany__link" href="#">
+                <div class="reviewsCompany__content">
+                  <div class="reviewsCompany__logo reviewsCompany__logo_yandex"><img src="../../img/yandex.svg" alt="logo" loading="lazy"/></div>
+                  <div class="reviewsCompany__rating"><span>4,9</span><span>из</span><span>5</span></div>
+                  <div class="reviewsCompany__quantity"><span class="animate-number-js">11</span><span>оценок</span></div>
+                </div></a><a class="reviewsCompany__link" href="#">
+                <div class="reviewsCompany__content">
+                  <div class="reviewsCompany__logo reviewsCompany__logo_google"><img src="../../img/google.svg" alt="logo" loading="lazy"/></div>
+                  <div class="reviewsCompany__rating"><span>4,9</span><span>из</span><span>5</span></div>
+                  <div class="reviewsCompany__quantity"><span class="animate-number-js">802</span><span>оценок</span></div>
+                </div></a><a class="reviewsCompany__link" href="#">
+                <div class="reviewsCompany__content">
+                  <div class="reviewsCompany__logo reviewsCompany__logo_logoy"><img src="../../img/logoy.svg" alt="logo" loading="lazy"/></div>
+                  <div class="reviewsCompany__rating"><span>4,9</span><span>из</span><span>5</span></div>
+                  <div class="reviewsCompany__quantity"><span class="animate-number-js">179</span><span>оценок</span></div>
+                </div></a>
+            </div>
+          </div>
+        </section>
+        <!-- end reviewsCompany-->
         <!-- begin form-->
         <!-- end form-->
         <!-- begin faq-->

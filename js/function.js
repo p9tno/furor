@@ -472,7 +472,7 @@ $(document).ready(function() {
     };
     uploadYoutubeVideoForModal();
 
-    function initonVisible() {
+    function initOnVisible() {
         function onVisible( selector, callback, repeat = false ) {
 
             let options = {
@@ -518,9 +518,7 @@ $(document).ready(function() {
         }
 
     }
-    initonVisible();
-
-
+    initOnVisible();
 
     function initAOS () {
         // https://github.com/michalsnik/aos

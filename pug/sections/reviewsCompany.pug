@@ -1,0 +1,22 @@
+// begin reviewsCompany
+section#reviewsCompany.reviewsCompany.section
+    .container_center
+        h2.section__title <b>Мы искренне заинтересованы в том, чтобы помочь вам</b> и сделать это лучше всех
+        .section__desc Отзывы с независимых источников 
+        .reviewsCompany__list
+            each item in [ {logo: 'zoon', quantity: '125'}, {logo: 'doctor', quantity: '75'}, {logo: '2gis', quantity: '200'}, {logo: 'yandex', quantity: '11'}, {logo: 'google', quantity: '802'}, {logo: 'logoy', quantity: '179'} ]
+
+
+                a.reviewsCompany__link(href="#")
+                    .reviewsCompany__content
+                        .reviewsCompany__logo(class="reviewsCompany__logo_"+item.logo+"")
+                            img(src="../../img/"+item.logo+".svg" alt="logo" loading="lazy")
+                        .reviewsCompany__rating
+                            span 4,9
+                            span из
+                            span 5
+                        .reviewsCompany__quantity
+                            span.animate-number-js=item.quantity
+                            span оценок
+
+// end reviewsCompany

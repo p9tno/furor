@@ -280,6 +280,26 @@ a {
 	position: relative;
 }
 
+.manager {
+	color: $color_white;
+	font-size: 0.5em;
+	@media (min-width: 768px) {
+		font-size: 1em;
+
+	}
+
+	&__name {
+		font-size: 1.5em;
+		font-weight: 700;
+		line-height: 1.1867;
+	}
+
+	&__info {
+		margin-top: 1.5em;
+		font-size: 1.125em;
+	}
+}
+
 // * {
 // 	border: 1px solid #000;
 // }

@@ -1,0 +1,48 @@
+// begin responses
+section#responses.responses.section
+    .container_center
+
+        .responses__row
+            .responses__col
+                h2.section__title <b>У нас часто спрашивают</b>
+                .section__desc На каждый вопрос записали максимально подробный видео-ответ
+            .responses__col.desktop
+                a.btn.btn_lg(href="#")
+                    span Задать вопрос нам в WhatsApp
+                    span Время ответа 10 минут (примерно)
+
+        .responses__row
+            .responses__col
+                ul.list
+                    each item in ['Как записаться на прием к стоматологу в нашу клинику?', 'Каковы стоимость и сроки лечения зубов?', 'Как записаться на прием к стоматологу в нашу клинику?', 'Как подготовиться к процедуре удаления зуба?', 'Какие услуги предоставляет стоматологическая клиника?', 'Как быстро можно восстановить зуб после удаления?' ]
+                        li
+                            .responses__title!=item
+                            .responses__play
+                                .play.youtubeModal_js#rsDoGqnPE4c
+                                    i.icon_play
+
+            .responses__col
+                .responses__preview.video-wrap
+                    .responses__video.video-play(style="background-image: url('../../img/reviewsVideo_"+item+".png')")
+                        video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
+                            source(src="../../media/information.mp4" type="video/mp4")
+
+                    .responses__content.video-content
+                        .responses__play
+                            .play.youtubeModal_js#rsDoGqnPE4c
+                                i.icon_play
+                        .responses__text
+                            span На вопросы отвечает куратор лечения
+                            span Магомед Зубайруевич Магомедов
+
+
+        .responses__btn.mobile
+            a.btn.btn_lg(href="#")
+                span Задать вопрос нам в WhatsApp
+                span Время ответа 10 минут (примерно)
+
+
+
+
+
+// end responses

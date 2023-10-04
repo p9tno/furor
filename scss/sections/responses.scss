@@ -1,0 +1,116 @@
+.responses {
+    background-color: #F5F5F5;
+
+    &__row {
+        @media (min-width: 768px) {
+
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3.75em;
+
+            &:first-child {
+                align-items: center;
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__col {
+        @media (min-width: 768px) {
+            &:first-child {
+                width: 71.25em;
+            }
+
+            &:last-child {
+                width: 34.625em;
+            }
+        }
+
+        ul {
+            @media (min-width: 768px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 2.125em;
+            }
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5em;
+
+            border-radius: 1.5625em;
+            padding: 1.375em 2.125em;
+
+            background-color: $color_white;
+
+            .responses__play {
+                font-size: 0.65em;
+            }
+        }
+    }
+
+    &__btn {}
+
+    &__title {
+        font-size: 1.375em;
+        font-weight: 700;
+
+    }
+
+    &__play {}
+
+    &__preview {
+        height: 12.25em;
+        border-radius: 0.625em;
+
+        @media (min-width: 768px) {
+            height: 24.6875em;
+            border-radius: 3.125em;
+
+        }
+
+        .responses__play {
+            font-size: 0.75em;
+        }
+    }
+
+    &__video {}
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        background: linear-gradient(21deg, rgba(0, 0, 0, 0.7) 4.54%, rgba(0, 0, 0, 0.00) 54.84%);
+        color: $color_white;
+
+        padding: 0.9375em;
+        @media (min-width: 768px) {
+
+            padding: 1.75em 2.625em 3.75em;
+        }
+    }
+
+    &__text {
+        width: 16em;
+
+        span {
+            display: inline-block;
+
+            &:first-child {
+                font-size: 1.125em;
+                line-height: 1.4;
+            }
+
+            &:last-child {
+                font-size: 1.375em;
+                margin-top: 0.875em;
+                line-height: 1.3;
+            }
+
+        }
+    }
+
+}

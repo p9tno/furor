@@ -1,0 +1,128 @@
+.singup {
+    .section__desc {
+        @media (max-width: 767px) {
+            font-size: 0.875em;
+            margin-top: 1.14287em;
+        }
+        font-weight: 700;
+    }
+
+    .section__title {
+        @media (max-width: 767px) {
+            font-size: 1.25em;
+        }
+    }
+
+    &__wrap {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.625em;
+        @media (min-width: 768px) {
+            border-radius: 3.125em;
+        }
+    }
+
+    &__bg {}
+
+    &__row {
+        position: relative;
+        padding: 1.5625em 0.9375em 8.75em;
+
+        @media (min-width: 768px) {
+            padding: 5.3125em 6.875em;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    &__col {
+        &:first-child {
+            text-align: center;
+
+            @media (min-width: 768px) {
+                text-align: left;
+                width: 37.5em;
+            }
+
+        }
+
+        &:nth-child(2) {
+            @media (min-width: 768px) {
+                width: 25em;
+            }
+
+        }
+
+    }
+
+    &__desc {
+        color: #4C5355;
+
+        margin-top: 1.333334em;
+        font-size: 0.75em;
+        line-height: 1.25;
+        @media (min-width: 768px) {
+            margin-top: 2.0833333em;
+            font-size: 1.5em;
+            line-height: 1.4;
+        }
+    }
+
+    &__form {
+        margin-top: 1em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
+    }
+
+    &__phone {
+        margin-top: 4.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 700;
+        line-height: 1;
+
+        font-size: 0.5624em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+            align-items: flex-start;
+
+        }
+
+        span {
+            font-size: 2em;
+
+            &:nth-child(2) {
+                font-size: 1.25em;
+                margin: 0.75em 0;
+                font-weight: 400;
+
+            }
+        }
+
+        a {
+            font-size: 2em;
+            text-decoration: none;
+            color: $main_color;
+        }
+    }
+
+    &__manager {
+        margin-top: 6.25em;
+        @media (max-width: 767px) {
+            .manager {
+                color: $main_color;
+            }
+        }
+        @media (min-width: 768px) {
+            margin-top: 0;
+            position: absolute;
+            bottom: 10em;
+            left: 60em;
+        }
+    }
+
+}

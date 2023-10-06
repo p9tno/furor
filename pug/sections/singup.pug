@@ -1,0 +1,58 @@
+// begin singup
+section#singup.singup.section
+    .container_center
+        .singup__wrap
+            .singup__bg.img_bg
+                img.desktop(src="../../img/singup_bg.png" alt="image" loading="lazy")
+                img.mobile(src="../../img/singup_bg_m.png" alt="image" loading="lazy")
+            .singup__row
+                .singup__col
+                    h2.section__title <b>Запишитесь</b> на первичный приём / консультацию в нашу клинику
+                    .section__desc С чего начать, если есть сомнения? 
+                    .singup__desc.mobile Перезвоним, ответим на ваши вопросы, предложим несколько вариантов лечения, сориентируем по стоимости. 
+                    .singup__desc.desktop Для начала — перезвоним, ответим на ваши вопросы, предложим несколько вариантов лечения, сориентируем по стоимости и, если все устроит, подберем удобное время для визита в клинику.
+
+                .singup__col
+
+                    .singup__form
+                        // begin form
+                        .form__title Просто оставьте контакты — свяжемся с вами в течение 10 минут
+                        form.form(action="send.php")
+                            //- из какой формы на сайте
+                            input(type="hidden" name="subject" value="форма в футоре")
+                            //- проверка спама
+                            input(type="hidden" name="notspam" value="")
+
+
+                            .form__row
+                                .form__label Введите номер телефона
+                                .phone_icon
+                                    input.phone(type="text" name="phone" required placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _")
+
+                            .form__row
+                                button.btn.btn_form.btn_danger.btn_lg.btn_didisabled_js(type="submit") 
+                                    span Получить консультацию
+
+                            .form__row.form__row_full
+                                .form__privacy
+                                    label.form__check
+                                        input.check_checked_js(type="checkbox" checked="checked")
+                                        span Даю согласие на обработку моих <a href="#" target="_blank">персональных данных</a>
+
+                        // end form
+
+                    .singup__phone
+                        span Или позвоните сейчас
+                        span Ежедневно с 10:00 до 21:00
+                        a(href="tel:+7 (926) 146-00-88") +7 (926) 146-00-88
+
+
+
+
+                .singup__manager
+                    .manager
+                        .manager__name Магомед<br> Зубайруевич<br> Магомедов
+                        .manager__info Куратор лечения
+
+
+// end singup

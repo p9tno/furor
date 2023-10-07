@@ -77,9 +77,33 @@ block content
 
     include ../../sections/responses.pug
 
+
+    // begin blog
+    section#blog.blog.section
+        .container_center
+            h2.section__title Просто о сложном
+            .section__desc Пишем статьи на актуальные темы в своём блоге 
+            .blog__grid
+                each item in [ {img: '1', title: 'Как подготовиться'}, {img: '2', title: 'Что делать, если сломался зуб: советы стоматолога по оказанию первой помощи'}, {img: '3', title: 'Лечение зубов за границей: плюсы и минусы, опыт и рекомендации'}, {img: '1', title: 'Как подготовиться к посещению стоматолога: советы и рекомендации'} ]
+                    .blog__item
+
+
+                        .blog__img.img
+                            img(src="../../img/blog_"+item.img+".png" alt="image" loading="lazy") 
+                        .blog__date 
+                            span 28 / 02 / 2023
+                        .blog__title
+                            span=item.title 
+                        .blog__link
+                            a.snakeline.arrow(href="#") Читать статью
+            .blog__more
+                a.snakeline.arrow(href="#") Читать больше статей     
+
+    // end blog
+
     include ../../sections/singup.pug
 
-    //- include ../../sections/content.pug
+    include ../../sections/content.pug
 
     //- include ../../sections/cards_col_2.pug
     //- include ../../sections/cards_col_3.pug

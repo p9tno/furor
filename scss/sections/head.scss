@@ -37,11 +37,7 @@
 
     &__breadcrumbs {
         position: relative;
-        margin-bottom: 1.5em;
-        @media (min-width: 768px) {
-            margin-bottom: 4.6875em;
-
-        }
+        margin-bottom: 1em;
     }
 
     &__inner {

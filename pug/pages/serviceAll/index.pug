@@ -1,0 +1,30 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+    //- path +"img/head_main.png"
+
+
+block content
+
+    // begin breadcrumbs
+    section#breadcrumbs.breadcrumbs.section
+        .container_center
+            .breadcrumbs__content
+
+                .kama_breadcrumbs
+                    span
+                        a(href="#")
+                            span Главная
+                    span.kb_sep 
+
+                    span.kb_title Услуги
+
+    // end breadcrumbs
+
+    include ../../sections/services.pug
+
+    include ../../sections/singup.pug
+
+    include ../../sections/content.pug

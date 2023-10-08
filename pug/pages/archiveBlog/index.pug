@@ -1,0 +1,66 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+    //- path +"img/head_main.png"
+
+
+block content
+
+    // begin breadcrumbs
+    section#breadcrumbs.breadcrumbs.section
+        .container_center
+            .breadcrumbs__content
+                .kama_breadcrumbs
+                    span
+                        a(href="#")
+                            span Главная
+                    span.kb_sep 
+                    span.kb_title Статьи
+
+    // end breadcrumbs
+
+    // begin blog
+    section#blog.blog.blog_archive.section
+        .container_center
+            h1.section__title Пишем статьи на актуальные темы
+
+            .blog__filter
+                .filter
+                    ul.cat-list.filter-cat-js
+
+                        li.cat-item.filter-cat-js
+                            input(type="radio" id="term_id_1" name="cat_name" value="term_id_1" checked)
+                            label(for="term_id_1")
+                                span Все
+
+                        each item in [ {id: '2', label: 'Лечение зубов во сне'}, {id: '3', label: 'Имплантация зубов'}, {id: '4', label: 'Все-на-4'}, {id: '5', label: 'Отбеливание зубов'}, {id: '6', label: 'Исправление прикуса'}, {id: '7', label: 'Элайнеры'}, {id: '8', label: 'Брекеты'}, {id: '9', label: 'Лечение дёсен'}, ]
+
+                            li.cat-item.filter-cat-js
+                                input(type="radio" id="term_id_"+item.id+"" name="cat_name" value="term_id_"+item.id+"")
+                                label(for="term_id_"+item.id+"")
+                                    span=item.label
+
+            .blog__grid
+                each item in [ {img: '1', title: 'Как подготовиться'}, {img: '2', title: 'Что делать, если сломался зуб: советы стоматолога по оказанию первой помощи'}, {img: '3', title: 'Лечение зубов за границей: плюсы и минусы, опыт и рекомендации'}, {img: '1', title: 'Как подготовиться к посещению стоматолога: советы и рекомендации'},  {img: '1', title: 'Как подготовиться'}, {img: '2', title: 'Что делать, если сломался зуб: советы стоматолога по оказанию первой помощи'}, {img: '3', title: 'Лечение зубов за границей: плюсы и минусы, опыт и рекомендации'}, {img: '1', title: 'Как подготовиться к посещению стоматолога: советы и рекомендации'},  {img: '1', title: 'Как подготовиться'}, {img: '2', title: 'Что делать, если сломался зуб: советы стоматолога по оказанию первой помощи'}, {img: '3', title: 'Лечение зубов за границей: плюсы и минусы, опыт и рекомендации'}, {img: '1', title: 'Как подготовиться к посещению стоматолога: советы и рекомендации'},  ]
+                    .blog__item
+
+
+                        .blog__img.img
+                            img(src="../../img/blog_"+item.img+".png" alt="image" loading="lazy") 
+                        .blog__date 
+                            span 28 / 02 / 2023
+                        .blog__title
+                            span=item.title 
+                        .blog__link
+                            a.snakeline.arrow(href="#") Читать статью
+
+                include ../../parts/pagination.pug
+
+
+    // end blog
+
+    include ../../sections/singup.pug
+
+    include ../../sections/content.pug

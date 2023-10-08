@@ -77,6 +77,10 @@ body {
 			font-size: 4.375em;
 			line-height: 1.143;
 		}
+
+		.section__wrap & {
+			font-weight: 700;
+		}
 	}
 
 	&__desc {
@@ -89,9 +93,285 @@ body {
 			margin-top: 1.5625em;
 			line-height: 1.4;
 			font-size: 2em;
+		}
+	}
+
+	&__wrap {
+		// position: relative;
+		// border-top: 0.125em solid #F5F9F9;
+		// padding-top: 2.5em;
+		@media (min-width: 768px) {
+			// padding-top: 3.75em;
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&__content {
+		@media (min-width: 768px) {
+			width: 73.75em;
+		}
+	}
+
+	&__sidebar {
+		margin-top: 1.5em;
+		@media (min-width: 768px) {
+			margin-top: 0;
+			width: 32.5em;
+			margin-top: 0;
+			flex: none;
+			position: sticky;
+			top: 5em;
+			height: 100%;
+		}
+	}
+
+	&__date {
+		color: #4C5355;
+		font-style: 500;
+		font-size: 0.625em;
+		margin-top: 1em;
+		@media (min-width: 768px) {
+			margin-top: 2.3em;
+			font-size: 0.9375em;
+		}
+	}
+
+	&__nav {
+		margin-top: 0.75em;
+		@media (min-width: 768px) {
+			margin-top: 2.1875em;
+		}
+
+		ul {
+			font-size: 0.5em;
+			@media (min-width: 768px) {
+				font-size: 1em;
+
+			}
+		}
+
+		li {
+			position: relative;
+			width: fit-content;
+			margin-bottom: 1em;
+			@media (min-width: 768px) {
+				margin-bottom: 2em;
+
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&:before {
+				content: '\e914';
+				font-family: 'icon';
+
+				display: inline-block;
+				position: absolute;
+				top: 50%;
+
+				transform: translateY(-50%);
+				left: 0;
+				color: $color_success;
+
+				font-size: 0.875em;
+				opacity: 0;
+				transition: 0.3s;
+
+			}
+
+			&:hover {
+				a {
+					color: $color_success;
+					transform: translateX(2.5em);
+
+					&:after {
+						opacity: 1;
+					}
+				}
+
+				&:before {
+					opacity: 1;
+
+				}
+			}
 
 		}
 
+		a {
+			display: inline-block;
+			position: relative;
+			text-decoration: none;
+			font-size: 1.375em;
+			font-weight: 500;
+			color: #7D8688;
+			transform: translateX(0);
+
+			&:after {
+				content: '';
+				position: absolute;
+				display: inline-block;
+				width: 100%;
+				left: 0;
+				bottom: -1px;
+				border-bottom: 1px solid;
+				border-color: inherit;
+				opacity: 0;
+
+				transition: 0.3s;
+			}
+
+		}
+	}
+
+	&__img {
+		overflow: hidden;
+		width: 100%;
+		height: 7.5em;
+		border-radius: 0.625em;
+		margin: 0.3125em 0;
+		@media (min-width: 768px) {
+			margin: 0;
+			height: 32.5em;
+			border-radius: 3.125em;
+		}
+	}
+
+	&__row {
+		padding-top: 0.75em;
+
+		@media (min-width: 768px) {
+			padding-top: 4.5em;
+
+			&_first {
+				padding-top: 2.1875em;
+
+			}
+		}
+
+		&_flex {
+
+			@media (min-width: 768px) {
+				display: flex;
+				justify-content: space-between;
+
+				&.reverse {
+					flex-direction: row-reverse;
+				}
+
+				.section__img {
+					flex: none;
+					width: 32.5em;
+					height: 25em;
+				}
+
+				.section__text {
+					width: 39.375em;
+				}
+
+			}
+		}
+	}
+
+	&__text {
+		color: #4C5355;
+		font-size: 0.5em;
+		@media (min-width: 768px) {
+			font-size: 1em;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-size: 2em;
+			font-weight: 700;
+
+			margin: 0.5em 0;
+			@media (min-width: 768px) {
+				margin: 0.94em 0;
+			}
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		ol,
+		p,
+		ul {
+			font-size: 1.25em;
+			margin: 0.5em 0;
+			line-height: 1.785;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			a {
+				font-size: 1em;
+
+			}
+		}
+
+		ol,
+		ul {
+			padding-left: 2em;
+		}
+
+		a {
+			font-size: 1.25em;
+			color: $color_info;
+			font-weight: 500;
+		}
+	}
+
+	&__quote {
+		color: #2A2A2A;
+		padding: 0.75em;
+		border-top: 1px solid;
+		border-bottom: 1px solid;
+		border-color: $color_primary;
+		text-align: center;
+		line-height: 1.3125;
+
+		font-size: 0.5em;
+		@media (min-width: 768px) {
+			font-size: 1em;
+		}
+
+		span {
+			font-size: 2em;
+		}
+	}
+
+	&__more {
+		margin-top: 1.5em;
+		@media (min-width: 768px) {
+			margin-top: 3.4375em;
+		}
+
+		a {
+			color: $color_info;
+			font-weight: 500;
+			@media (min-width: 768px) {
+				font-size: 1.5em;
+
+			}
+
+		}
 	}
 }
 

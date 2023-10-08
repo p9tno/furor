@@ -1,15 +1,29 @@
 .collapse {
     &__toggle {
+        display: inline-block;
         cursor: pointer;
         font-weight: bold;
         color: $color_info;
         font-size: 0.625em;
-        @media (min-width: 768px) {
-            font-size: 1.5em;
+        transition: 0.3s;
 
+        margin-top: 1em;
+
+        @media (max-width: 767px) {
+            text-decoration: underline;
         }
 
-        &.open {}
+        @media (min-width: 768px) {
+            margin-top: 2em;
+            font-size: 1.5em;
+
+            &.open {
+                &:after {
+                    width: 65%;
+                }
+            }
+        }
+
     }
 
     &__body {

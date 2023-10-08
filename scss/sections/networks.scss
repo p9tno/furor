@@ -1,0 +1,112 @@
+.networks {
+    &__list {
+
+        margin-top: 0.75em;
+
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 2.6875em;
+            grid-auto-rows: 12.875em;
+
+            margin-top: 3.125em;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid;
+        border-color: #EFEFEF;
+        border-radius: 0.625em;
+        padding: 1em;
+        margin-bottom: 0.75em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+            border-radius: 3.125em;
+        }
+
+        &:hover {
+            border-color: $color_success;
+
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        gap: 1.25em;
+        font-size: 0.625em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+        }
+
+        i {
+            flex: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 4.375em;
+            height: 4.375em;
+            border-radius: 100%;
+            color: $color_white;
+
+            &.icon_vk {
+                background-color: #01A7EE;
+
+                &:before {
+                    font-size: 2em;
+
+                }
+
+            }
+
+            &.icon_Insta {
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+
+            }
+
+            &.icon_youtube {
+                background-color: #F01807;
+
+                &:before {
+                    font-size: 2em;
+
+                }
+            }
+        }
+    }
+
+    &__content {}
+
+    &__label {
+        font-size: 2.4375em;
+        font-weight: 700;
+        color: $color_black;
+        line-height: 1.23;
+    }
+
+    &__quantity {
+        margin-top: 0.3125em;
+
+        span {
+            font-size: 1.125em;
+            color: #B8B8B8;
+            font-weight: 500;
+
+            &:last-child {
+                margin-left: 0.375em;
+            }
+        }
+    }
+}

@@ -1,18 +1,10 @@
 // Breadcrumb ==================================================================
 
 .breadcrumbs {
-	// padding-top: 5.35em!important;
-	// padding-bottom: 0;
-	// line-height: 1.1;
-	// font-size: 0.75em;
-	// @media (min-width: 768px) {
-	// 	line-height: $main_line_height;
-	// 	padding-top: 13em!important;
-	// 	padding-bottom: 0.75em;
-	// 	/* 12/16 */
-	// 	font-size: 1em;
-	// }
-
+	padding: 0.5em 0 0;
+	@media (min-width: 768px) {
+		padding: 3.125em 0 0;
+	}
 }
 
 .kama_breadcrumbs {

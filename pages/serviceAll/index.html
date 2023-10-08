@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/aos.css"/>
-    <link rel="stylesheet" type="text/css" href="css/fancybox.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
-    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/twentytwenty.css"/>
-    <link rel="stylesheet" type="text/css" href="css/select.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/aos.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/fancybox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/twentytwenty.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/select.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
   </head>
   <body>
     <div class="wrapper" id="wrapper">
@@ -125,43 +125,164 @@
         </div>
       </header>
       <main class="main_content">
-        <!-- begin projectNaw-->
-        <section class="projectNaw section" id="projectNaw">
+        <!-- begin breadcrumbs-->
+        <section class="breadcrumbs section" id="breadcrumbs">
           <div class="container_center">
-            <h2 class="section__title"><span>Навигация по проекту</span></h2>
-            <ul style="font-size:1.25em;">
-              <li><a href="../pages/home/">Главная</a></li>
-              <li><a href="../pages/serviceAll/">Страница всех услуг</a></li>
-              <li><a href="../pages/about/">О нас</a></li>
-              <li><a href="../pages/archiveBlog/">Страница блога</a></li>
-              <li><a href="../pages/singleBlog/">Страница одногй статьи</a></li>
-              <li><a href="../pages/service/">Страница одной услуги (в работе)</a></li>
-            </ul>
-          </div>
-        </section>
-        <!-- end projectNaw-->
-        <!-- begin projectBtn-->
-        <section class="projectBtn section" id="projectBtn">
-          <div class="container_center">
-            <h2 class="section__title"><span>Кнопки</span></h2>
-            <div class="section__content">
-              <h3> .btn</h3><a class="btn" href="#"> <span>Подробнее о враче</span></a><br/><br/>
-              <h3> .btn_sm</h3><a class="btn btn_sm" href="#"> <span>Заказать консультацию</span></a><br/><br/><a class="btn btn_sm btn_danger" href="#"> <span>Участвовать в акции</span></a><br/><br/><a class="btn btn_sm" href="#"> <span>Узнать больше</span></a><br/><br/>
-              <h3> .btn_lg</h3><a class="btn btn_lg" href="#"> <span>Оставить заявку на рассрочку</span></a><br/><br/><a class="btn btn_danger btn_lg" href="#"> <span>Записаться на <br> первичный приём</span></a><br/><br/><a class="btn btn_lg" href="#"> <span>Узнать стоимость <br>по WhatsApp</span><span>время ответа около 10 минут</span></a><br/><br/>
+            <div class="breadcrumbs__content">
+              <div class="kama_breadcrumbs"><span><a href="#"><span>Главная</span></a></span><span class="kb_sep"> </span><span class="kb_title">Услуги</span></div>
             </div>
           </div>
         </section>
-        <!-- end projectBtn-->
-        <!-- begin projectModal-->
-        <section class="projectModal section" id="projectModal">
+        <!-- end breadcrumbs-->
+        <!-- begin services-->
+        <section class="services section" id="services">
           <div class="container_center">
-            <h2 class="section__title"><span>Модальные окна</span></h2>
-            <div class="section__content"><a class="btn show_modal_js" href="#info"> <span>Собщение</span></a><br/><br/>
-              <div class="play youtubeModal_js" id="rsDoGqnPE4c"><i class="icon_play"></i></div>
+            <h2 class="section__title"><b>Все стоматологические услуги</b> для взрослых и детей в одном месте 24/7</h2>
+            <div class="section__desc">Помогаем решить любые проблемы по лечению и восстановлению зубов </div>
+            <div class="services__row">
+              <div class="services__col">
+                <div class="services__label"><span>Восстановить зуб</span>
+                  <div class="services__toggle mobile"><i class="icon_caret_bottom"></i></div>
+                </div>
+                <ul class="services__menu list">
+                  <li class="services__item"><a class="services__link snakeline" href="#">Имплантация зубов</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Реставрация зубов</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Коронки</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Протезирование зубов</a></li>
+                </ul>
+              </div>
+              <div class="services__col">
+                <div class="services__label"><span>Вставить все зубы</span>
+                  <div class="services__toggle mobile"><i class="icon_caret_bottom"></i></div>
+                </div>
+                <ul class="services__menu list">
+                  <li class="services__item"><a class="services__link snakeline" href="#">Все-на-4</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Несъемные протезы</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Съемные зубные протезы</a></li>
+                </ul>
+              </div>
+              <div class="services__col">
+                <div class="services__label"><span>Вылечить зубы</span>
+                  <div class="services__toggle mobile"><i class="icon_caret_bottom"></i></div>
+                </div>
+                <ul class="services__menu list">
+                  <li class="services__item"><a class="services__link snakeline" href="#">Диагностика зубов</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Лечение зубов</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Лечение кариеса</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Лечение пульпита</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Лечение десен</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Лечение периодонтита</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Лечение зубов во сне</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Удаление зуба мудрости</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Удаление зубов</a></li>
+                </ul>
+              </div>
+              <div class="services__col">
+                <div class="services__label"><span>Красивая улыбка</span>
+                  <div class="services__toggle mobile"><i class="icon_caret_bottom"></i></div>
+                </div>
+                <ul class="services__menu list">
+                  <li class="services__item"><a class="services__link snakeline" href="#">Чистка зубов</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Отбеливание зубов</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Виниры</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Элайнеры</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Брекеты</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Исправление прикуса</a></li>
+                  <li class="services__item"><a class="services__link snakeline" href="#">Хирургическое лечение</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
-        <!-- end projectModal-->
+        <!-- end services-->
+        <!-- begin singup-->
+        <section class="singup section" id="singup">
+          <div class="container_center">
+            <div class="singup__wrap">
+              <div class="singup__bg img_bg"><img class="desktop" src="../../img/singup_bg.png" alt="image" loading="lazy"/><img class="mobile" src="../../img/singup_bg_m.png" alt="image" loading="lazy"/></div>
+              <div class="singup__row">
+                <div class="singup__col">
+                  <h2 class="section__title"><b>Запишитесь</b> на первичный приём / консультацию в нашу клинику</h2>
+                  <div class="section__desc">С чего начать, если есть сомнения? </div>
+                  <div class="singup__desc mobile">Перезвоним, ответим на ваши вопросы, предложим несколько вариантов лечения, сориентируем по стоимости. </div>
+                  <div class="singup__desc desktop">Для начала — перезвоним, ответим на ваши вопросы, предложим несколько вариантов лечения, сориентируем по стоимости и, если все устроит, подберем удобное время для визита в клинику.</div>
+                </div>
+                <div class="singup__col">
+                  <div class="singup__form">
+                    <!-- begin form-->
+                    <div class="form__title">Просто оставьте контакты — свяжемся с вами в течение 10 минут</div>
+                    <form class="form" action="send.php">
+                      <input type="hidden" name="subject" value="форма в футоре"/>
+                      <input type="hidden" name="notspam" value=""/>
+                      <div class="form__row">
+                        <div class="form__label">Введите номер телефона</div>
+                        <div class="phone_icon">
+                          <input class="phone" type="text" name="phone" required="required" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"/>
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <button class="btn btn_form btn_danger btn_lg btn_didisabled_js" type="submit"> <span>Получить консультацию</span></button>
+                      </div>
+                      <div class="form__row form__row_full">
+                        <div class="form__privacy">
+                          <label class="form__check">
+                            <input class="check_checked_js" type="checkbox" checked="checked"/><span>Даю согласие на обработку моих <a href="#" target="_blank">персональных данных</a></span>
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                    <!-- end form-->
+                  </div>
+                  <div class="singup__phone"><span>Или позвоните сейчас</span><span>Ежедневно с 10:00 до 21:00</span><a href="tel:+7 (926) 146-00-88">+7 (926) 146-00-88</a></div>
+                </div>
+                <div class="singup__manager">
+                  <div class="manager">
+                    <div class="manager__name">Магомед<br> Зубайруевич<br> Магомедов</div>
+                    <div class="manager__info">Куратор лечения</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end singup-->
+        <!-- begin content-->
+        <section class="content section" id="content">
+          <div class="container_center">
+            <h2 class="content__title">О сети цифровых клиник FUROR</h2>
+            <div class="content__preview">
+              <div class="section__text">
+                <p>Сеть стоматологических клиник Furor основана в мае 2014 года в г. Москва, врачом – стоматологом, кандидатом медицинских наук Байбурцян Айком Оганесовичем. Клиники полностью оснащены: стоматологические установки, операционный блок, собственная зуботехническая лаборатория. Коллектив клиники - профессионалы, работающие по системе непрерывного профессионального образования. Проводят мастер классы, презентации для врачей других стоматологических учреждений.</p>
+              </div>
+            </div>
+            <div class="content__collapse">
+              <div class="collapse__body" data-collapse-body="">
+                <div class="section__text">
+                  <p> Сеть стоматологических клиник Furor основана в мае 2014 года в г. Москва, врачом – стоматологом, кандидатом медицинских наук Байбурцян Айком Оганесовичем. Клиники полностью оснащены: стоматологические установки, операционный блок, собственная зуботехническая лаборатория. Коллектив клиники - профессионалы, работающие по системе непрерывного профессионального образования. Проводят мастер классы, презентации для врачей других стоматологических учреждений.</p>
+                  <p>  Сеть стоматологических клиник Furor основана в мае 2014 года в г. Москва, врачом – стоматологом, кандидатом медицинских наук Байбурцян Айком Оганесовичем. Клиники полностью оснащены: стоматологические установки, операционный блок, собственная зуботехническая лаборатория. Коллектив клиники - профессионалы, работающие по системе непрерывного профессионального образования. Проводят мастер классы, презентации для врачей других стоматологических учреждений.</p>
+                  <h1>заголовок h1</h1>
+                  <h2>заголовок h2</h2>
+                  <h3>заголовок h3</h3>
+                  <h4>заголовок h4</h4>
+                  <h5>заголовок h5</h5>
+                  <h6>заголовок h6</h6>
+                  <p> Сеть стоматологических клиник Furor основана в мае 2014 года в г. Москва, врачом – стоматологом, кандидатом медицинских наук Байбурцян Айком Оганесовичем. Клиники полностью оснащены: стоматологические установки, операционный блок, собственная зуботехническая лаборатория. Коллектив клиники - профессионалы, работающие по системе непрерывного профессионального образования. Проводят мастер классы, презентации для врачей других стоматологических учреждений.</p>
+                  <h3>заголовок третьего уровня</h3>
+                  <p> Сеть стоматологических клиник Furor основана в мае 2014 года в г. Москва, врачом – стоматологом, кандидатом медицинских наук Байбурцян Айком Оганесовичем. Клиники полностью оснащены: стоматологические установки, операционный блок, собственная зуботехническая лаборатория. Коллектив клиники - профессионалы, работающие по системе непрерывного профессионального образования. Проводят мастер классы, презентации для врачей других стоматологических учреждений.</p>
+                  <h1>список ul</h1>
+                  <ul>
+                    <li>защищенность от размокания;</li>
+                    <li>использование водостойких материалов и покрытий;</li>
+                    <li>широкий диапазон рабочих температур;</li>
+                    <li>обработка составами, предотвращающими появление плесени или грибков;</li>
+                  </ul>
+                  <p> Сеть стоматологических клиник Furor основана в мае 2014 года в г. Москва, врачом – стоматологом, кандидатом медицинских наук Байбурцян Айком Оганесовичем. Клиники полностью оснащены: стоматологические установки, операционный блок, собственная зуботехническая лаборатория. Коллектив клиники - профессионалы, работающие по системе непрерывного профессионального образования. Проводят мастер классы, презентации для врачей других стоматологических учреждений.</p>
+                </div>
+              </div><a class="snakeline arrow collapse__toggle" data-collapse="">Читать полностью</a>
+            </div>
+          </div>
+        </section>
+        <!-- end content-->
       </main>
       <footer class="footer">
         <div class="footer__content">
@@ -292,20 +413,20 @@
         </div>
       </div>
       <!-- End modal info-->
-      <script src="js/jquery.js"></script>
-      <script src="js/jquery.maskedinput.min.js"></script>
-      <script src="js/modal.js"></script>
-      <script src="js/swiper-bundle.min.js"></script>
-      <script src="js/select2.min.js"></script>
-      <script src="js/jquery.event.move.js"></script>
-      <script src="js/jquery.twentytwenty.js"></script>
-      <script src="js/jquery.marquee.min.js"></script>
-      <script src="js/aos.js"></script>
-      <script src="js/fancybox.min.js"></script>
-      <script src="js/jquery-ui.min.js"></script>
-      <script src="js/jquery-ui-touch-punch.js"></script>
-      <script src="js/form.js"></script>
-      <script src="js/function.js"></script>
+      <script src="../../js/jquery.js"></script>
+      <script src="../../js/jquery.maskedinput.min.js"></script>
+      <script src="../../js/modal.js"></script>
+      <script src="../../js/swiper-bundle.min.js"></script>
+      <script src="../../js/select2.min.js"></script>
+      <script src="../../js/jquery.event.move.js"></script>
+      <script src="../../js/jquery.twentytwenty.js"></script>
+      <script src="../../js/jquery.marquee.min.js"></script>
+      <script src="../../js/aos.js"></script>
+      <script src="../../js/fancybox.min.js"></script>
+      <script src="../../js/jquery-ui.min.js"></script>
+      <script src="../../js/jquery-ui-touch-punch.js"></script>
+      <script src="../../js/form.js"></script>
+      <script src="../../js/function.js"></script>
     </div>
   </body>
 </html>

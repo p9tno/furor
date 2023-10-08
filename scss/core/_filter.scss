@@ -1,0 +1,89 @@
+.filter {
+    .cat-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        display: flex;
+
+        font-size: 0.5em;
+
+        @media (max-width: 767px) {
+            position: relative;
+            overflow-x: auto;
+            overflow-y: hidden;
+            margin-bottom: 1em;
+            padding-bottom: 1.5em;
+
+            margin-left: -22px;
+            margin-right: -22px;
+
+        }
+
+        @media (min-width: 768px) {
+            flex-wrap: wrap;
+            gap: 1.25em;
+            font-size: 1em;
+        }
+
+    }
+
+    .cat-item {
+        width: fit-content;
+        flex: none;
+
+        @media (max-width: 767px) {
+            margin-right: 1em;
+
+            &:first-child {
+                margin-left: 2.75em;
+            }
+
+            &:last-child {
+
+                padding-right: 2em;
+            }
+
+        }
+
+        input {
+            display: none;
+
+            &:checked ~ label {
+                color: $color_white;
+                background-color: $color_success;
+            }
+        }
+
+        label {
+            display: block;
+            padding: 1.313em 1.947em;
+
+            border: 1px solid;
+            border-color: $color_success;
+
+            color: $color_success;
+            background-color: $color_white;
+            border-radius: 1.25em;
+
+            font-weight: 700;
+            line-height: 1;
+            cursor: pointer;
+            transition: 0.3s;
+
+            span {
+                font-size: 1em;
+            }
+
+        }
+
+        &:hover {
+            label {
+                color: $color_white;
+                background-color: $color_success;
+
+            }
+        }
+    }
+
+}

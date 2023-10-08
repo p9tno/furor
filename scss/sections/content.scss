@@ -15,6 +15,12 @@
 
     &__preview {
         position: relative;
+        margin-top: 0.875em;
+
+        @media (min-width: 768px) {
+
+            margin-top: 1.375em;
+        }
 
         &:after {
             content: '';
@@ -35,16 +41,9 @@
             }
         }
 
-        p {
-            font-size: 0.625em;
-            @media (min-width: 768px) {
-                font-size: 1em;
-            }
-        }
     }
 
     &__collapse {}
 
-    &__content {
-        }
+    &__content {}
 }

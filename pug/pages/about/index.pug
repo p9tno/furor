@@ -1,0 +1,128 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+    //- path +"img/head_main.png"
+
+
+block content
+
+    // begin head
+    section#head.head.head_breadcrumbs.section
+        .container_center
+            .head__top
+                .head__bg.img_bg
+                    img.desktop(src=path +"img/head_service.png" alt="image" loading="lazy")
+                    img.mobile(src=path +"img/head_main_m.png" alt="image" loading="lazy")
+
+                .head__breadcrumbs
+                    .kama_breadcrumbs
+                        span
+                            a(href="#")
+                                span Главная
+                        span.kb_sep 
+
+                        span.kb_title О клинике
+
+                .head__inner
+                    .head__content
+                        h2.section__title <b>Стоматология Furor — заботливая стоматология, которую вы полюбите.</b>
+                        .head__btns
+                            a.btn.btn_danger.btn_lg(href="#") 
+                                span Записаться на <br> первичный приём
+                            a.btn.btn_lg(href="#") 
+                                span Узнать стоимость <br>по WhatsApp
+                                span время ответа около 10 минут
+
+            .head__bottom
+                .miniCards
+                    ul.miniCards__list
+                        each item in [{img: '1', content: 'Собственная зуботехническая <b>лаборатория</b>'}, {img: '2', content: 'Только <b>стерильные инструменты</b> проходящие полный цикл обработки'},{img: '3', content: 'Личный <b>куратор</b> на весь процесс лечения в нашей клинике'},{img: '4', content: 'Беспроцентная <b>рассрочка</b> сроком на 12 месяцев'},]
+
+                            // begin .bottom__item
+                            .miniCards__item
+                                .miniCards__img.img
+                                    img(src=path +"img/card_sm_"+item.img+".png" alt="image" loading="lazy")
+                                .miniCards__title!=item.content 
+
+                            // end .bottom__item
+
+
+    // end head
+
+    // begin information
+    //- img 800/550
+    section#information.information.section
+        .container_center
+            .information__wrap
+
+                .information__top
+                    h2.section__title О стоматологии
+                    .section__desc Стоматология Furor в Москве является современным медицинским центром, предоставляющим полный спектр стоматологических услуг. Клиника оснащена новейшим оборудованием и использует только высококачественные материалы для лечения зубов.
+
+                .information__bottom.video-wrap
+
+                    .information__video.video-play(style="background-image: url('../../img/information_bg.png')")
+                        video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
+                            source(src="../../media/information.mp4" type="video/mp4")
+
+                    .information__content.video-content
+                        .information__play
+                            .play.youtubeModal_js#rsDoGqnPE4c
+                                i.icon_play
+                        .information__subtitle За 12 лет установили<br>более 50 000 имплантатов. 
+
+    // end information
+
+    include ../../sections/team.pug
+
+    include ../../sections/doctor.pug
+
+    include ../../sections/feedback.pug
+
+    include ../../sections/responses.pug
+
+    include ../../sections/reviewsCompany.pug
+
+    include ../../sections/payment.pug
+
+    include ../../sections/location.pug
+
+    // begin networks
+    section#networks.networks.section
+        .container_center
+            h2.section__title <b>Следите за новостями и акциями в наших социальных сетях</b>
+            .networks__list
+
+                a.networks__link(href="#")
+                    .networks__wrap
+                        i.icon_youtube
+                        .networks__content
+                            .networks__label YouTube
+                            .networks__quantity
+                                span.animate-number-js 60
+                                span подписчиков
+
+                a.networks__link(href="#")
+                    .networks__wrap
+                        i.icon_Insta
+                        .networks__content
+                            .networks__label Insta
+                            .networks__quantity
+                                span.animate-number-js 60
+                                span подписчиков
+
+                a.networks__link(href="#")
+                    .networks__wrap
+                        i.icon_vk
+                        .networks__content
+                            .networks__label Вконтакте
+                            .networks__quantity
+                                span.animate-number-js 5
+                                span подписчиков
+
+
+    // end networks
+
+    include ../../sections/singup.pug

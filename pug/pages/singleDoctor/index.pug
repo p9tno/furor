@@ -1,0 +1,120 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+    //- path +"img/head_main.png"
+
+
+block content
+
+    // begin breadcrumbs
+    section#breadcrumbs.breadcrumbs.section
+        .container_center
+            .breadcrumbs__content
+
+                .kama_breadcrumbs
+                    span
+                        a(href="#")
+                            span Главная
+                    span.kb_sep 
+                    span
+                        a(href="#")
+                            span Врачи
+                    span.kb_sep 
+
+                    span.kb_title  Айк Оганесович Байбурцян
+
+    // end breadcrumbs
+
+    // begin doctor
+    section#doctor.doctor.doctor_single.section
+        .container_center
+            .doctor__row
+                .doctor__col
+                    h1.section__title <b>Айк Оганесович Байбурцян</b>
+
+                    .doctor__subtitle <b>Основатель и руководитель</b> сети стоматологических клиник Furor, эксперт в области имплантации и протезирования
+                    .doctor__btn
+                        a.btn.btn_danger(href="#")
+                            span Записаться<br> на первичный прием
+                .doctor__col
+                    .doctor__preview
+                        .doctor__img.img
+                            img(src=path +"img/doctor_1.png" alt="image" loading="lazy")
+                        .doctor__play
+                            .play.youtubeModal_js#rsDoGqnPE4c
+                                i.icon_play
+
+            .doctor__row
+                .doctor__col
+                    .doctor__title Специализация
+                    .doctor__desc Эксперт в области имплантации и протезирования
+                    .test
+                        p Имплантация зубов и протезирование - это важные процедуры стоматологической медицины, которые позволяют восстановить эстетику и функциональность полости рта. Имплантация зубов является современным методом восстановления зубов, который позволяет восстановить красоту улыбки и функциональность челюсти.
+
+                        p Протезирование зубов также является важной процедурой, которая может помочь восстановить зубную эстетику и функциональность полости рта.
+
+                        p Существует несколько типов зубных протезов, включая съемные и неподвижные протезы, которые выбираются в зависимости от индивидуальных потребностей пациента.
+                .doctor__col
+                    .doctor__imgLg.img
+                        img(src=path +"img/doctor_i.png" alt="image" loading="lazy")
+
+            .doctor__row
+                .doctor__col
+                    .doctor__title Образование, повышение квалификации
+                    .doctor__desc Регулярно прохожу обучение на крупнейших конференциях и мастер-классах в Израиле, США и Европе
+                    p Имплантация зубов и протезирование - это важные процедуры стоматологической медицины, которые позволяют восстановить эстетику и функциональность полости рта.
+
+                    p Имплантация зубов является современным методом восстановления зубов, который позволяет восстановить красоту улыбки и функциональность челюсти
+                .doctor__col
+                    .doctor__licenses
+                        .licenses.swiper.swiper_licenses_js
+                            .swiper-wrapper.itemForDataFancybox_js
+                                each item in ['', '', '', '', '', '', '', ]
+                                    .swiper-slide
+                                        .licenses__img.img
+                                            a(href=path +"img/license.png" data-fancybox data-type="image")
+                                                img(src=path +"img/license.png" loading="lazy" alt="license")
+                            .licenses__nav
+                                .swiper-fraction
+                                .swiper-arrows
+                                    i.icon_arrow_left
+                                    i.icon_arrow_right
+
+
+
+
+
+
+    // end doctor
+
+
+
+    // begin reviewsVideo
+    section#reviewsVideo.reviewsVideo.section
+        .container_center
+            h2.section__title <b>Отзывы благодарных пациентов</b>
+            .reviewsVideo__grid
+                each item in [1,2,3,4,1]
+                    .reviewsVideo__preview.video-wrap
+                        .reviewsVideo__video.video-play(style="background-image: url('../../img/reviewsVideo_"+item+".png')")
+                            video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
+                                source(src="../../media/information.mp4" type="video/mp4")
+
+                        .reviewsVideo__content.video-content
+                            .reviewsVideo__play
+                                .play.youtubeModal_js#rsDoGqnPE4c
+                                    i.icon_play
+                            .reviewsVideo__text
+                                span Анна Ивановна Троценко
+                                span “Благодарю за высокий профессионализм и грамотную понятную консультацию”
+            .reviewsVideo__link
+                a.snakeline.arrow(href="#") Смотреть все отзывы
+
+    // end reviewsVideo
+
+
+    include ../../sections/singup.pug
+
+    include ../../sections/content.pug

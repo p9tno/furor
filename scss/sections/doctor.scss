@@ -1,6 +1,13 @@
 .doctor {
     overflow: hidden;
 
+    &__filter {
+        margin-top: 0.75em;
+        @media (min-width: 768px) {
+            margin-top: 3.4375em;
+        }
+    }
+
     &__slider {
         margin-top: 0.75em;
 
@@ -98,6 +105,138 @@
 
     }
 
+    // START ARCHIVE
+
+    &__list {
+        margin-top: 0.75em;
+        @media (min-width: 768px) {
+            margin-top: 3.4375em;
+        }
+    }
+
+    &__item {
+        margin-bottom: 1.25em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 768px) {
+            margin-bottom: 3.4375em;
+
+            display: flex;
+
+            gap: 3.75em;
+
+        }
+
+        .doctor__preview {
+            @media (min-width: 768px) {
+                width: 25em;
+
+            }
+        }
+
+        .doctor__left {}
+
+        .doctor__right {
+            margin-top: 0.75em;
+            @media (min-width: 768px) {
+                margin-top: 0;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .doctor__name {
+            margin-bottom: 0.2em;
+        }
+
+        .doctor__label {
+            color: #111;
+            font-weight: 700;
+            line-height: 1.075;
+            padding-bottom: 0.125em;
+            border-bottom: 1px solid #F5F5F5;
+            margin-top: 0.43em;
+
+            font-size: 0.875em;
+            @media (min-width: 768px) {
+                font-size: 1.75em;
+            }
+        }
+
+        .doctor__experience,
+        .doctor__specializing {
+            color: #4C5355;
+            line-height: 1.25;
+            margin-top: 0.25em;
+
+            font-size: 0.75em;
+            @media (min-width: 768px) {
+                font-size: 1.5em;
+            }
+
+        };
+
+        ul {
+            margin: 0.5em 0 0;
+            @media (min-width: 768px) {
+                margin: 0.75em 0 0;
+
+            }
+
+            li {
+                color: #4C5355;
+
+                position: relative;
+                padding-left: 0.75em;
+                margin-bottom: 0.25em;
+
+                font-size: 0.625em;
+                @media (min-width: 768px) {
+                    font-size: 1.5em;
+
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+
+                    display: block;
+                    width: 0.25em;
+                    height: 0.25em;
+                    border-radius: 100%;
+                    background-color: $color_success;
+                }
+            }
+        }
+
+        .doctor__btn {
+            padding-top: 0.75em;
+            @media (min-width: 768px) {
+                margin-top: auto;
+            }
+        }
+    }
+
+    .pagination {
+        margin-top: 0.75em;
+        @media (min-width: 768px) {
+            margin-top: 3.4375em;
+        }
+    }
+
+    // END ARCHIVE
+
     &__preview {
         position: relative;
     }
@@ -138,16 +277,10 @@
     &__name {
         font-size: 1.25em;
         font-weight: 700;
-        // line-height: 1.5;
         @media (min-width: 768px) {
             font-size: 2.1875em;
-
         }
     }
-
-    &__specializing {}
-
-    &__experience {}
 
     &__all {
         margin-top: 0.75em;
@@ -166,5 +299,147 @@
             }
         }
     }
+
+    // START SINGLE
+
+    &__row {
+        @media (min-width: 768px) {
+            margin-bottom: 10em;
+            display: flex;
+            gap: 6.875em;
+
+            &:first-child {
+                gap: 15.625em;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:nth-child(2n) {
+                flex-direction: row-reverse;
+            }
+
+        }
+    }
+
+    &__col {
+        margin-bottom: 1em;
+
+        // &:last-child {
+        //     margin-bottom: 0;
+        // }
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+        }
+
+        &:last-child {
+            @media (min-width: 768px) {
+                flex: none;
+                width: 53.125em;
+            }
+        }
+
+        .doctor__img {
+            @media (min-width: 768px) {
+                height: 66.25em;
+                border: 1px solid #000;
+            }
+        }
+
+        p {
+            margin: 1.333334em 0;
+
+            font-size: 0.75em;
+            @media (min-width: 768px) {
+                font-size: 1.5em;
+
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 1.25em;
+        @media (min-width: 768px) {
+            font-size: 3.375em;
+
+        }
+    }
+
+    &__subtitle {
+        font-size: 1em;
+        margin-top: 0.75em;
+
+        @media (min-width: 768px) {
+            font-size: 1.5em;
+            margin-top: 2.375em;
+            line-height: 1.417;
+        }
+    }
+
+    &__desc {
+        margin-top: 1em;
+        padding-bottom: 1em;
+        border-bottom: 1px solid $color_primary;
+
+        font-size: 1em;
+        @media (min-width: 768px) {
+            line-height: 1.3;
+            font-size: 2em;
+        }
+    }
+
+    &__btn {
+        margin-top: 0.75em;
+        @media (min-width: 768px) {
+            margin-top: 3.5625em;
+        }
+    }
+
+    &__imgLg {
+        overflow: hidden;
+        border-radius: 0.625em;
+        height: 13.125em;
+        @media (min-width: 768px) {
+            border-radius: 3.125em;
+            height: 40.625em;
+        }
+    }
+
+    &__licenses {
+        .licenses {}
+
+        .licenses__nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-top: 0.75em;
+            @media (min-width: 768px) {
+                margin-top: 3.75em;
+
+            }
+        }
+
+        .licenses__img {
+            overflow: hidden;
+            width: 8.25em;
+            border-radius: 0.625em;
+            @media (min-width: 768px) {
+                width: 23.75em;
+                border-radius: 3.125em;
+            }
+
+        }
+    }
+
+    // END SINGLE
 
 }

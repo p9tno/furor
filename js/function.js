@@ -413,6 +413,27 @@ $(document).ready(function() {
     }
     addDataFancybox();
 
+    function settingsFancybox() {
+
+        $('[data-fancybox]').fancybox({
+            loop: true,
+            autoFocus: false,
+            arrows: true,
+            toolbar: true,
+            buttons: [
+                // "zoom",
+                //"share",
+                // "slideShow",
+                //"fullScreen",
+                //"download",
+                // "thumbs",
+                "close"
+            ],
+        });
+    }
+
+    settingsFancybox()
+
 
     // Видео youtube для страницы
     function uploadYoutubeVideo() {
@@ -547,6 +568,9 @@ $(document).ready(function() {
 
     }
     initAOS ();
+
+
+
 
 
     // --------------------------------------------------------------------
@@ -760,6 +784,34 @@ $(document).ready(function() {
         });
     }
     initLocationSlider();
+
+    const licenses = new Swiper('.swiper_licenses_js', {
+        slidesPerView: 2,
+        spaceBetween: 12,
+        speed: 500,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+
+        navigation: {
+            prevEl: '.icon_arrow_left',
+            nextEl: '.icon_arrow_right',
+        },
+
+        pagination: {
+            el: '.swiper-fraction',
+            clickable: true,
+            type: "fraction",
+        },
+
+        breakpoints: {
+            768: {
+                spaceBetween: 90,
+            },
+
+        }
+    });
 
 
 })

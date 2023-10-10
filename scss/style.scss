@@ -52,3 +52,20 @@
 
 @import 'vendor/modal';
 @import 'vendor/swiper';
+@import 'vendor/fancybox';
+
+.projectNaw {
+    ul {
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: 0.5em;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color_info;
+        font-weight: 500;
+    }
+}

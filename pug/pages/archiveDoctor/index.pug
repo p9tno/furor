@@ -1,0 +1,82 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+    //- path +"img/head_main.png"
+
+
+block content
+
+    // begin breadcrumbs
+    section#breadcrumbs.breadcrumbs.section
+        .container_center
+            .breadcrumbs__content
+
+                .kama_breadcrumbs
+                    span
+                        a(href="#")
+                            span Главная
+                    span.kb_sep 
+
+                    span.kb_title Врачи
+
+    // end breadcrumbs
+
+    include ../../sections/team.pug
+
+    // begin doctor
+    section#doctor.doctor.doctor_archive.section
+        .container_center
+            h2.section__title <b>Забота о пациенте превыше всего</b>
+            .section__desc Вкладываем душу каждый день, на каждой операции, лечении и разговоре с пациентом
+
+            .doctor__filter
+                .filter
+                    ul.cat-list.filter-cat-js
+
+                        li.cat-item.filter-cat-js
+                            input(type="radio" id="term_id_1" name="cat_name" value="term_id_1" checked)
+                            label(for="term_id_1")
+                                span Все
+
+                        each item in [ {id: '2', label: 'Хирурги'}, {id: '3', label: 'Ортопеды'}, {id: '4', label: 'Техники'}, {id: '5', label: 'Терапевты'}, {id: '5', label: 'Ассистенты'}, {id: '6', label: 'Кураторы'} ]
+
+                            li.cat-item.filter-cat-js
+                                input(type="radio" id="term_id_"+item.id+"" name="cat_name" value="term_id_"+item.id+"")
+                                label(for="term_id_"+item.id+"")
+                                    span=item.label
+
+            .doctor__list.filter__content
+                each item in [ {img: '1', name : 'Айк Оганесович Байбурцян'}, {img: '2', name : 'Магомед Зубайруевич Магомедов'},{img: '3', name : 'Александр Викторович Красов'}, {img: '1', name : 'Айк Оганесович Байбурцян'} ]
+
+                    .doctor__item
+                        .doctor__left
+                            .doctor__preview
+                                .doctor__img.img
+                                    img(src=path +"img/doctor_"+item.img+".png" alt="image" loading="lazy")
+                                .doctor__play
+                                    .play.youtubeModal_js#rsDoGqnPE4c
+                                        i.icon_play
+
+                        .doctor__right
+                            .doctor__name=item.name
+                            .doctor__label Квалификация
+                            .doctor__specializing Эксперт в области имплантации и протезирования
+                            //- Опыт работы / Стаж
+                            .doctor__label Стаж
+                            .doctor__experience 17 лет
+                            ul.list
+                                each item in ['Дентальная имплантация: Nobel, Noris, Альфабио, SGS, Astra, Zumer, Osstem, Straumann, Cortex', 'Имплантация ALL-on-4', 'Установка Pterygoid, Zigoma (скуловые имплантаты).' ]
+                                    li=item
+                            .doctor__btn
+                                a.btn(href="#")
+                                    span Подробнее о враче
+
+                include ../../parts/pagination.pug
+
+    // end doctor
+
+    include ../../sections/singup.pug
+
+    include ../../sections/content.pug

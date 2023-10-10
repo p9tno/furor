@@ -125,4 +125,21 @@
         display: none;
     }
 
+    &__link {
+        margin-top: 0.75em;
+        @media (min-width: 768px) {
+            margin-top: 3.4375em;
+
+        }
+
+        a {
+            color: $color_info;
+            font-weight: 700;
+            @media (min-width: 768px) {
+                font-size: 1.25em;
+            }
+
+        }
+    }
+
 }

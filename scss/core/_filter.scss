@@ -15,8 +15,8 @@
             margin-bottom: 1em;
             padding-bottom: 1.5em;
 
-            margin-left: -22px;
-            margin-right: -22px;
+            margin-left: -2.75em;
+            margin-right: -2.75em;
 
         }
 
@@ -73,6 +73,19 @@
 
             span {
                 font-size: 1em;
+            }
+
+            .doctor__filter & {
+                @media (min-width: 768px) {
+                    min-width: 14.375em;
+                    text-align: center;
+
+                    padding: 1.0625em 1em;
+
+                    span {
+                        font-size: 1.5em;
+                    }
+                }
             }
 
         }

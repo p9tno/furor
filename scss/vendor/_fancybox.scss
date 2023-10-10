@@ -1,0 +1,79 @@
+.fancybox-is-open .fancybox-bg {
+    opacity: 1;
+}
+
+.fancybox-bg {
+    background: rgba($color_black, 0.65);
+}
+
+.fancybox-slide--image .fancybox-content {}
+
+.fancybox-infobar {
+    color: $color_white;
+}
+
+.fancybox-navigation {}
+
+.fancybox-button {
+    div {
+        display: none;
+    }
+}
+
+.fancybox-navigation .fancybox-button--arrow_left,
+.fancybox-navigation .fancybox-button--arrow_right {
+    padding: 0.75em;
+    // background-color: rgba($color_info,0.5);
+    background-color: transparent;
+    // color: rgba($color_success, 1);
+
+    &:before {
+
+        font-family: 'icon';
+        font-size: 2em;
+        transition: 0.3s;
+
+        @media (min-width: 501px) {
+            font-size: 3em;
+
+        }
+
+    }
+}
+
+.fancybox-navigation .fancybox-button--arrow_left {
+    &:before {
+        content: '\e911';
+    }
+}
+
+.fancybox-navigation .fancybox-button--arrow_right {
+    &:before {
+        content: '\e903';
+    }
+}
+
+.fancybox-button--close {
+    // border: 1px solid red;
+    background-color: transparent;
+
+    svg {
+        display: none;
+    }
+    width: auto;
+    height: auto;
+
+    &:before {
+        content: '\e902';
+        font-family: 'icon';
+        font-size: 2em;
+        transition: 0.3s;
+
+        @media (min-width: 501px) {
+            font-size: 4em;
+
+        }
+
+    }
+
+}

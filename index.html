@@ -27,7 +27,7 @@
             <div class="header__col header__col_phone"><a class="desktop" href="tel:+7 (926) 146-00-88"><i class="icon_phone"></i></a>
               <div> <span>Ежедневно с 10:00 до 21:00</span><a href="tel:+7 (926) 146-00-88">+7 (926) 146-00-88</a><a class="mobile" href="tel:+7 (926) 146-00-88">+7 (926) 146-00-88</a></div>
             </div>
-            <div class="header__col desktop"><a class="btn btn_sm show_js" href="#show_js"><span>Заказать консультацию</span></a></div>
+            <div class="header__col desktop"><a class="btn btn_sm show_modal_js" href="#onlyPhone"><span>Заказать консультацию</span></a></div>
             <div class="header__toggle mobile"></div>
           </div>
           <!-- end .header__row-->
@@ -87,7 +87,7 @@
                 <li class="menu-item"><a href="#">Статьи</a></li>
                 <li class="menu-item"><a href="#">Контакты</a></li>
               </ul>
-              <div class="navbar__calback mobile"><a class="btn show_js" href="#show_js">Заказать консультацию</a></div>
+              <div class="navbar__calback mobile"><a class="btn show_modal_js" href="#onlyPhone">Заказать консультацию</a></div>
               <div class="header__dropmenu desktop">
                 <div class="dropmenu">
                   <ul class="menu_drop">
@@ -253,7 +253,7 @@
               <div class="footer__label">Контакты</div>
               <div class="footer__phone"><a href="tel:+7 (926) 146-00-88"><i class="icon_phone"></i>
                   <div> <span>Ежедневно с 10:00 до 21:00</span><span>+7 (926) 146-00-88</span></div></a></div>
-              <div class="footer__btn"><a class="btn btn_sm show_js" href="#show_js"><span>Заказать консультацию</span></a></div>
+              <div class="footer__btn"><a class="btn btn_sm show_modal_js" href="#onlyPhone"><span>Заказать консультацию</span></a></div>
               <div class="footer__whatsapp"><a href="#"><i class="icon_whatsapp"></i></a><span><b>Задайте нам вопрос,</b> мы всегда онлайн</span></div>
             </div>
           </div>
@@ -285,15 +285,46 @@
         </div>
       </div>
       <!-- End modal modalVideo-->
-      <!-- Begin Modal info-->
-      <div class="modal fade info" id="info">
+      <!-- Button trigger modal onlyPhone-->
+      <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#onlyPhone">Click to open modal</button>
+      <!-- Begin Modal onlyPhone-->
+      <div class="modal fade onlyPhone" id="onlyPhone">
         <div class="modal-dialog">
           <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
-            <div class="form__message"></div>
+            <div class="modal-header">
+              <div class="modal-title">Только телефон<br> и мы в деле</div>
+              <div class="modal-subtile">Оставьте заявку и мы свяжемся с вами в течение 5-10 минут</div>
+            </div>
+            <div class="modal-body"> 
+              <div class="modal-form">
+                <!-- begin form-->
+                <form class="form" action="send.php">
+                  <input type="hidden" name="subject" value="форма в футоре"/>
+                  <input type="hidden" name="notspam" value=""/>
+                  <div class="form__row">
+                    <div class="form__label">Введите номер телефона</div>
+                    <div class="phone_icon">
+                      <input class="phone" type="text" name="phone" required="required" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"/>
+                    </div>
+                  </div>
+                  <div class="form__row">
+                    <button class="btn btn_lg btn_form btn_didisabled_js" type="submit"> <span>Отправить</span></button>
+                  </div>
+                  <div class="form__row form__row_full">
+                    <div class="form__privacy">
+                      <label class="form__check">
+                        <input class="check_checked_js" type="checkbox" checked="checked"/><span>Даю согласие на обработку моих <a href="#" target="_blank">персональных данных</a></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+                <!-- end form-->
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- End modal info-->
+      <!-- End modal onlyPhone-->
       <script src="js/jquery.js"></script>
       <script src="js/jquery.maskedinput.min.js"></script>
       <script src="js/modal.js"></script>

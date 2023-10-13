@@ -7,10 +7,41 @@
                 .modalVideo__wraper
 // End modal modalVideo
 
-// Begin Modal info
-.modal.fade.info#info
+
+// Button trigger modal onlyPhone
+button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#onlyPhone") Click to open modal
+// Begin Modal onlyPhone
+.modal.fade.onlyPhone#onlyPhone
     .modal-dialog
         .modal-content
             a(href="#" class="modal-close" data-dismiss="modal")
-            .form__message
-// End modal info
+            .modal-header
+                .modal-title Только телефон<br> и мы в деле
+                .modal-subtile Оставьте заявку и мы свяжемся с вами в течение 5-10 минут
+            .modal-body 
+                .modal-form
+                    // begin form
+                    form.form(action="send.php")
+                        //- из какой формы на сайте
+                        input(type="hidden" name="subject" value="форма в футоре")
+                        //- проверка спама
+                        input(type="hidden" name="notspam" value="")
+
+                        .form__row
+                            .form__label Введите номер телефона
+                            .phone_icon
+                                input.phone(type="text" name="phone" required placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _")
+
+                        .form__row
+                            button.btn.btn_lg.btn_form.btn_didisabled_js(type="submit") 
+                                span Отправить
+
+                        .form__row.form__row_full
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span Даю согласие на обработку моих <a href="#" target="_blank">персональных данных</a>
+
+                    // end form
+
+// End modal onlyPhone

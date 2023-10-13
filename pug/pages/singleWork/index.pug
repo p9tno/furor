@@ -1,0 +1,122 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+    //- path +"img/head_main.png"
+
+
+block content
+
+    // begin breadcrumbs
+    section#breadcrumbs.breadcrumbs.section
+        .container_center
+            .breadcrumbs__content
+
+                .kama_breadcrumbs
+                    span
+                        a(href="#")
+                            span Главная
+                    span.kb_sep 
+                    span
+                        a(href="#")
+                            span Наши работы
+                    span.kb_sep 
+
+                    span.kb_title  Провели имплантацию All-on-4 при полной адентии, наростив костную ткань
+
+    // end breadcrumbs
+
+    // begin
+    section.section.section_work
+        .container_center
+            .section__wrap
+                .section__content
+                    h1.section__title Провели имплантацию All-on-4 при полной адентии, наростив костную ткань
+                    .section__btn
+                        a.btn.btn_lg.btn_danger(href="#")
+                            span Записаться на<br> первичный приём
+
+                        a.btn.btn_lg(href="#")
+                            span Узнать стоимость<br> по WhatsApp
+                            span время ответа около 10 минут
+                    .section__nav
+                        ul.list
+                            li
+                                a.scroll_js(href="#row1") С чем обратился пациент
+                            li
+                                a.scroll_js(href="#row2") Провели обследование
+                            li
+                                a.scroll_js(href="#row3") Установили импланты
+                            li 
+                                a.scroll_js(href="#row4") Установили постоянный мост
+                            li
+                                a.scroll_js(href="#row5") Результат
+
+
+                    .section
+
+
+                    // begin row
+                    .section__row
+
+                        .section__text
+                            h2 О стоматологии
+                            p Имплантация зубов и протезирование - это важные процедуры стоматологической медицины, которые позволяют восстановить эстетику и функциональность полости рта. <a href="">Имплантация зубов</a> является современным методом восстановления зубов, который позволяет восстановить красоту улыбки и функциональность челюсти.
+
+                            ul
+                                each item in ['', '', '', '', '', ]
+
+                                    li элемент списка
+                            ol
+                                each item in ['', '', '', '', '', ]
+
+                                    li элемент списка
+
+                            a(href="#") Имплантация зубов и протезирование
+
+                        .section__img.img
+                            img(src="../../img/img_sm.png" loading="lazy")
+
+
+
+                    // end row
+
+                    // begin row
+                    .section__row#aspect
+                        .section__text
+                            h2 Важный аспект
+                            p Важным аспектом стоматологии является также эстетическая коррекция зубов. Стоматологи могут помочь пациентам устранить проблемы с цветом, формой или расположением зубов, решить проблемы с недостатком зубов, а также улучшить внешний вид улыбки. Как и в любой области медицины, важно регулярно посещать стоматолога для поддержания здоровья рта. Регулярные посещения помогают выявлять проблемы раньше, чем они прогрессируют, и предотвращать развитие серьезных заболеваний полости рта.
+
+                        .section__img.img
+                            img(src="../../img/img_sm.png" loading="lazy")
+                    // end row
+
+
+
+                // begin sidebar
+                .section__sidebar
+                    .sidebar
+                        // begin sidebar__item
+                        .sidebar__item
+                            .sidebar__title Может быть интересно
+                            .blog__grid
+                                each item in [ {img: '1', title: 'Как подготовиться'}, {img: '2', title: 'Что делать, если сломался зуб: советы стоматолога по оказанию первой помощи'}, {img: '3', title: 'Лечение зубов за границей: плюсы и минусы, опыт и рекомендации'}, {img: '1', title: 'Как подготовиться к посещению стоматолога: советы и рекомендации'} ]
+                                    .blog__item
+
+
+                                        .blog__img.img
+                                            img(src="../../img/blog_"+item.img+".png" alt="image" loading="lazy") 
+                                        .blog__date 
+                                            span 28 / 02 / 2023
+                                        .blog__title
+                                            span=item.title 
+                                        .blog__link
+                                            a.snakeline.arrow(href="#") Читать статью
+                        // end sidebar__item
+
+
+                // end sidebar
+
+
+    // end

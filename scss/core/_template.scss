@@ -110,6 +110,11 @@ body {
 	&__content {
 		@media (min-width: 768px) {
 			width: 73.75em;
+
+			.section_work & {
+				width: 66.875em;
+			}
+
 		}
 	}
 
@@ -236,6 +241,10 @@ body {
 			margin: 0;
 			height: 32.5em;
 			border-radius: 3.125em;
+
+			.section_work & {
+				height: 25em;
+			}
 		}
 	}
 

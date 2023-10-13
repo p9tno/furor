@@ -88,6 +88,17 @@
                 }
             }
 
+            .work__filter & {
+                @media (min-width: 768px) {
+
+                    padding: 1.0625em 1.952em;
+
+                    span {
+                        font-size: 1.5em;
+                    }
+                }
+            }
+
         }
 
         &:hover {

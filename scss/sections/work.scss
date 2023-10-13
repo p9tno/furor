@@ -23,6 +23,7 @@
         &:last-child {
             margin-bottom: 0;
         }
+
         @media (min-width: 768px) {
             margin-bottom: 0;
         }
@@ -154,5 +155,123 @@
             }
         }
     }
+
+    // START ARCHIVE
+    &_archive {}
+
+    &__filter {
+        margin-top: 0.75em;
+        @media (min-width: 768px) {
+            margin-top: 3.4375em;
+        }
+    }
+
+    &__list {
+        margin-top: 0.75em;
+
+        @media (min-width: 768px) {
+            margin-top: 3.4375em;
+        }
+
+        .work__item {
+
+            @media (min-width: 768px) {
+                display: flex;
+                justify-content: space-between;
+
+                margin-bottom: 3.4375em;
+                padding-bottom: 3.4375em;
+                border-bottom: 1px solid $color_primary;
+            }
+        }
+
+        .work__beforeAfter {
+            @media (min-width: 768px) {
+                width: 39.375em!important;
+                height: 33.4375em!important;
+            }
+        }
+
+        .work__info {
+            @media (min-width: 768px) {
+                width: 18.75em;
+            }
+
+        }
+
+        .work__box {
+            @media (min-width: 768px) {
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                span {
+                    font-size: 1em;
+                    line-height: 1.5625;
+                }
+            }
+        }
+    }
+
+    &__content {
+        margin-top: 1em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+            width: 39.375em;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        line-height: 1.1;
+        font-size: 1em;
+        @media (min-width: 768px) {
+            font-size: 2.5em;
+
+        }
+    }
+
+    &__description {
+        margin-top: 0.75em;
+        @media (min-width: 768px) {
+            margin-top: 2.1875em;
+        }
+    }
+
+    &__row {
+        margin-bottom: 1em;
+        padding-bottom: 1em;
+        border-bottom: 1px solid $color_primary;
+        font-size: 0.63em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+
+        span {
+            font-size: 1.25em;
+            font-weight: 700;
+        }
+
+        p {
+            margin: 0.75em 0 0;
+            font-size: 1em;
+        }
+    }
+
+    &__btn {
+        margin-top: 0.75em;
+        @media (min-width: 768px) {
+            margin-top: 2.25em;
+
+        }
+    }
+    // END ARCHIVE
 
 }

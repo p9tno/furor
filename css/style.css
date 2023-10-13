@@ -603,6 +603,9 @@ body {
   .section__content {
     width: 73.75em;
   }
+  .section_work .section__content {
+    width: 66.875em;
+  }
 }
 .section__sidebar {
   margin-top: 1.5em;
@@ -718,6 +721,9 @@ body {
     margin: 0;
     height: 32.5em;
     border-radius: 3.125em;
+  }
+  .section_work .section__img {
+    height: 25em;
   }
 }
 .section__row {
@@ -4374,6 +4380,110 @@ a.arrow:before {
     font-size: 1.25em;
   }
 }
+.work__filter {
+  margin-top: 0.75em;
+}
+@media (min-width: 768px) {
+  .work__filter {
+    margin-top: 3.4375em;
+  }
+}
+.work__list {
+  margin-top: 0.75em;
+}
+@media (min-width: 768px) {
+  .work__list {
+    margin-top: 3.4375em;
+  }
+}
+@media (min-width: 768px) {
+  .work__list .work__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3.4375em;
+    padding-bottom: 3.4375em;
+    border-bottom: 1px solid #F1F1F1;
+  }
+}
+@media (min-width: 768px) {
+  .work__list .work__beforeAfter {
+    width: 39.375em !important;
+    height: 33.4375em !important;
+  }
+}
+@media (min-width: 768px) {
+  .work__list .work__info {
+    width: 18.75em;
+  }
+}
+@media (min-width: 768px) {
+  .work__list .work__box:first-child {
+    margin-top: 0;
+  }
+  .work__list .work__box span {
+    font-size: 1em;
+    line-height: 1.5625;
+  }
+}
+.work__content {
+  margin-top: 1em;
+}
+@media (min-width: 768px) {
+  .work__content {
+    margin-top: 0;
+    width: 39.375em;
+  }
+}
+.work__title {
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 1em;
+}
+@media (min-width: 768px) {
+  .work__title {
+    font-size: 2.5em;
+  }
+}
+.work__description {
+  margin-top: 0.75em;
+}
+@media (min-width: 768px) {
+  .work__description {
+    margin-top: 2.1875em;
+  }
+}
+.work__row {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #F1F1F1;
+  font-size: 0.63em;
+}
+@media (min-width: 768px) {
+  .work__row {
+    font-size: 1em;
+  }
+}
+.work__row:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.work__row span {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+.work__row p {
+  margin: 0.75em 0 0;
+  font-size: 1em;
+}
+.work__btn {
+  margin-top: 0.75em;
+}
+@media (min-width: 768px) {
+  .work__btn {
+    margin-top: 2.25em;
+  }
+}
 
 .content__title {
   font-weight: 700;
@@ -5632,6 +5742,14 @@ a.arrow:before {
     padding: 1.0625em 1em;
   }
   .doctor__filter .filter .cat-item label span {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 768px) {
+  .work__filter .filter .cat-item label {
+    padding: 1.0625em 1.952em;
+  }
+  .work__filter .filter .cat-item label span {
     font-size: 1.5em;
   }
 }

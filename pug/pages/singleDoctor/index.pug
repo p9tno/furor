@@ -38,13 +38,19 @@ block content
                     .doctor__btn
                         a.btn.btn_danger(href="#")
                             span Записаться<br> на первичный прием
+
                 .doctor__col
-                    .doctor__preview
-                        .doctor__img.img
-                            img(src=path +"img/doctor_1.png" alt="image" loading="lazy")
-                        .doctor__play
-                            .play.youtubeModal_js#rsDoGqnPE4c
-                                i.icon_play
+
+                    .doctor__preview.video-wrap
+                        .doctor__video.video-play(style="background-image: url('../../img/videoContent.png')")
+                            video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
+                                source(src="../../media/information.mp4" type="video/mp4")
+
+                        .doctor__videoContent.video-content
+                            .doctor__play
+                                .play.youtubeModal_js#rsDoGqnPE4c
+                                    i.icon_play
+                            .doctor__text Видеообращение <br> врача
 
             .doctor__row
                 .doctor__col
@@ -88,6 +94,10 @@ block content
 
 
     // end doctor
+
+
+
+    include ../../sections/work.pug
 
 
 

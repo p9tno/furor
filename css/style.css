@@ -2672,12 +2672,6 @@ a.arrow:before {
     width: 53.125em;
   }
 }
-@media (min-width: 768px) {
-  .doctor__col .doctor__img {
-    height: 66.25em;
-    border: 1px solid #000;
-  }
-}
 .doctor__col p {
   margin: 1.333334em 0;
   font-size: 0.75em;
@@ -2689,6 +2683,48 @@ a.arrow:before {
 }
 .doctor__col p:last-child {
   margin-bottom: 0;
+}
+.doctor__col .doctor__preview {
+  border-radius: 0.625em;
+  height: 10em;
+}
+@media (min-width: 768px) {
+  .doctor__col .doctor__preview {
+    border-radius: 3.125em;
+    height: 31.25em;
+  }
+}
+.doctor__col .doctor__videoContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: linear-gradient(21deg, rgba(0, 0, 0, 0.7) 4.54%, rgba(0, 0, 0, 0) 53%);
+  color: #ffffff;
+  padding: 0.75em;
+}
+@media (min-width: 768px) {
+  .doctor__col .doctor__videoContent {
+    padding: 2.1875em 3.125em;
+  }
+}
+.doctor__col .doctor__play {
+  position: static;
+}
+@media (min-width: 768px) {
+  .doctor__col .doctor__play {
+    font-size: 1em;
+  }
+}
+.doctor__col .doctor__text {
+  line-height: 1.3;
+  font-weight: 500;
+  font-size: 0.75em;
+}
+@media (min-width: 768px) {
+  .doctor__col .doctor__text {
+    font-size: 1.875em;
+  }
 }
 .doctor__title {
   font-weight: 700;
@@ -4196,6 +4232,147 @@ a.arrow:before {
 }
 .networks__quantity span:last-child {
   margin-left: 0.375em;
+}
+
+.work__grid {
+  margin-top: 0.75em;
+}
+@media (min-width: 768px) {
+  .work__grid {
+    margin-top: 3.4375em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 4.375em;
+    grid-row-gap: 3.4375em;
+  }
+}
+@media (min-width: 768px) {
+  .work__grid .work__beforeAfter {
+    height: 28.125em !important;
+  }
+}
+.work__item {
+  margin-bottom: 1.5em;
+}
+.work__item:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .work__item {
+    margin-bottom: 0;
+  }
+}
+.work__beforeAfter {
+  width: 100% !important;
+  height: 11.5625em !important;
+  border-radius: 0.625em;
+}
+@media (min-width: 768px) {
+  .work__beforeAfter {
+    border-radius: 3.125em;
+  }
+}
+.work__beforeAfter .twentytwenty-handle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.875em;
+  height: 3.75em;
+  margin-top: 0;
+  margin-left: 0;
+  border-radius: 0;
+  background-color: #ffffff;
+  box-shadow: none;
+  font-size: 0.5em;
+}
+.work__beforeAfter .twentytwenty-handle:after, .work__beforeAfter .twentytwenty-handle:before {
+  box-shadow: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 0.1875em;
+}
+@media (min-width: 768px) {
+  .work__beforeAfter .twentytwenty-handle {
+    font-size: 1em;
+  }
+}
+.work__beforeAfter .twentytwenty-left-arrow {
+  left: 0;
+  margin-left: -2.75em;
+}
+@media (min-width: 768px) {
+  .work__beforeAfter .twentytwenty-left-arrow {
+    margin-left: -1.75em;
+  }
+}
+.work__beforeAfter .twentytwenty-right-arrow {
+  right: 0;
+  margin-right: -2.75em;
+}
+@media (min-width: 768px) {
+  .work__beforeAfter .twentytwenty-right-arrow {
+    margin-right: -1.75em;
+  }
+}
+.work__info {
+  font-size: 0.5em;
+}
+@media (min-width: 768px) {
+  .work__info {
+    font-size: 1em;
+  }
+}
+.work__box {
+  margin-top: 2.5em;
+}
+.work__box span {
+  display: inline-block;
+  margin-top: 1.25em;
+  font-size: 1.25em;
+  line-height: 1.25;
+  font-weight: 500;
+}
+.work__box.error {
+  color: #4C5355;
+}
+.work__box.error span {
+  font-weight: 400;
+}
+.work__label {
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1;
+}
+.work__label:before {
+  content: "";
+  font-family: "icon";
+  font-size: 0.9em;
+  color: #26966E;
+  margin-right: 0.668em;
+}
+.error .work__label:before {
+  content: "";
+  color: #E85454;
+}
+.work__more {
+  margin-top: 1em;
+}
+@media (min-width: 768px) {
+  .work__more {
+    margin-top: 3.4375em;
+  }
+}
+.work__more a {
+  color: #517DC0;
+  font-size: 1em;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .work__more a {
+    font-size: 1.25em;
+  }
 }
 
 .content__title {

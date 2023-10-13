@@ -387,9 +387,9 @@ $(document).ready(function() {
         $(".phone").mask("+7 ( 9 9 9 ) 9 9 9 - 9 9 - 9 9");
     });
 
-    function initTwentytwenty () {
-        $(".twentytwenty-container").twentytwenty({
-            default_offset_pct: 0.42, // сколько показывать 'изображение до' в процентах (максимально 1) сразу после загрузки страницы
+    function initBeforeAfterImg () {
+        $(".beforeAfter-container").twentytwenty({
+            default_offset_pct: 0.3, // сколько показывать 'изображение до' в процентах (максимально 1) сразу после загрузки страницы
             orientation: 'horizontal', // ориентация слайдера ('horizontal' или 'vertical')
             before_label: 'До', // подпись 'до'
             after_label: 'После', // подпись 'после'
@@ -399,7 +399,7 @@ $(document).ready(function() {
             click_to_move: false // разрешить перемещение "бегунка" слайдера по клику на изображении
         });
     }
-    // initTwentytwenty(); добавить пример и стили
+    initBeforeAfterImg();
 
 
 

@@ -36,6 +36,10 @@
         border-radius: 0.625em;
         @media (min-width: 768px) {
             border-radius: 3.125em;
+
+            .section_work & {
+                height: 45em!important;
+            }
         }
 
         .twentytwenty-handle {

@@ -19,4 +19,12 @@
 
         }
     }
+
+    .reviewsVideo__preview:first-child .reviewsVideo__content {
+        height: 10.75em;
+        @media (min-width: 768px) {
+            padding: 2.1875em 2.1875em 2.8125em;
+            height: 31.25em;
+        }
+    }
 }

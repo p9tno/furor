@@ -142,6 +142,23 @@ body {
 		}
 	}
 
+	&__btn {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75em;
+
+		margin-top: 0.75em;
+		margin-bottom: 0.75em;
+		@media (min-width: 768px) {
+			flex-direction: row;
+			align-items: center;
+			gap: 1.25em;
+
+			margin-top: 3.4375em;
+			margin-bottom: 7.875em;
+		}
+	}
+
 	&__nav {
 		margin-top: 0.75em;
 		@media (min-width: 768px) {
@@ -152,7 +169,6 @@ body {
 			font-size: 0.5em;
 			@media (min-width: 768px) {
 				font-size: 1em;
-
 			}
 		}
 
@@ -237,6 +253,7 @@ body {
 		height: 7.5em;
 		border-radius: 0.625em;
 		margin: 0.3125em 0;
+
 		@media (min-width: 768px) {
 			margin: 0;
 			height: 32.5em;
@@ -244,6 +261,15 @@ body {
 
 			.section_work & {
 				height: 25em;
+				margin: 3.125em 0 4.6875em;
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
@@ -256,7 +282,10 @@ body {
 
 			&_first {
 				padding-top: 2.1875em;
+			}
 
+			.section_work & {
+				padding-top: 4.6875em;
 			}
 		}
 
@@ -303,6 +332,13 @@ body {
 			margin: 0.5em 0;
 			@media (min-width: 768px) {
 				margin: 0.94em 0;
+
+				.section_work & {
+					font-size: 2.5em;
+					margin: 0.75em 0;
+					padding-bottom: 0.75em;
+					border-bottom: 1px solid $color_primary;
+				}
 			}
 
 			&:first-child {
@@ -321,6 +357,18 @@ body {
 			margin: 0.5em 0;
 			line-height: 1.785;
 
+			a {
+				font-size: 1em;
+			}
+
+			@media (min-width: 768px) {
+				.section_work & {
+					font-size: 1.125em;
+					margin: 1.666667em 0;
+					line-height: 1.3198;
+				}
+			}
+
 			&:first-child {
 				margin-top: 0;
 			}
@@ -329,10 +377,6 @@ body {
 				margin-bottom: 0;
 			}
 
-			a {
-				font-size: 1em;
-
-			}
 		}
 
 		ol,
@@ -379,6 +423,66 @@ body {
 				font-size: 1.5em;
 
 			}
+
+		}
+	}
+
+	&__workInfo {
+		display: flex;
+		gap: 3.4375em;
+		margin: 1.875em 0;
+		padding: 0 0 1.875em;
+		list-style: none;
+
+		font-size: 0.75em;
+		@media (min-width: 768px) {
+			font-size: 1em;
+			border-bottom: 1px solid $color_primary;
+		}
+
+		li {
+			display: flex;
+			flex-direction: column;
+		}
+
+		span {
+			font-size: 1.25em;
+			font-weight: 700;
+			line-height: 1.45;
+
+			&:last-child {
+				margin-top: 0.6em;
+				font-weight: 400;
+				color: #4C5355;
+			}
+		}
+
+	}
+
+	&__play {
+		display: flex;
+		align-items: center;
+		gap: 1.25em;
+		margin: 1.875em 0;
+
+		font-size: 0.675em;
+		@media (min-width: 768px) {
+			font-size: 1em;
+
+		}
+
+		.play {}
+
+		&_label {
+			font-size: 1.5em;
+			font-weight: 700;
+		}
+	}
+
+	&__beforeAfter {
+		margin-top: 0.75em;
+		@media (min-width: 768px) {
+			margin-top: 3.125em;
 
 		}
 	}

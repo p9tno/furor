@@ -53,50 +53,112 @@ block content
                             li
                                 a.scroll_js(href="#row5") Результат
 
-
-                    .section
-
-
                     // begin row
                     .section__row
 
-                        .section__text
-                            h2 О стоматологии
-                            p Имплантация зубов и протезирование - это важные процедуры стоматологической медицины, которые позволяют восстановить эстетику и функциональность полости рта. <a href="">Имплантация зубов</a> является современным методом восстановления зубов, который позволяет восстановить красоту улыбки и функциональность челюсти.
+                        .section__text#row1
+                            h2 С чем обратился пациент
+                            div
+                                p Пациент выразил свою неудовлетворенность относительно внешнего вида своих зубов. Он отметил, что их цвет не является достаточно белым и привлекательным. Кроме того, пациент также обратил внимание на различные эстетические проблемы, такие как неровности и сколы на поверхности зубов.
 
-                            ul
-                                each item in ['', '', '', '', '', ]
-
-                                    li элемент списка
-                            ol
-                                each item in ['', '', '', '', '', ]
-
-                                    li элемент списка
-
-                            a(href="#") Имплантация зубов и протезирование
+                                p В целом, он был не удовлетворен общим состоянием своей улыбки и хотел ее улучшить.
 
                         .section__img.img
-                            img(src="../../img/img_sm.png" loading="lazy")
-
+                            img(src="../../img/singleWork_1.png" loading="lazy")
 
 
                     // end row
 
                     // begin row
-                    .section__row#aspect
+                    .section__row#row2
                         .section__text
-                            h2 Важный аспект
-                            p Важным аспектом стоматологии является также эстетическая коррекция зубов. Стоматологи могут помочь пациентам устранить проблемы с цветом, формой или расположением зубов, решить проблемы с недостатком зубов, а также улучшить внешний вид улыбки. Как и в любой области медицины, важно регулярно посещать стоматолога для поддержания здоровья рта. Регулярные посещения помогают выявлять проблемы раньше, чем они прогрессируют, и предотвращать развитие серьезных заболеваний полости рта.
+                            h2 Провели обследование
+                            p Обследование: пациент проходит рентгеновские и КТ-исследования для определения здоровья кости и других тканей в зоне имплантации.
+
+                            p Если зубы уже удалены, то перед установкой имплантов может потребоваться провести дополнительную хирургическую процедуру для восстановления объема кости.
 
                         .section__img.img
-                            img(src="../../img/img_sm.png" loading="lazy")
+                            img(src="../../img/singleWork_2.png" loading="lazy")
                     // end row
+
+                    // begin row
+                    .section__row#row3
+                        .section__text
+                            h2 Установили импланты
+                            p Установка имплантов: во время этого этапа хирург устанавливает четыре импланта в верхнюю или нижнюю челюсть, в зависимости от того, где требуется восстановление зубов.
+
+                            p После установки имплантов, на них крепится временный мост, чтобы пациент мог использовать зубы на следующий день после процедуры.
+
+                        .section__img.img
+                            img(src="../../img/singleWork_3.png" loading="lazy")
+                    // end row
+
+                    // begin row
+                    .section__row#row4
+                        .section__text
+                            h2 Установили постоянный мост
+                            p Установка имплантов: во время этого этапа хирург устанавливает четыре импланта в верхнюю или нижнюю челюсть, в зависимости от того, где требуется восстановление зубов.
+
+                            p После установки имплантов, на них крепится временный мост, чтобы пациент мог использовать зубы на следующий день после процедуры.
+
+                        .section__img.img
+                            img(src="../../img/singleWork_4.png" loading="lazy")
+                    // end row
+
+                    // begin row
+                    .section__row#row5
+                        .section__text
+                            h2 Результат
+                            p В результате  удалось улучшить эстетический вид улыбки пациента. Керамические виниры покрыли поверхность зубов, создав естественный белоснежный цвет и скрыли неровности и сколы.
+
+                            p Пациент был доволен результатом и выразил благодарность стоматологам за проведенную процедуру.
+                    // end row
+
+                    ul.section__workInfo
+                        li 
+                            span Стоимость:
+                            span 250 000 руб
+                        li 
+                            span Срок:
+                            span 1 день
+
+
+                    .section__play
+                        .play.youtubeModal_js#rsDoGqnPE4c
+                            i.icon_play
+                        .section__play_label Смотреть видеоотзыв
+
+                    .section__beforeAfter
+                        .work__beforeAfter.img.beforeAfter-container
+                            img(src="../../img/work_1.png" loading="lazy")
+                            img(src="../../img/work_2.png" loading="lazy")
+
+
+
+
 
 
 
                 // begin sidebar
                 .section__sidebar
                     .sidebar
+                        // begin sidebar__item
+                        .sidebar__item
+                            .reviewsVideo__preview.video-wrap
+                                .reviewsVideo__video.video-play(style="background-image: url('../../img/reviewsVideo_"+item+".png')")
+                                    video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
+                                        source(src="../../media/information.mp4" type="video/mp4")
+
+                                .reviewsVideo__content.video-content
+                                    .reviewsVideo__play
+                                        .play.youtubeModal_js#rsDoGqnPE4c
+                                            i.icon_play
+                                    .reviewsVideo__text
+                                        span Анна Ивановна Троценко
+                                        span “Благодарю за высокий профессионализм и грамотную понятную консультацию” 
+
+                        // end sidebar__item
+
                         // begin sidebar__item
                         .sidebar__item
                             .sidebar__title Может быть интересно
@@ -120,3 +182,44 @@ block content
 
 
     // end
+
+    // begin author
+    section#author.author.section
+        .container_center
+            h2.section__title <b>Автор статьи</b>
+            .doctor__list
+                each item in [ {img: '1', name : 'Айк Оганесович Байбурцян'} ]
+
+                    .doctor__item
+                        .doctor__left
+                            .doctor__preview
+                                .doctor__img.img
+                                    img(src=path +"img/doctor_"+item.img+".png" alt="image" loading="lazy")
+                                .doctor__play
+                                    .play.youtubeModal_js#rsDoGqnPE4c
+                                        i.icon_play
+
+                        .doctor__right
+                            .doctor__name=item.name
+                            .doctor__label Квалификация
+                            .doctor__specializing Эксперт в области имплантации и протезирования
+                            //- Опыт работы / Стаж
+                            .doctor__label Стаж
+                            .doctor__experience 17 лет
+                            ul.list
+                                each item in ['Дентальная имплантация: Nobel, Noris, Альфабио, SGS, Astra, Zumer, Osstem, Straumann, Cortex', 'Имплантация ALL-on-4', 'Установка Pterygoid, Zigoma (скуловые имплантаты).' ]
+                                    li=item
+                            .doctor__btn
+                                a.btn(href="#")
+                                    span Подробнее о враче
+
+
+    // end author
+
+    include ../../sections/reviewsCompany.pug
+
+    include ../../sections/advantages.pug
+
+    include ../../sections/payment.pug
+
+    include ../../sections/singup.pug

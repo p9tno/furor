@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/aos.css"/>
-    <link rel="stylesheet" type="text/css" href="css/fancybox.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
-    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/twentytwenty.css"/>
-    <link rel="stylesheet" type="text/css" href="css/select.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/aos.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/fancybox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/twentytwenty.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/select.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
   </head>
   <body>
     <div class="wrapper" id="wrapper">
@@ -125,52 +125,81 @@
         </div>
       </header>
       <main class="main_content">
-        <!-- begin projectNaw-->
-        <section class="projectNaw section" id="projectNaw">
+        <!-- begin breadcrumbs-->
+        <section class="breadcrumbs section" id="breadcrumbs">
           <div class="container_center">
-            <h2 class="section__title"><span>Навигация по проекту</span></h2>
-            <ul style="font-size:1.25em; margin:0;padding-left:0.75em;">
-              <li><a class="snakeline" href="../pages/home/">Главная</a></li>
-              <li><a class="snakeline" href="../pages/serviceAll/">Страница всех услуг</a></li>
-              <li><a class="snakeline" href="../pages/about/">О нас</a></li>
-              <li><a class="snakeline" href="../pages/archiveDoctor/">Врачи</a></li>
-              <li><a class="snakeline" href="../pages/singleDoctor/">Страница одного врача</a></li>
-              <li><a class="snakeline" href="../pages/price/">Цены</a></li>
-              <li><a class="snakeline" href="../pages/stock/">Акции</a></li>
-              <li><a class="snakeline" href="../pages/archiveWork/">Наши работы</a></li>
-              <li><a class="snakeline" href="../pages/singleWork/">Страница 1 работы</a></li>
-              <li><a class="snakeline" href="../pages/archiveReviews/">Отзывы</a></li>
-              <li><a class="snakeline" href="../pages/archiveBlog/">Страница блога</a></li>
-              <li><a class="snakeline" href="../pages/singleBlog/">Страница 1 статьи</a></li>
-              <li><a class="snakeline" href="../pages/thanks/">Cтраница спасибо</a></li>
-              <li><a class="snakeline" href="../pages/notfound/">Ошибка 404</a></li>
-              <li><a class="snakeline" href="../pages/service/">Страница одной услуги (в работе)</a></li>
-            </ul>
-          </div>
-        </section>
-        <!-- end projectNaw-->
-        <!-- begin projectBtn-->
-        <section class="projectBtn section" id="projectBtn">
-          <div class="container_center">
-            <h2 class="section__title"><span>Кнопки</span></h2>
-            <div class="section__content">
-              <h3> .btn</h3><a class="btn" href="#"> <span>Подробнее о враче</span></a><br/><br/>
-              <h3> .btn_sm</h3><a class="btn btn_sm" href="#"> <span>Заказать консультацию</span></a><br/><br/><a class="btn btn_sm btn_danger" href="#"> <span>Участвовать в акции</span></a><br/><br/><a class="btn btn_sm" href="#"> <span>Узнать больше</span></a><br/><br/>
-              <h3> .btn_lg</h3><a class="btn btn_lg" href="#"> <span>Оставить заявку на рассрочку</span></a><br/><br/><a class="btn btn_danger btn_lg" href="#"> <span>Записаться на <br> первичный приём</span></a><br/><br/><a class="btn btn_lg" href="#"> <span>Узнать стоимость <br>по WhatsApp</span><span>время ответа около 10 минут</span></a><br/><br/>
+            <div class="breadcrumbs__content">
+              <div class="kama_breadcrumbs"><span><a href="#"><span>Главная</span></a></span><span class="kb_sep"> </span><span class="kb_title">Цены</span></div>
             </div>
           </div>
         </section>
-        <!-- end projectBtn-->
-        <!-- begin projectModal-->
-        <section class="projectModal section" id="projectModal">
+        <!-- end breadcrumbs-->
+        <!-- begin price-->
+        <section class="price section" id="price">
           <div class="container_center">
-            <h2 class="section__title"><span>Модальные окна</span></h2>
-            <div class="section__content"><a class="btn show_modal_js" href="#info"> <span>Собщение</span></a><br/><br/>
-              <div class="play youtubeModal_js" id="rsDoGqnPE4c"><i class="icon_play"></i></div>
+            <h1 class="section__title"><b>Цены на лечение в стоматологии Furor</b></h1>
+            <div class="section__desc">Никаких переплат и скрытых платежей, цены фиксированные и прописываются в договоре</div>
+            <div class="priceTabs__content">
+              <div class="priceTabs__row">
+                <div class="priceTabs__col">
+                  <div class="priceTabs__label"><span>Восстановить зуб</span>
+                    <div class="priceTabs__toggle mobile"><i class="icon_caret_bottom"></i></div>
+                  </div>
+                  <ul class="priceTabs__menu list">
+                    <li class="priceTabs__item"><span class="priceTabs__link active" data-tab="#plate-1">Имплантация зубов</span></li>
+                    <li class="priceTabs__item"><span class="priceTabs__link" data-tab="#plate-2">Реставрация зубов</span></li>
+                    <li class="priceTabs__item"><span class="priceTabs__link" data-tab="#plate-3">Коронки</span></li>
+                    <li class="priceTabs__item"><span class="priceTabs__link" data-tab="#plate-4">Протезирование зубов</span></li>
+                  </ul>
+                </div>
+                <div class="priceTabs__col">
+                  <div class="priceTabs__label"><span>Вставить все зубы</span>
+                    <div class="priceTabs__toggle mobile"><i class="icon_caret_bottom"></i></div>
+                  </div>
+                  <ul class="priceTabs__menu list">
+                    <li class="priceTabs__item"><span class="priceTabs__link" data-tab="#plate-5">Все-на-4</span></li>
+                    <li class="priceTabs__item"><span class="priceTabs__link" data-tab="#plate-6">Несъемные протезы</span></li>
+                    <li class="priceTabs__item"><span class="priceTabs__link" data-tab="#plate-7">Съемные зубные протезы</span></li>
+                  </ul>
+                </div>
+                <div class="priceTabs__col">
+                  <div class="priceTabs__label"><span>Вылечить зубы</span>
+                    <div class="priceTabs__toggle mobile"><i class="icon_caret_bottom"></i></div>
+                  </div>
+                </div>
+                <div class="priceTabs__col">
+                  <div class="priceTabs__label"><span>Красивая улыбка</span>
+                    <div class="priceTabs__toggle mobile"><i class="icon_caret_bottom"></i></div>
+                  </div>
+                </div>
+              </div>
+              <div class="priceTabContent">
+                <div class="priceTabContent__item active" id="plate-1">
+                  <h1>1</h1>
+                </div>
+                <div class="priceTabContent__item" id="plate-2">
+                  <h1>2</h1>
+                </div>
+                <div class="priceTabContent__item" id="plate-3">
+                  <h1>3</h1>
+                </div>
+                <div class="priceTabContent__item" id="plate-4">
+                  <h1>4</h1>
+                </div>
+                <div class="priceTabContent__item" id="plate-5">
+                  <h1>5</h1>
+                </div>
+                <div class="priceTabContent__item" id="plate-6">
+                  <h1>6</h1>
+                </div>
+                <div class="priceTabContent__item" id="plate-7">
+                  <h1>7</h1>
+                </div>
+              </div>
             </div>
           </div>
         </section>
-        <!-- end projectModal-->
+        <!-- end price-->
       </main>
       <footer class="footer">
         <div class="footer__content">
@@ -330,20 +359,20 @@
         </div>
       </div>
       <!-- End modal onlyPhone-->
-      <script src="js/jquery.js"></script>
-      <script src="js/jquery.maskedinput.min.js"></script>
-      <script src="js/modal.js"></script>
-      <script src="js/swiper-bundle.min.js"></script>
-      <script src="js/select2.min.js"></script>
-      <script src="js/jquery.event.move.js"></script>
-      <script src="js/jquery.twentytwenty.js"></script>
-      <script src="js/jquery.marquee.min.js"></script>
-      <script src="js/aos.js"></script>
-      <script src="js/fancybox.min.js"></script>
-      <script src="js/jquery-ui.min.js"></script>
-      <script src="js/jquery-ui-touch-punch.js"></script>
-      <script src="js/form.js"></script>
-      <script src="js/function.js"></script>
+      <script src="../../js/jquery.js"></script>
+      <script src="../../js/jquery.maskedinput.min.js"></script>
+      <script src="../../js/modal.js"></script>
+      <script src="../../js/swiper-bundle.min.js"></script>
+      <script src="../../js/select2.min.js"></script>
+      <script src="../../js/jquery.event.move.js"></script>
+      <script src="../../js/jquery.twentytwenty.js"></script>
+      <script src="../../js/jquery.marquee.min.js"></script>
+      <script src="../../js/aos.js"></script>
+      <script src="../../js/fancybox.min.js"></script>
+      <script src="../../js/jquery-ui.min.js"></script>
+      <script src="../../js/jquery-ui-touch-punch.js"></script>
+      <script src="../../js/form.js"></script>
+      <script src="../../js/function.js"></script>
     </div>
   </body>
 </html>

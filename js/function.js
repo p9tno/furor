@@ -96,6 +96,7 @@ $(document).ready(function() {
         console.log('mobile');
         toggleMobileSubMenu();
         toggleServicesMenu();
+        togglePriceMenu();
     }
 
     // only desktop function
@@ -159,6 +160,14 @@ $(document).ready(function() {
     function toggleServicesMenu() {
         $('.services__toggle').click(function(event) {
             let menu = $(this).closest('.services__col').find('.services__menu').eq(0);
+            $(this).toggleClass('active');
+            menu.slideToggle();
+        })
+    }
+    // only mobile function
+    function togglePriceMenu() {
+        $('.priceTabs__toggle').click(function(event) {
+            let menu = $(this).closest('.priceTabs__col').find('.priceTabs__menu').eq(0);
             $(this).toggleClass('active');
             menu.slideToggle();
         })
@@ -244,13 +253,11 @@ $(document).ready(function() {
     openMobileNav();
 
 
-    function showMore(classItem, btn) {
+    function showMore(classItem, btn, start = 1, show = 1 ) {
         // let classItem = '.vacancies__item';
         // let classItem = class;
         let item = $(''+ classItem +'');
         let count = item.length;
-        let start = 6;
-        let show = 4;
 
         item.addClass('d-none');
         $('' + classItem + ':lt(' + start + ')').removeClass('d-none');
@@ -277,7 +284,8 @@ $(document).ready(function() {
         });
 
     }
-    showMore('.reviews__item', '.show_more_js');
+    showMore('.reviews__item', '.show_more_js', 6, 4);
+    showMore('.price__item', '.show_more_price_js', 8, 8);
 
     function collapsed() {
         let toggle = $('[data-collapse]');
@@ -330,6 +338,22 @@ $(document).ready(function() {
 
     }
     doTabs();
+
+    function doPriceTabs () {
+        $('.priceTabs__link').on('click', function() {
+           $('.priceTabs__link').removeClass('active');
+           $(this).addClass('active');
+
+           $('.priceTabContent__item').hide()
+           console.log(($(this).data('tab')));
+           $($(this).data('tab')).fadeIn();
+
+           // $('.priceTabContent__item').removeClass('active');
+            // $($(this).data('tab')).addClass('active');
+       });
+
+    }
+    doPriceTabs();
 
     function doDrop() {
         $('.drop__toggle').on('click', function() {
@@ -812,6 +836,5 @@ $(document).ready(function() {
 
         }
     });
-
 
 })

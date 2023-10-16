@@ -1,0 +1,84 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+    //- path +"img/head_main.png"
+
+
+block content
+
+    // begin breadcrumbs
+    section#breadcrumbs.breadcrumbs.section
+        .container_center
+            .breadcrumbs__content
+
+                .kama_breadcrumbs
+                    span
+                        a(href="#")
+                            span Главная
+                    span.kb_sep 
+
+                    span.kb_title Цены
+    // end breadcrumbs
+
+    // begin price
+    section#price.price.section
+        .container_center
+            h1.section__title <b>Цены на лечение в стоматологии Furor</b>
+            .section__desc Никаких переплат и скрытых платежей, цены фиксированные и прописываются в договоре
+
+            .priceTabs__content
+                .priceTabs__row
+                    .priceTabs__col
+                        .priceTabs__label
+                            span Восстановить зуб
+                            .priceTabs__toggle.mobile
+                                i.icon_caret_bottom
+                        ul.priceTabs__menu.list
+
+                            li.priceTabs__item
+                                span.priceTabs__link.active(data-tab="#plate-1") Имплантация зубов
+                            each item in [ {id: '2', link: 'Реставрация зубов'},  {id: '3', link: 'Коронки'},  {id: '4', link: 'Протезирование зубов'} ]
+                                li.priceTabs__item
+                                    span.priceTabs__link(data-tab="#plate-"+item.id+"")=item.link
+
+                    .priceTabs__col
+                        .priceTabs__label
+                            span Вставить все зубы
+                            .priceTabs__toggle.mobile
+                                i.icon_caret_bottom
+                        ul.priceTabs__menu.list
+                            each item in [ {id: '5', link: 'Все-на-4'},  {id: '6', link: 'Несъемные протезы'},  {id: '7', link: 'Съемные зубные протезы'} ]
+                                li.priceTabs__item
+                                    span.priceTabs__link(data-tab="#plate-"+item.id+"")=item.link
+
+                    .priceTabs__col
+                        .priceTabs__label
+                            span Вылечить зубы
+                            .priceTabs__toggle.mobile
+                                i.icon_caret_bottom
+
+                    .priceTabs__col
+                        .priceTabs__label
+                            span Красивая улыбка
+                            .priceTabs__toggle.mobile
+                                i.icon_caret_bottom
+
+
+
+
+                .priceTabContent
+                    .priceTabContent__item.active(id="plate-1")
+                        h1 1
+
+                    each item in [2,3,4,5,6,7]
+
+                        .priceTabContent__item(id="plate-"+item+"")
+                            h1=item
+
+
+
+
+
+    // end price

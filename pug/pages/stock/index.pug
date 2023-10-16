@@ -1,0 +1,49 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+    //- path +"img/head_main.png"
+
+
+block content
+
+    // begin breadcrumbs
+    section#breadcrumbs.breadcrumbs.section
+        .container_center
+            .breadcrumbs__content
+
+                .kama_breadcrumbs
+                    span
+                        a(href="#")
+                            span Главная
+                    span.kb_sep 
+
+                    span.kb_title Акции
+    // end breadcrumbs
+
+    // begin price
+    section#price.price.section
+        .container_center
+            h1.section__title <b>Всегда выгодные акции для вас</b>
+            .price__list
+
+                //- include ../../parts/priceItem.pug
+                each item in ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '' ]
+
+                    include ../../parts/priceItemSell.pug
+
+            .section__moreRotate
+                a.show_more_price_js(href="#")
+                    span Смотреть все акции
+
+
+    // end price
+
+    include ../../sections/reviewsCompany.pug
+
+    include ../../sections/advantages.pug
+
+    include ../../sections/payment.pug
+
+    include ../../sections/singup.pug

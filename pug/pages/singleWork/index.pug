@@ -140,10 +140,10 @@ block content
 
 
                 // begin sidebar
-                .section__sidebar
+                .section__sidebar.no_sticky
                     .sidebar
                         // begin sidebar__item
-                        .sidebar__item
+                        .sidebar__item.desktop
                             .reviewsVideo__preview.video-wrap
                                 .reviewsVideo__video.video-play(style="background-image: url('../../img/reviewsVideo_"+item+".png')")
                                     video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
@@ -161,7 +161,7 @@ block content
 
                         // begin sidebar__item
                         .sidebar__item
-                            .sidebar__title Может быть интересно
+                            .sidebar__title Другие работы
                             .blog__grid
                                 each item in [ {img: '1', title: 'Как подготовиться'}, {img: '2', title: 'Что делать, если сломался зуб: советы стоматолога по оказанию первой помощи'}, {img: '3', title: 'Лечение зубов за границей: плюсы и минусы, опыт и рекомендации'}, {img: '1', title: 'Как подготовиться к посещению стоматолога: советы и рекомендации'} ]
                                     .blog__item
@@ -174,7 +174,7 @@ block content
                                         .blog__title
                                             span=item.title 
                                         .blog__link
-                                            a.snakeline.arrow(href="#") Читать статью
+                                            a.snakeline.arrow(href="#") Смотреть работу
                         // end sidebar__item
 
 

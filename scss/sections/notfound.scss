@@ -1,0 +1,21 @@
+.notfound {
+    text-align: center;
+
+    &__btn {
+        margin-top: 0.75em;
+        @media (min-width: 768px) {
+            margin-top: 3.125em;
+        }
+    }
+
+    &__img {
+        width: 34.6875em;
+        margin: 0 auto 1.875em;
+
+        font-size: 0.4em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+
+        }
+    }
+}

@@ -1,0 +1,42 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+    //- path +"img/head_main.png"
+
+
+block content
+    // begin thanks
+    section#thanks.thanks.section
+        .container_center
+            h1.section__title <b>Спасибо!</b>
+            .section__desc Мы получили ваши данные и совсем скоро с вами свяжемся 
+            .thanks__btn
+                a.btn.btn_lg(href="#")
+                    span Вернуться на главную
+
+    // end thanks
+
+    include ../../sections/networks.pug
+
+    // begin videoLg
+    section#videoLg.videoLg.section
+        .container_center
+            h2.section__title <b>Пока вы ждёте звонка посмотрите видео о клинике и о нашем подходе к работе</b>
+
+
+            .videoLg__wrap.video-wrap
+
+                .videoLg__video.video-play(style="background-image: url('../../img/videoLg.png')")
+                    video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
+                        source(src="../../media/information.mp4" type="video/mp4")
+
+                .videoLg__content.video-content
+                    .videoLg__play
+                        .play.youtubeModal_js#rsDoGqnPE4c
+                            i.icon_play
+
+
+
+    // end videoLg

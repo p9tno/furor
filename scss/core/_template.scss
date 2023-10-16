@@ -128,6 +128,11 @@ body {
 			position: sticky;
 			top: 5em;
 			height: 100%;
+
+			&.no_sticky {
+				position: static;
+			}
+
 		}
 	}
 
@@ -501,7 +506,7 @@ body {
 }
 
 .d-none {
-	display: none;
+	display: none!important;
 }
 
 .d-block {

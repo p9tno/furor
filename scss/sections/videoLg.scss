@@ -1,0 +1,32 @@
+.videoLg {
+    &__wrap {
+        height: 9.375em;
+        border-radius: 0.625em;
+        margin-top: 0.75em;
+        @media (min-width: 768px) {
+            height: 53.125em;
+            border-radius: 3.125em;
+            margin-top: 3.4375em;
+
+        }
+    }
+
+    &__video {}
+
+    &__content {
+        background: linear-gradient(21deg, rgba(0, 0, 0, 0.70) 6.76%, rgba(0, 0, 0, 0.00) 52.77%);
+        height: 100%;
+        padding: 0.75em;
+
+        @media (min-width: 768px) {
+            padding: 2.625em 3.125em;
+        }
+
+        .videoLg__play {
+            @media (max-width: 767px) {
+                font-size: 0.4em;
+            }
+        }
+    }
+
+}

@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?jlurfd');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?jlurfd#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?jlurfd') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?jlurfd') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?jlurfd##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?cd3lp4');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?cd3lp4#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?cd3lp4') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?cd3lp4') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?cd3lp4##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon_more {
+  &:before {
+    content: $icon_more; 
+  }
+}
 .icon_quotes {
   &:before {
     content: $icon_quotes; 

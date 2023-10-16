@@ -249,8 +249,8 @@ $(document).ready(function() {
         // let classItem = class;
         let item = $(''+ classItem +'');
         let count = item.length;
-        let start = 1;
-        let show = 1;
+        let start = 6;
+        let show = 4;
 
         item.addClass('d-none');
         $('' + classItem + ':lt(' + start + ')').removeClass('d-none');
@@ -277,7 +277,7 @@ $(document).ready(function() {
         });
 
     }
-    // showMore('.vacancies__item', '.show_more_v_js');
+    showMore('.reviews__item', '.show_more_js');
 
     function collapsed() {
         let toggle = $('[data-collapse]');

@@ -68,17 +68,42 @@ block content
 
 
 
-                .priceTabContent
+                .priceTabContent#priceTabContent
                     .priceTabContent__item.active(id="plate-1")
-                        h1 1
+                        .priceTabContent__link
+                            a.snakeline(href="#") Имплантация зубов
 
-                    each item in [2,3,4,5,6,7]
+                        .price__list
+                            include ../../parts/priceItemSell.pug
+                            include ../../parts/priceItem.pug
+                            each item in ['', '', '', ]
+                                include ../../parts/priceItem.pug
 
-                        .priceTabContent__item(id="plate-"+item+"")
-                            h1=item
+
+
+
+                    each item in [ {id: '2', link: 'Реставрация зубов'},  {id: '3', link: 'Коронки'},  {id: '4', link: 'Протезирование зубов'},{id: '5', link: 'Все-на-4'},  {id: '6', link: 'Несъемные протезы'},  {id: '7', link: 'Съемные зубные протезы'} ]
+
+                        .priceTabContent__item(id="plate-"+item.id+"")
+
+                            .priceTabContent__link
+                                a.snakeline(href="#")=item.link
+
+                            .price__list
+                                include ../../parts/priceItemSell.pug
+                                include ../../parts/priceItem.pug
+
+                                //- each item in ['', '', '', ]
+                                //-     include ../../parts/priceItem.pug
 
 
 
 
 
     // end price
+
+    include ../../sections/payment.pug
+
+    include ../../sections/singup.pug
+
+    include ../../sections/content.pug

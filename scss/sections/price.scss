@@ -279,11 +279,33 @@
 }
 
 .priceTabContent {
+    padding-top: 1em;
+    @media (min-width: 768px) {
+        padding-top: 5.9375em;
+    }
+
     &__item {
         display: none;
 
         &.active {
             display: block;
+        }
+    }
+
+    &__link {
+        margin-bottom: 1em;
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+        }
+
+        a {
+            font-weight: 700;
+            color: $color_info;
+            font-size: 1.25em;
+            @media (min-width: 768px) {
+                font-size: 2.1875em;
+
+            }
         }
     }
 }
@@ -299,10 +321,14 @@
 
     &__row {
         margin: 0 -1.375em;
+
         @media (min-width: 768px) {
             margin: 0;
             display: flex;
             justify-content: space-between;
+
+            padding-bottom: 3.75em;
+            border-bottom: 1px solid $color_primary;
         }
     }
 

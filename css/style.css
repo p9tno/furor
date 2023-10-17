@@ -5018,11 +5018,37 @@ a.arrow:before {
   }
 }
 
+.priceTabContent {
+  padding-top: 1em;
+}
+@media (min-width: 768px) {
+  .priceTabContent {
+    padding-top: 5.9375em;
+  }
+}
 .priceTabContent__item {
   display: none;
 }
 .priceTabContent__item.active {
   display: block;
+}
+.priceTabContent__link {
+  margin-bottom: 1em;
+}
+@media (min-width: 768px) {
+  .priceTabContent__link {
+    margin-bottom: 0;
+  }
+}
+.priceTabContent__link a {
+  font-weight: 700;
+  color: #517DC0;
+  font-size: 1.25em;
+}
+@media (min-width: 768px) {
+  .priceTabContent__link a {
+    font-size: 2.1875em;
+  }
 }
 
 .priceTabs__content {
@@ -5041,6 +5067,8 @@ a.arrow:before {
     margin: 0;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 3.75em;
+    border-bottom: 1px solid #F1F1F1;
   }
 }
 @media (max-width: 767px) {

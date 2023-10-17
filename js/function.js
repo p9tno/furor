@@ -97,6 +97,7 @@ $(document).ready(function() {
         toggleMobileSubMenu();
         toggleServicesMenu();
         togglePriceMenu();
+        // scrollCurrentTab();
     }
 
     // only desktop function
@@ -285,7 +286,7 @@ $(document).ready(function() {
 
     }
     showMore('.reviews__item', '.show_more_js', 6, 4);
-    showMore('.price__item', '.show_more_price_js', 8, 8);
+    showMore('.price_stock .price__item', '.show_more_price_js', 8, 8);
 
     function collapsed() {
         let toggle = $('[data-collapse]');
@@ -343,17 +344,24 @@ $(document).ready(function() {
         $('.priceTabs__link').on('click', function() {
            $('.priceTabs__link').removeClass('active');
            $(this).addClass('active');
-
            $('.priceTabContent__item').hide()
-           console.log(($(this).data('tab')));
            $($(this).data('tab')).fadeIn();
-
-           // $('.priceTabContent__item').removeClass('active');
-            // $($(this).data('tab')).addClass('active');
+           let top = $('#priceTabContent').offset().top;
+           $('body,html').animate({scrollTop: top}, 1000);
        });
-
     }
     doPriceTabs();
+
+    // only mobile function
+    // function scrollCurrentTab() {
+    //     $('.priceTabs__link').on('click', function() {
+    //         let top = $('#priceTabContent').offset().top;
+    //         $('body,html').animate({scrollTop: top}, 1000);
+    //     })
+    // }
+
+
+
 
     function doDrop() {
         $('.drop__toggle').on('click', function() {

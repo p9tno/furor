@@ -1,0 +1,298 @@
+.contacts {
+    @media (max-width: 767px) {
+        overflow: hidden;
+    }
+
+    &__list {
+        margin-top: 1.25em;
+        @media (min-width: 768px) {
+            margin-top: 5.3125em;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 2.625em;
+        }
+    }
+
+    &__item {
+        &:first-child {
+            .contacts__col {
+                &:after {
+                    color: #53A753;
+
+                }
+            }
+        }
+
+        &:last-child {
+            .contacts__col {
+                &:after {
+                    color: #FFD000;
+                }
+            }
+        }
+        margin-bottom: 2.5em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+            width: 52.625em;
+        }
+    }
+
+    &__head {}
+
+    &__title {
+        font-weight: 700;
+        font-size: 1.25em;
+        @media (min-width: 768px) {
+            font-size: 3.125em;
+            line-height: 0.9;
+        }
+    }
+
+    &__descriptions {
+        margin-top: 0.625em;
+
+        span {
+            display: block;
+            color: #4C5355;
+
+            margin-right: 2em;
+            font-size: 0.75em;
+
+            &:last-child {
+                margin-right: 0;
+            }
+            @media (min-width: 768px) {
+                display: inline;
+                font-size: 1.25em;
+
+            }
+        }
+    }
+
+    &__action {
+        margin-top: 1.25em;
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2.5em;
+        }
+    }
+
+    &__phone {
+        display: flex;
+        align-items: center;
+        gap: 1.375em;
+        text-decoration: none;
+
+        font-size: 0.625em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+
+        }
+
+        i {
+            color: $color_success;
+            font-size: 2em;
+
+        }
+
+        span {
+            font-size: 2em;
+            color: $main_color;
+            font-weight: 700;
+            line-height: 1;
+
+        }
+    }
+
+    &__directions {
+        display: inline-block;
+        font-size: 1em;
+        font-weight: 700;
+        color: $color_info;
+        margin-top: 0.75em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+            font-size: 1.25em;
+
+        }
+    }
+
+    &__main {}
+
+    &__col {
+        position: relative;
+        overflow: hidden;
+
+        border-radius: 0.625em;
+        margin-top: 0.75em;
+
+        height: 11.875em;
+
+        @media (min-width: 768px) {
+            border-radius: 3.125em;
+            height: 31.75em;
+            margin-top: 3.125em;
+
+        }
+
+        &:first-child {
+            &:after {
+                content: '\e90b';
+                font-family: 'icon';
+
+                position: absolute;
+
+                color: $color_white;
+
+                font-size: 2.813em;
+                bottom: 0.3334em;
+                right: 0.3334em;
+                @media (min-width: 768px) {
+                    font-size: 5.25em;
+                    bottom: 0.572em;
+                    right: 0.655em;
+
+                }
+            }
+        }
+    }
+
+    &__img {}
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        color: $color_white;
+
+        padding: 0.9375em;
+        background: linear-gradient(32deg, rgba(0, 0, 0, 0.60) 32.91%, rgba(0, 0, 0, 0.00) 68.7%);
+        @media (min-width: 768px) {
+            padding: 2.625em 3.125em 3em;
+            background: linear-gradient(23deg, rgba(0, 0, 0, 0.60) 30.27%, rgba(0, 0, 0, 0.00) 60.71%);
+        }
+    }
+
+    &__play {
+        font-size: 0.4em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+        }
+    }
+
+    &__metro {
+        font-weight: 700;
+        font-size: 0.4em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+        }
+
+        span {
+            display: block;
+
+            &:first-child {
+                font-size: 2em;
+            }
+
+            &:last-child {
+                font-size: 3.75em;
+                line-height: 1;
+                margin-top: 0.625em;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__tour {}
+
+    &__slider {
+        margin-top: 0.75em;
+        @media (min-width: 768px) {
+            margin-top: 3.125em;
+
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        @media (max-width: 767px) {
+
+            overflow: visible;
+
+            &:after,
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+
+                width: 1.375em;
+                height: 100%;
+                background-color: $color_white;
+                z-index: 2;
+            }
+
+            &:before {
+                left: 100%;
+            }
+
+            &:after {
+                right: 100%;
+            }
+        }
+
+        .swiper-arrows {
+            @media (max-width: 767px) {
+                position: absolute;
+                top: 7em;
+                left: -1.563em;
+                width: 24.688em;
+                z-index: 3;
+            }
+        }
+
+    }
+
+    &__slide {
+        overflow: hidden;
+        border-radius: 0.625em;
+        height: 5em;
+        @media (min-width: 768px) {
+            border-radius: 1.25em;
+            height: 9.375em;
+        }
+    }
+
+    &__naw {
+        margin-top: 1.25em;
+        margin-bottom: 0.75em;
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &_col {
+            &:first-child {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                @media (min-width: 768px) {
+                    width: 40em;
+                }
+            }
+        }
+    }
+
+}

@@ -17,3 +17,81 @@ block content
                 span.kb_title Контакты
     // end breadcrumbs
 
+    // begin contacts
+    section#contacts.contacts.section
+        .container_center
+            h1.section__title <b>2 клиники Furor в Москве</b>
+            .contacts__list
+                each item in [{title: 'Москва, м. <span>Сокол</span>', loc: 'Ленинградский проспект, 77к2', metro: 'Сокол'}, {title: 'Москва, м.Перово', loc: 'ул. Перовская, д. 66, корп. 6', metro: 'ПЕРОВО '}]
+
+
+                    .contacts__item
+                        .contacts__head
+                            .contacts__title!=item.title
+                            .contacts__descriptions
+                                span=item.loc
+                                span Ежедневно с 10:00 до 21:00
+                            .contacts__action
+                                a.contacts__phone(href="tel:+7(926)1460088")
+                                    i.icon_phone
+                                    span +7 (926) 146 00 88
+                                a.contacts__directions.snakeline.arrow(href="#") Проложить маршрут
+
+                        .contacts__main
+
+                            .contacts__col
+                                .contacts__img.img_bg
+                                    img(src="../../img/location_2.png" loading="lazy" alt="img")
+
+                                .contacts__content
+                                    .contacts__play
+                                        .play.youtubeModal_js#rsDoGqnPE4c
+                                            i.icon_play
+
+                                    .contacts__metro
+                                        span Как добраться<br> к нам от метро
+                                        span=item.metro
+
+                            .contacts__col
+                                .contacts__img.img_bg
+                                    img(src="../../img/location_1.png" loading="lazy" alt="img")
+
+                                .contacts__content
+                                    span
+                                    .contacts__tour
+                                        a.btn.btn_lg.btn_danger(href="https://stred.ru/panorama/kafe/shtof/" target="_blank")
+                                            span Смотреть 3D - тур по клинике
+
+                        .contacts__slider.swiper.swiper_contacts_js
+                            .contacts__naw
+                                .contacts__naw_col
+                                    .swiper-fraction
+                                    .swiper-label  Листайте, чтобы просмотреть больше фотографий
+                                .contacts__naw_col
+                                    .swiper-arrows
+                                        i.icon_arrow_left
+                                        i.icon_arrow_right
+
+                            .swiper-wrapper
+                                each item in [1,2,3,4,4,3,2,1,1,2,3,4]
+                                    .swiper-slide
+                                        .contacts__slide.img
+                                            img(src="../../img/location_sm_"+item+".png" loading="lazy" alt="img")
+
+
+
+    // end contacts
+
+    // begin map
+    section#map.map.section
+        .container_center
+            h2.section__title <b>Адреса наших клиник на карте</b>
+            .map__content
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0be7c32a6d9e68f7ba69d5b2e7dfcda1e7a15a262e57ffcb28e4d02d36ab69ef&amp;source=constructor" width="820" height="720" frameborder="0"></iframe>
+
+    // end map
+
+
+    include ../../sections/networks.pug
+
+    include ../../sections/singup.pug

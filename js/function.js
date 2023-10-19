@@ -805,8 +805,8 @@ $(document).ready(function() {
             on: {
                 init: function (e) {
                     // do something
-                    console.log('init');
-                    console.log(e);
+                    // console.log('init');
+                    // console.log(e);
                 },
                 // click: function () {
                 //     // do something
@@ -843,6 +843,45 @@ $(document).ready(function() {
             },
 
         }
+    });
+
+    const contacts = new Swiper('.swiper_contacts_js', {
+        slidesPerView: 2,
+        spaceBetween: 12,
+        speed: 500,
+        loop: false,
+        autoplay: {
+            delay: 5000,
+        },
+
+        grid: {
+            rows: 2,
+            fill: "col",
+        },
+
+        navigation: {
+            prevEl: '.contacts__naw_col .icon_arrow_left',
+            nextEl: '.contacts__naw_col .icon_arrow_right',
+        },
+
+        pagination: {
+            el: '.swiper-fraction',
+            clickable: true,
+            type: "fraction",
+        },
+
+        breakpoints: {
+            768: {
+                spaceBetween: 14,
+                slidesPerView: 4,
+                // loop: true,
+                grid: {
+                    rows: 1,
+                },
+            },
+
+        },
+
     });
 
 })

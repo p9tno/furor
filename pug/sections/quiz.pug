@@ -1,0 +1,51 @@
+// begin quiz
+section.quiz.section
+    .container_center
+
+        h1.section__title <b>Рассчитайте сколько будет стоить</b> для вас восстановить зубы за 1 день
+        .section__desc Пройдите небольшой бесплатный тест 
+
+
+
+        form.quiz-form#quiz(action='#')
+
+            // start quiz-container
+            .quiz-container
+                // start quiz-main
+                .quiz-main
+                    .quiz-wrap
+                        .quiz-header
+                            .quiz-label Получите индивидуальный расчет стоимости имплантации в 3-х вариантах
+                            .quiz-steps
+                                span.quiz_current_step_js 1
+                                span /
+                                span.quiz_total_step_js 4
+
+                        .quiz-line
+                            .quiz-line__bg(style='width: 5%;')
+
+
+                        include ../quiz/quiz-question.pug
+
+                    .quiz-footer
+                        .quiz-arrow__wrap
+                            button.btn.btn_sm.btn_danger.quiz-arrow.quiz-arrow__prev
+                                span Назад
+                            button.btn.btn_sm.quiz-arrow.quiz-arrow__next(disabled='')
+                                span Далее
+                        .quiz-footer__hint
+                            span <b>Выберите вариант ответа</b><br> и нажмите кнопку “Далее”
+
+                // end quiz-main
+
+                include ../quiz/quiz-right.pug
+
+
+
+            // end quiz-container
+
+            include ../quiz/quiz-result.pug
+
+
+
+// end quiz

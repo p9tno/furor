@@ -1,0 +1,279 @@
+// start quiz-question
+.quiz-question.quiz-question__photo.active(data-q='')
+
+    .quiz-question__title Вам нужна имплантация:
+
+    .quiz-question__wrap.quiz-question__wrap_grid
+
+        // start quiz-question__photo-block
+        .quiz-question__photo-block
+            label.quiz-question__photo-label
+                input(type='radio' name='q-1')
+                img.quiz-question__photo-img(loading='lazy' src=path +'img/quiz/question/photo_1.png' alt='')
+                .quiz-question__check.quiz-question__photo-check
+                    i.icon_mark
+
+            .quiz-question__photo-text Верхней челюсти
+        // end quiz-question__photo-block
+
+
+        // start quiz-question__photo-block
+        .quiz-question__photo-block
+            label.quiz-question__photo-label
+                input(type='radio' name='q-1')
+                img.quiz-question__photo-img(loading='lazy' src=path +'img/quiz/question/photo_2.png' alt='')
+                .quiz-question__check.quiz-question__photo-check
+                    i.icon_mark
+
+            .quiz-question__photo-text Нижней челюсти
+
+            .quiz-question-hint
+                i.icon_info
+                p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        // end quiz-question__photo-block
+
+        // start quiz-question__photo-block
+        .quiz-question__photo-block
+            label.quiz-question__photo-label
+                input(type='radio' name='q-1')
+                img.quiz-question__photo-img(loading='lazy' src=path +'img/quiz/question/photo_3.png' alt='')
+                .quiz-question__check.quiz-question__photo-check
+                    i.icon_mark
+
+            .quiz-question__photo-text Обоих челюстей
+        // end quiz-question__photo-block
+
+// end quiz-question
+
+// start quiz-question
+.quiz-question.quiz-question__photo(data-q='')
+
+    .quiz-question__title Что именно вам нужно? (множ.выбор)
+
+    .quiz-question__wrap.quiz-question__wrap_grid
+
+        // start quiz-question__photo-block
+        .quiz-question__photo-block
+            label.quiz-question__photo-label
+                input(type='checkbox' name='q-1')
+                img.quiz-question__photo-img(loading='lazy' src=path +'img/quiz/question/photo_4.png' alt='')
+                .quiz-question__check.quiz-question__photo-check
+                    i.icon_mark
+            .quiz-question__photo-text Восстановление зубов за 1 день по технологии All-on-4
+        // end quiz-question__photo-block
+
+        // start quiz-question__photo-block
+        .quiz-question__photo-block
+            label.quiz-question__photo-label
+                input(type='checkbox' name='q-1')
+                img.quiz-question__photo-img(loading='lazy' src=path +'img/quiz/question/photo_5.png' alt='')
+                .quiz-question__check.quiz-question__photo-check
+                    i.icon_mark
+            .quiz-question__photo-text Лечение зубов
+        // end quiz-question__photo-block
+
+        // start quiz-question__photo-block
+        .quiz-question__photo-block
+            label.quiz-question__photo-label
+                input(type='checkbox' name='q-1')
+                img.quiz-question__photo-img(loading='lazy' src=path +'img/quiz/question/photo_6.png' alt='')
+                .quiz-question__check.quiz-question__photo-check
+                    i.icon_mark
+            .quiz-question__photo-text Лечение зубов
+
+            .quiz-question-hint
+                i.icon_info
+                p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+
+        // end quiz-question__photo-block
+
+
+// end quiz-question
+
+// start quiz-question
+.quiz-question.quiz-question__content(data-q='')
+
+    .quiz-question__title Хотим, чтобы вы знали
+
+    .quiz-question__wrap.quiz-question__wrap_content
+
+        p Стоматология <b>Furor — заботливая стоматология,</b> которую вы полюбите. 
+        p Стоматология Furor — заботливая стоматология, которую вы полюбите. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  
+
+        //- .quiz-question__slider-input
+        //-     label
+        //-         input(type='checkbox' required='' name='')
+        //-         .input-check
+        //-             i.icon_mark
+        //-         p Прочитал (-а)
+
+        .quiz-question__text-block
+            label.quiz-question__text-label
+                input(type='radio' name='q-1')
+                p Прочитал (-а)
+                .quiz-question__check
+                    i.icon_mark
+
+// end quiz-question
+
+
+// start quiz-question
+.quiz-question.quiz-question__text(data-q='')
+
+    .quiz-question__title Какие проблемы с зубами вас беспокоят?
+
+    .quiz-question__wrap.quiz-question__wrap_text
+        each item in ['', '', '', '', ]
+
+            // start quiz-question__text-block
+            .quiz-question__text-block
+                label.quiz-question__text-label
+                    input(type='radio' name='q-1')
+                    p Чувствительность зубов
+                    .quiz-question__check
+                        i.icon_mark
+            // end quiz-question__text-block
+
+            // start quiz-question__text-block
+            .quiz-question__text-block
+                label.quiz-question__text-label
+                    input(type='radio' name='q-1')
+                    p Кровоточивость десен
+                    .quiz-question__check
+                        i.icon_mark
+
+                .quiz-question-hint
+                    i.icon_info
+                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+
+            // end quiz-question__text-block
+
+// end quiz-question
+
+// start quiz-question
+.quiz-question.quiz-question__text(data-q='')
+
+    .quiz-question__title Какие проблема с зубами вас беспокоят? (множ.выбор)
+
+    .quiz-question__wrap.quiz-question__wrap_text
+        each item in ['', '', '', '', ]
+
+            // start quiz-question__text-block
+            .quiz-question__text-block
+                label.quiz-question__text-label
+                    input(type='checkbox' name='q-1')
+                    p Чувствительность зубов
+                    .quiz-question__check
+                        i.icon_mark
+            // end quiz-question__text-block
+
+            // start quiz-question__text-block
+            .quiz-question__text-block
+                label.quiz-question__text-label
+                    input(type='checkbox' name='q-1')
+                    p Кровоточивость десен
+                    .quiz-question__check
+                        i.icon_mark
+
+                .quiz-question-hint
+                    i.icon_info
+                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+
+            // end quiz-question__text-block
+
+// end quiz-question
+
+
+// start quiz-question
+.quiz-question.quiz-question__file(data-q='')
+
+    .quiz-question__title Прикрепите снимок КТ, если есть <small>Это поможет нам предложить лучшее решение для вас и сократит время на уточнение деталей</small>
+
+    .quiz-question__wrap.quiz-question__wrap_file
+        .quiz-question__file-block
+            label(data-text="Файл не выбран").send-form__file
+                input(type='file' required='required')
+                p Загрузить файл
+
+        .quiz-question__text-block
+            label.quiz-question__text-label
+                input(type='radio' name='q-1')
+                p Пропустить вопрос
+                .quiz-question__check
+                    i.icon_mark
+
+// end quiz-question
+
+// start quiz-question
+.quiz-question.quiz-question__textHasImg(data-q='')
+    .quiz-question__title Какие проблемы с зубами вас беспокоят?
+    .quiz-question__wrap
+        .quiz-question__col
+            .quiz-question__img.img
+                img(src=path +'img/quiz/bg_1.png' alt="image" loading="lazy")
+
+        .quiz-question__col
+            // start quiz-question__text-block
+            .quiz-question__text-block
+                label.quiz-question__text-label
+                    input(type='radio' name='q-1')
+                    p Чувствительность зубов
+                    .quiz-question__check
+                        i.icon_mark
+            // end quiz-question__text-block
+
+            // start quiz-question__text-block
+            .quiz-question__text-block
+                label.quiz-question__text-label
+                    input(type='radio' name='q-1')
+                    p Кровоточивость десен
+                    .quiz-question__check
+                        i.icon_mark
+
+                .quiz-question-hint
+                    i.icon_info
+                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+
+            // end quiz-question__text-block
+
+
+
+
+// end quiz-question
+
+// start quiz-question
+.quiz-question.quiz-question__textHasImg(data-q='')
+    .quiz-question__title Какие проблема с зубами вас беспокоят? (множ.выбор)
+    .quiz-question__wrap
+        .quiz-question__col
+            .quiz-question__img.img
+                img(src=path +'img/quiz/bg_2.png' alt="image" loading="lazy")
+
+        .quiz-question__col
+            // start quiz-question__text-block
+            .quiz-question__text-block
+                label.quiz-question__text-label
+                    input(type='checkbox' name='q-1')
+                    p Чувствительность зубов
+                    .quiz-question__check
+                        i.icon_mark
+            // end quiz-question__text-block
+
+            // start quiz-question__text-block
+            .quiz-question__text-block
+                label.quiz-question__text-label
+                    input(type='checkbox' name='q-1')
+                    p Кровоточивость десен
+                    .quiz-question__check
+                        i.icon_mark
+
+                .quiz-question-hint
+                    i.icon_info
+                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+
+            // end quiz-question__text-block
+
+
+
+
+// end quiz-question

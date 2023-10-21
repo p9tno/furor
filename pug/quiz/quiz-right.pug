@@ -1,0 +1,25 @@
+// start quiz-right
+.quiz-right.desktop
+    .quiz-right__persone.img
+        img(src="../../img/quiz/manager.png" alt="image" loading="lazy")
+    .quiz-right__content
+
+        .quiz-right__row
+            .quiz-right__label Кучава Нино Важаевна
+            span  Эксперт в области протезирования
+
+        .quiz-right__row
+            .quiz-right__label Здравствуйте!
+            span Я помогу понять Вам какой бюджет потребуется для восстановления зубов. Все что от Вас нужно, ответить на 8 простых вопросов.
+
+        .quiz-right__row
+            .quiz-right__label Ответьте на вопросы и получите:
+            .quiz-right__list
+                each item in [{img: "1", span: 'Стоимость имплантации зубов в 3 вариантах'}, {img: "2", span: 'Консультация стоматолога бесплатно'}, {img: "3", span: 'КТ снимок в подарок от нашей клиники '}]
+                    .quiz-right__item
+                        .quiz-right__img.img
+                            img(src="../../img/quiz/photo_sm_"+item.img+".png" alt="image" loading="lazy")
+                        span=item.span
+
+
+// end quiz-right

@@ -147,6 +147,11 @@
 		span {
 			@media (min-width: 768px) {
 				font-size: 1.25em;
+
+				.quiz-result__action & {
+					font-size: 1.125em;
+
+				}
 			}
 
 			&:nth-child(2) {

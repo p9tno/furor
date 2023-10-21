@@ -1,0 +1,52 @@
+
+// start quiz-result
+.quiz-result
+    .quiz-result__container
+        // start quiz-main
+        .quiz-main
+            .quiz-wrap
+                .quiz-header
+                    .quiz-label Получите индивидуальный расчет стоимости имплантации в 3-х вариантах
+                    .quiz-steps
+                        span.quiz_current_step_js 1
+                        span /
+                        span.quiz_total_step_js 4
+
+                .quiz-line
+                    .quiz-line__bg(style='width: 100%;')
+
+                .quiz-question__title Расчет стоимости лечения готов!
+                .quiz-result__subtitle Оставьте телефон — мы свяжемся с вами, чтобы обсудить план лечения,<br> расскажем о действущей рассрочке и специальных предложениях.
+
+                .quiz-result__action
+                    // begin form
+                    .form
+                        .form__row
+                            .form__label Введите номер телефона
+                            .phone_icon
+                                input.phone(type="text" name="phone" required placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _")
+
+                        .form__row
+                            button.btn.btn_form.btn_lg.btn_didisabled_js(type="submit") 
+                                span Получить результат + подарок
+
+
+                        .form__row.form__row_full
+                            .form__privacy
+                                label.form__check
+                                    input.check_checked_js(type="checkbox" checked="checked")
+                                    span Даю согласие на обработку моих <a href="#" target="_blank">персональных данных</a>
+
+                    // end form
+
+            .quiz-result__phone.img
+                img(src="../../img/quiz/hand.png" alt="image" loading="lazy")
+
+
+
+        // end quiz-main
+
+        include ../quiz/quiz-right.pug
+
+
+// end quiz-result

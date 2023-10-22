@@ -66,3 +66,56 @@ block content
     // end head
 
     include ../../sections/quiz.pug
+
+    include ../../sections/problems.pug
+
+    include ../../sections/do.pug
+
+    include ../../sections/information.pug
+
+    include ../../sections/reviewsVideo.pug
+
+    include ../../sections/work.pug
+
+    include ../../sections/responses.pug
+
+    include ../../sections/doctor.pug
+
+    include ../../sections/instruction.pug
+
+    include ../../sections/cards_grid.pug
+
+    include ../../sections/stages.pug
+
+    include ../../sections/reviewsCompany.pug
+
+    include ../../sections/advantages.pug
+
+    include ../../sections/payment.pug
+
+    // begin price
+    section#price.price.price_stock.section
+        .container_center
+            h1.section__title <b>Сколько стоит вернуть зубы за 1 день по протоколу Все-на-4?</b>
+            .price__list
+
+                //- include ../../parts/priceItem.pug
+                each item in ['', '',]
+
+                    include ../../parts/priceItem.pug
+
+    // end price
+
+    include ../../sections/doc.pug
+
+    include ../../sections/singup.pug
+
+    include ../../sections/content.pug
+
+
+
+
+    //- include ../../sections/cards_col_2.pug
+    //- include ../../sections/cards_col_3.pug
+    //- include ../../sections/cards_col_4.pug
+    //- include ../../sections/cards_grid.pug

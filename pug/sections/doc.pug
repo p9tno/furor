@@ -1,0 +1,14 @@
+// begin doc
+section#doc.doc.section
+    .container_center
+        .doc__list
+            each item in [ {img: '1', title: 'В договоре мы фиксируем<br> финальную стоимость', text: 'Она не изменится ни на рубль,<br> даже если курс доллара резко<br> подскочит', link: 'Смотреть пример договора'}, {img: '2', title: 'Имеем лицензию на осуществление<br> медицинской деятельности', text: '№ ЛО-77-01-019722 Выдана 04.03.2020<br> комитетом по здравоохранениюг. Москва<br> ООО «Имплант-Центр»,ИНН<br> 7717778358ОГРН 1147746256943', link: 'Ознакомиться с лицензией'} ]
+                .doc__item
+                    .doc__img.img_bg
+                        img(src="../../img/doc_"+item.img+".png" alt="image" loading="lazy")
+                    .doc__content
+                        span!=item.title
+                        p!=item.text
+                        a.snakeline.arrow(href="#" target="_blank")=item.link
+
+// end doc

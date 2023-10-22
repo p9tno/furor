@@ -1,0 +1,76 @@
+.doc {
+    &__list {
+        @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+        }
+    }
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.625em;
+        min-height: 7.25em;
+        margin-bottom: 0.625em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 768px) {
+            border-radius: 3.125em;
+            min-height: 22.5em;
+            margin-bottom: 0;
+
+            width: calc(50% - 1em);
+        }
+    }
+
+    &__img {}
+
+    &__content {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        padding: 0.375em 0.875em;
+        @media (min-width: 768px) {
+            padding: 3em 3.125em;
+        }
+
+        a {
+            width: fit-content;
+            color: $color_info;
+            font-weight: 700;
+            font-size: 0.625em;
+            @media (min-width: 768px) {
+                font-size: 1.25em;
+            }
+        }
+
+        span {
+            font-weight: 700;
+            line-height: 1.25;
+            font-size: 0.875em;
+            @media (min-width: 768px) {
+                font-size: 2em;
+
+            }
+
+        }
+
+        p {
+            color: #4C5355;
+            font-size: 0.625em;
+            @media (min-width: 768px) {
+                font-size: 1.25em;
+                line-height: 1.5;
+            }
+        }
+    }
+
+}

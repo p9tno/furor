@@ -676,35 +676,12 @@ a {
 .counter-item {
 	counter-increment: line;
 
-	&:nth-child(n+10) {
-		.counter-el {
-			&:before {
-				content: none;
-
-			}
-		}
-	}
-
 	.counter-el {
-		&:before {
-			content: '0';
-
-		}
-
 		&:after {
-			content: counter(line) ' ';
+			content: counter(line) '. ';
 		}
-
 	}
 }
-
-// По счетчикам элементов с нулям впереди на будущее
-// li:before {
-//   counter-increment: li;
-//   content: counter(item, decimal-leading-zero);
-// }
-
-// При чем есть варинаты через :nth-child(-n+9) сделать
 
 /*
 	<div class="video-wrap">

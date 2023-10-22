@@ -28,13 +28,15 @@ section.quiz.section
                         include ../quiz/quiz-question.pug
 
                     .quiz-footer
+                        .quiz-footer__hint
+                            span <b>Выберите вариант ответа</b><br> и нажмите кнопку “Далее”
+
                         .quiz-arrow__wrap
                             button.btn.btn_sm.btn_danger.quiz-arrow.quiz-arrow__prev
                                 span Назад
                             button.btn.btn_sm.quiz-arrow.quiz-arrow__next(disabled='')
                                 span Далее
-                        .quiz-footer__hint
-                            span <b>Выберите вариант ответа</b><br> и нажмите кнопку “Далее”
+
 
                 // end quiz-main
 

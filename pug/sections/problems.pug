@@ -1,0 +1,29 @@
+// begin problems
+section#problems.problems.section
+    .container_center
+        h2.section__title <b>Скорее всего, вы уже столкнулись</b> с этими проблемами из-за отсутствия зубов
+        .problems__content(style="background-image: url('../../img/problems_bg.png')")
+            .problems__persone.img.desktop
+                img(src="../../img/problems_man.png" alt="image" loading="lazy")
+            .problems__row
+
+                ul.list.problems__col
+                    each item in [ {label: 'Деформация и ассиметрия лица', text: '<p>Потеря зубов приводит к нарушению тонуса жевательных мышц</p>'}, {label: 'Головные боли', text: '<p>Смещение жевательной нагрузки на одну сторону – причина частых головных болей</p>'}, {label: 'Атрофия костной ткани', text: '<p>Истончение кости ведёт к риску невозможности установить несъёмный протез</p>'}, {label: 'Лишний вес', text: '<p>Невозможность пережевывать твердую пищу вынуждает заменить высокоценные пищевые продукты на быстрые углеводы</p>'},  ]
+
+                        li 
+                            .problems__label=item.label
+                            .problems__text!=item.text
+
+
+                ul.list.problems__col
+                    each item in [ {label: 'Нарушение речи', text: '<p>Человек шепелявит, сложно произносить некоторые звуки из-за нарушения прикуса и отсутствия зубов</p>'}, {label: 'Ночное апноэ', text: '<p>Вызывается нарушениями работы височно-нижнечелюстного сустава.</p><p>Один из основных катализаторов развития сердечно-сосудистых заболеваний</p>'}, {label: 'Неуверенность, зажатость', text: '<p>В глазах близкого окружения и малознакомых людей выглядят замкнутыми, суровыми и необщительными</p>'}, ]
+
+                        li 
+                            .problems__label=item.label
+                            .problems__text!=item.text
+
+
+
+
+
+// end problems

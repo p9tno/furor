@@ -97,12 +97,26 @@ block content
     section#price.price.price_stock.section
         .container_center
             h1.section__title <b>Сколько стоит вернуть зубы за 1 день по протоколу Все-на-4?</b>
-            .price__list
 
-                //- include ../../parts/priceItem.pug
-                each item in ['', '',]
+            .price__tabs
+                .tabs__wrapper
+                    .tabs
+                        .tab 
+                            span Брекеты
+                        .tab 
+                            span Элайнеры
 
-                    include ../../parts/priceItem.pug
+                    .tabs__content
+                        each item in ['', '', ]
+                            .tab__item
+                                .price__list
+                                    each item in ['', '',]
+                                        include ../../parts/priceItem.pug
+
+
+            .section__more
+                a.snakeline.arrow(href="#") Смотреть все цены
+
 
     // end price
 

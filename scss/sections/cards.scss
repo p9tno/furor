@@ -36,6 +36,12 @@
                 grid-gap: 2.1875em;
             }
 
+            .cols & {
+                grid-template-columns: repeat(3, 1fr);
+                grid-column-gap: 4.375em;
+                grid-row-gap: 1.875em;
+            }
+
             .grid & {
                 grid-template-columns: repeat(3, 1fr);
                 grid-gap: 4.375em;
@@ -105,6 +111,12 @@
             }
         }
 
+        .cols & {
+            @media (min-width: 768px) {
+                height: 18.75em;
+            }
+        }
+
         .grid & {
             height: 9.375em;
             @media (min-width: 768px) {
@@ -125,6 +137,10 @@
             margin: 1.35em 0;
             line-height: 1.273;
             font-size: 0.5em;
+
+            .cols & {
+                margin: 0.5em 0;
+            }
 
             &:last-child {
                 margin-bottom: 0;

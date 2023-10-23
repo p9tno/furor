@@ -1,4 +1,11 @@
 .price {
+    &__tabs {
+        margin-top: 0.75em;
+        @media (min-width: 768px) {
+            margin-top: 3.125em;
+        }
+    }
+
     &__list {
         margin-top: 0.75em;
         @media (min-width: 768px) {

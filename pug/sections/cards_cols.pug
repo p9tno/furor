@@ -1,0 +1,20 @@
+// begin cards col_5 .....
+//- img 530/300
+section.cards.cols.section
+    .container_center
+        h2.section__title <b>Вне зависимости от ситуации с прикусом вы получите красивую улыбку и ровные зубы</b>
+
+        ul.cards__list
+            each item in [ {img: '1', title: 'Скученность', content: 'Когда зубы находятся вблизи друг от друга и перекрываются.'}, {img: '2', title: 'Выпирающий ряд зубов', content: 'Когда верхний или нижний ряд сильно выдвинут вперед'}, {img: '3', title: 'Глубокий прикус', content: 'Приводит к неправильному смыканию челюсти и эстетическим проблемам'}, {img: '4', title: '«Почти прямые зубы»', content: 'Когда зубной ряд имеет слабый дефект. Заметно незначительное искривление зубов.'}, {img: '5', title: '«Съехавший» ряд зубов', content: 'Когда зубы вышли из своего естественного положения и не находятся в ряду.'}, {img: '6', title: 'Отсутствие смыкания', content: 'Когда зубы не соприкасаются друг с другом и отсутствует правильное смыкание'}, ]
+
+                // begin .cards__item
+                .cards__item
+                    .cards__img.img
+                        img(src=path +"img/cards_col_"+item.img+".png" alt="image" loading="lazy")
+                    .cards__content
+                        .cards__title!=item.title
+                        p!=item.content
+
+                // end .cards__item
+
+// end cards

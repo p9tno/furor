@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    function initQuiz() {
+
         let total = 0;
 
 
@@ -19,8 +19,7 @@ $(document).ready(function() {
 
 
 
-        let quizId = $('#quiz');
-        let quizScroll = $(quizId).offset().top;
+
 
 
         let questionNumber = 1;
@@ -53,6 +52,9 @@ $(document).ready(function() {
         $('.quiz-arrow__next, .quiz-question input[type="radio"], .quiz-question__slider-input input[type="checkbox"]').click(function() {
             $('.quiz-hint').hide();
             $('.quiz-arrow__prev').css('display', 'flex');
+
+            let quizId = $('#quiz');
+            let quizScroll = $(quizId).offset().top;
 
             if (questionNumber < total) {
                 setTimeout(() => {
@@ -188,6 +190,5 @@ $(document).ready(function() {
         };
         changeSlide();
 
-    }
-    initQuiz();
+
 })

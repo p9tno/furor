@@ -120,21 +120,21 @@
         }
     }
 
-    &__more {
-        margin-top: 1em;
-        @media (min-width: 768px) {
-            margin-top: 3.5em;
-        }
+    // &__more {
+    //     margin-top: 1em;
+    //     @media (min-width: 768px) {
+    //         margin-top: 3.5em;
+    //     }
 
-        a {
-            color: $color_info;
-            font-weight: 700;
-            @media (min-width: 768px) {
-                font-size: 1.5em;
+    //     a {
+    //         color: $color_info;
+    //         font-weight: 700;
+    //         @media (min-width: 768px) {
+    //             font-size: 1.5em;
 
-            }
-        }
-    }
+    //         }
+    //     }
+    // }
 
     .pagination {
         grid-column-start: 1;

@@ -99,6 +99,9 @@ $(document).ready(function() {
 
 
         $('.quiz-arrow__prev').click(function() {
+            let quizId = $('#quiz');
+            let quizScroll = $(quizId).offset().top;
+            
             if (questionNumber > 2) {
                 questionNumber--;
                 if (valid['quiestion-' + questionNumber] == true) {

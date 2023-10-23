@@ -1,0 +1,51 @@
+// begin information
+//- img 800/550
+section.information.section
+    .container_center
+        h2.section__title <b>Решим проблемы</b> используя актуальные методы имплантации
+        .information__tabs
+            .tabs__wrapper
+                .tabs
+                    .tab 
+                        span Одномоментная
+                    .tab 
+                        span Классическая
+                    .tab 
+                        span Все-на-4
+                    .tab 
+                        span Все-на-6
+                    .tab 
+                        span Скуловая
+
+                .tabs__content
+                    each item in ['', '', '', '', '']
+                        .tab__item
+                            .information__wrap.information__wrap_sm
+                                .information__top
+                                    .section__title <b>Классическая</b>
+                                    .section__desc Процедура, которая используется для замены одного или нескольких отсутствующих зубов. Она включает в себя вставку маленьких металлических винтов в кость челюсти, на которые затем устанавливаются зубные коронки
+
+
+                                    .information__btn
+                                        a.btn.btn_lg.show_modal_js(href="#onlyPhone")
+                                            span Заказать консультацию
+                                    .information__phone
+                                        span Или позвоните прямо сейчас
+                                        span Ежедневно с 10:00 до 21:00 
+                                        a(href="tel:+7 (926) 146-00-88") +7 (926) 146-00-88
+
+                                .information__bottom.video-wrap
+
+                                    .information__video.video-play(style="background-image: url('../../img/information_bg.png')")
+                                        video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
+                                            source(src="../../media/information.mp4" type="video/mp4")
+
+                                    .information__content.video-content
+                                        .information__play
+                                            .play.youtubeModal_js#rsDoGqnPE4c
+                                                i.icon_play
+                                        .information__subtitle 
+                                            span Айк Оганесович Байбурцян
+                                            span Кандидат медицинских наук,<br> руководитель и основатель сети<br> стоматологий FUROR
+
+// end information

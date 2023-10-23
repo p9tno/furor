@@ -1,10 +1,43 @@
 .information {
+    &__tabs {
+        margin-top: 0.75em;
+        @media (min-width: 768px) {
+            margin-top: 3.125em;
+
+        }
+    }
+
     &__wrap {
         @media (min-width: 768px) {
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-direction: row-reverse;
+        }
+
+        &_sm {
+            .section__title {
+                font-size: 1em;
+                @media (min-width: 768px) {
+                    font-size: 2.5em;
+
+                }
+            }
+
+            .information__top {
+                @media (min-width: 768px) {
+                    min-height: 34.375em;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+            }
+
+            .section__desc {
+                @media (min-width: 768px) {
+                    margin-top: 1em;
+                }
+            }
         }
     }
 
@@ -49,11 +82,84 @@
     }
 
     &__subtitle {
-        font-weight: 500;
+
         color: $color_white;
-        font-size: 0.75em;
+
+        span {
+            display: block;
+            font-size: 0.75em;
+            font-weight: 500;
+            @media (min-width: 768px) {
+                font-size: 1.875em;
+            }
+
+            &:nth-child(2) {
+                margin-top: 0.25em;
+                font-size: 0.625em;
+                font-weight: 400;
+                @media (min-width: 768px) {
+                    font-size: 1.375em;
+
+                }
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 0.75em;
         @media (min-width: 768px) {
-            font-size: 1.875em;
+            margin-top: 2em;
+
+        }
+
+        .btn {
+            @media (min-width: 768px) {
+                min-width: 25em;
+
+            }
+        }
+    }
+
+    &__phone {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2.5em;
+
+        > * {
+            margin-bottom: 0.125em;
+            @media (min-width: 768px) {
+                margin-bottom: 0.45em;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        font-size: 0.5em;
+
+        @media (min-width: 768px) {
+            margin-top: 2em;
+            font-size: 1em;
+            width: 23.75em;
+        }
+
+        span {
+            color: #4C5355;
+            font-size: 1.125em;
+
+            &:first-child {
+                font-weight: 700;
+            }
+
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 2.5em;
+            font-weight: 700;
+            color: $main_color;
+            line-height: 1;
         }
     }
 

@@ -143,13 +143,13 @@
     }
 
     &__action {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
         margin-top: 0.75em;
         @media (min-width: 768px) {
             margin-top: 3.125em;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
     }
 
@@ -164,16 +164,26 @@
     &__phone {
         display: flex;
         flex-direction: column;
+        text-align: center;
+        margin-top: 1.5em;
 
         > * {
-            margin-bottom: 0.225em;
+            margin-bottom: 0.125em;
+            @media (min-width: 768px) {
+                margin-bottom: 0.45em;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
 
-        &:last-child {
-            margin-bottom: 0;
-        }
+        font-size: 0.5em;
 
         @media (min-width: 768px) {
+            text-align: left;
+            margin-top: 0;
+            font-size: 1em;
             width: 23.75em;
         }
 

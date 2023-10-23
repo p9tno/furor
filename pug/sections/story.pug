@@ -1,0 +1,27 @@
+// begin story
+section#story.story.section
+    .container_center
+        h2.section__title <b>Изготовим протез вашего зуба в собственной зуботехнической лаболатории</b>
+        .section__desc За 1 день без наценки и слепка с 100% попаданием в цвет родных зубов
+        .story__row
+            .story__preview.video-wrap
+                .story__video.video-play(style="background-image: url('../../img/reviewsVideo_"+item+".png')")
+                    video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
+                        source(src="../../media/information.mp4" type="video/mp4")
+
+                .story__content.video-content
+                    .story__play
+                        .play.youtubeModal_js#rsDoGqnPE4c
+                            i.icon_play
+                    .story__text
+                        span Lorem ipsum dolor sit amet
+
+
+            .story__gallery.itemForDataFancybox_js
+                each item in [1,2,3,4]
+                    .story__img.img
+                        a(href="../../img/card_"+item+".png" data-fancybox data-type="image")
+                            img(src="../../img/card_"+item+".png" loading="lazy" alt="image")
+
+
+// end story

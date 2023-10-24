@@ -202,6 +202,7 @@
 
     &__prev {
         display: none;
+        padding: 1.016em 2.2em;
     }
 
 }
@@ -326,7 +327,6 @@
             @media (min-width: 768px) {
                 margin-top: 0.1em;
                 line-height: 2.5;
-
             }
 
         }
@@ -484,7 +484,6 @@
         margin-top: 0.5em;
         @media (min-width: 768px) {
             font-size: 1.5em;
-
         }
     }
 

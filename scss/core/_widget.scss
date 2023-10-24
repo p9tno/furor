@@ -6,6 +6,11 @@
     z-index: 5;
     width: 7.8125em;
 
+    font-size: 0.45em;
+    @media (min-width: 768px) {
+        font-size: 1em;
+    }
+
     &__list {
         margin: 0;
         padding: 0;

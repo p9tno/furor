@@ -14,6 +14,18 @@
     <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
   </head>
   <body>
+    <div class="preloader__wrap" id="preloader">
+      <div class="loader">
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+      </div>
+    </div>
     <div class="wrapper" id="wrapper">
       <header class="header">
         <div class="header__content">
@@ -606,6 +618,19 @@
           </div>
         </div>
       </footer>
+      <!-- begin widget-->
+      <div class="widget" id="widget">
+        <div class="widget__toggle"><i class="icon_close"></i></div>
+        <ul class="widget__list">
+          <li class="widget__item"><a class="widget__link" href="#"><i class="icon_calendar"></i><span>Записаться на прием</span></a></li>
+          <li class="widget__item"><a class="widget__link" href="#"><i class="icon_pdf"></i><span>Скачать полезный файл</span></a></li>
+          <li class="widget__item"><a class="widget__link" href="#"><i class="icon_phone"></i><span>Заказать консультацию</span></a></li>
+        </ul><a class="widget__top scroll_js" href="#wrapper"> <i class="icon_caret_top"></i></a>
+      </div>
+      <!-- end widget-->
+      <!-- begin calculate-->
+      <div class="calculate" id="calculate"><a class="calculate__btn show_modal_js" href="#modalQuiz">Рассчитать цену онлайн</a></div>
+      <!-- end calculate-->
       <!-- Begin Modal modalVideo-->
       <div class="modal fade modalVideo" id="modalVideo">
         <div class="modal-dialog">
@@ -655,6 +680,175 @@
         </div>
       </div>
       <!-- End modal onlyPhone-->
+      <!-- Begin Modal modalQuiz-->
+      <div class="modal fade modalQuiz" id="modalQuiz">
+        <div class="modal-dialog">
+          <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"><i class="icon_close"></i></a>
+            <div class="modal-quiz">
+              <!-- begin quiz-->
+              <div class="quiz">
+                <div class="container_center">
+                  <!-- start quiz-container-->
+                  <div class="quiz-container">
+                    <!-- start quiz-main-->
+                    <div class="quiz-main">
+                      <div class="quiz-wrap">
+                        <div class="quiz-header">
+                          <div class="quiz-label">Получите индивидуальный расчет стоимости имплантации в 3-х вариантах</div>
+                        </div>
+                        <div class="quiz-line">
+                          <div class="quiz-line__bg" style="width: 5%;"></div>
+                        </div>
+                        <div class="quiz-question__title">Выберите услугу для расчёта стоимости</div>
+                        <div class="scroll__wrap">
+                          <div class="scroll">
+                            <div class="scroll__content">
+                              <div class="modalQuiz__list"><a class="modalQuiz__item" href="#">
+                                  <div class="modalQuiz__img img"><img src="../../img/quiz/question/photo_1.png" alt="image" loading="lazy"/>
+                                    <div class="modalQuiz__check"><i class="icon_mark"></i></div>
+                                  </div>
+                                  <div class="modalQuiz__title">Имплантация зубов</div></a><a class="modalQuiz__item" href="#">
+                                  <div class="modalQuiz__img img"><img src="../../img/quiz/question/photo_1.png" alt="image" loading="lazy"/>
+                                    <div class="modalQuiz__check"><i class="icon_mark"></i></div>
+                                  </div>
+                                  <div class="modalQuiz__title">Имплантация зубов</div></a><a class="modalQuiz__item" href="#">
+                                  <div class="modalQuiz__img img"><img src="../../img/quiz/question/photo_1.png" alt="image" loading="lazy"/>
+                                    <div class="modalQuiz__check"><i class="icon_mark"></i></div>
+                                  </div>
+                                  <div class="modalQuiz__title">Имплантация зубов</div></a><a class="modalQuiz__item" href="#">
+                                  <div class="modalQuiz__img img"><img src="../../img/quiz/question/photo_1.png" alt="image" loading="lazy"/>
+                                    <div class="modalQuiz__check"><i class="icon_mark"></i></div>
+                                  </div>
+                                  <div class="modalQuiz__title">Имплантация зубов</div></a><a class="modalQuiz__item" href="#">
+                                  <div class="modalQuiz__img img"><img src="../../img/quiz/question/photo_1.png" alt="image" loading="lazy"/>
+                                    <div class="modalQuiz__check"><i class="icon_mark"></i></div>
+                                  </div>
+                                  <div class="modalQuiz__title">Имплантация зубов</div></a><a class="modalQuiz__item" href="#">
+                                  <div class="modalQuiz__img img"><img src="../../img/quiz/question/photo_1.png" alt="image" loading="lazy"/>
+                                    <div class="modalQuiz__check"><i class="icon_mark"></i></div>
+                                  </div>
+                                  <div class="modalQuiz__title">Имплантация зубов</div></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="quiz-footer">
+                        <div class="quiz-footer__hint"><span><b>Выберите вариант ответа</b><br> и нажмите кнопку “Далее”</span></div>
+                        <div class="quiz-arrow__wrap">
+                          <button class="btn btn_sm quiz-arrow" disabled=""><span>Далее</span></button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end quiz-main-->
+                    <!-- start quiz-right-->
+                    <div class="quiz-right desktop">
+                      <div class="quiz-right__persone img"><img src="../../img/quiz/manager.png" alt="image" loading="lazy"/></div>
+                      <div class="quiz-right__content">
+                        <div class="quiz-right__row">
+                          <div class="quiz-right__label">Кучава Нино Важаевна</div><span> Эксперт в области протезирования</span>
+                        </div>
+                        <div class="quiz-right__row">
+                          <div class="quiz-right__label">Здравствуйте!</div><span>Я помогу понять Вам какой бюджет потребуется для восстановления зубов. Все что от Вас нужно, ответить на 8 простых вопросов.</span>
+                        </div>
+                        <div class="quiz-right__row">
+                          <div class="quiz-right__label">Ответьте на вопросы и получите:</div>
+                          <div class="quiz-right__list">
+                            <div class="quiz-right__item">
+                              <div class="quiz-right__img img"><img src="../../img/quiz/photo_sm_1.png" alt="image" loading="lazy"/></div><span>Стоимость имплантации зубов в 3 вариантах</span>
+                            </div>
+                            <div class="quiz-right__item">
+                              <div class="quiz-right__img img"><img src="../../img/quiz/photo_sm_2.png" alt="image" loading="lazy"/></div><span>Консультация стоматолога бесплатно</span>
+                            </div>
+                            <div class="quiz-right__item">
+                              <div class="quiz-right__img img"><img src="../../img/quiz/photo_sm_3.png" alt="image" loading="lazy"/></div><span>КТ снимок в подарок от нашей клиники </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end quiz-right-->
+                  </div>
+                  <!-- end quiz-container-->
+                  <!-- start quiz-result-->
+                  <div class="quiz-result">
+                    <div class="quiz-result__container">
+                      <!-- start quiz-main-->
+                      <div class="quiz-main">
+                        <div class="quiz-wrap">
+                          <div class="quiz-header">
+                            <div class="quiz-label">Получите индивидуальный расчет стоимости имплантации в 3-х вариантах</div>
+                            <div class="quiz-steps"><span class="quiz_current_step_js">1</span><span>/</span><span class="quiz_total_step_js">4</span></div>
+                          </div>
+                          <div class="quiz-line">
+                            <div class="quiz-line__bg" style="width: 100%;"></div>
+                          </div>
+                          <div class="quiz-question__title">Расчет стоимости лечения готов!</div>
+                          <div class="quiz-result__subtitle">Оставьте телефон — мы свяжемся с вами, чтобы обсудить план лечения,<br> расскажем о действущей рассрочке и специальных предложениях.</div>
+                          <div class="quiz-result__action">
+                            <!-- begin form-->
+                            <div class="form">
+                              <div class="form__row">
+                                <div class="form__label">Введите номер телефона</div>
+                                <div class="phone_icon">
+                                  <input class="phone" type="text" name="phone" required="required" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"/>
+                                </div>
+                              </div>
+                              <div class="form__row">
+                                <button class="btn btn_form btn_lg btn_didisabled_js" type="submit"> <span>Получить результат + подарок</span></button>
+                              </div>
+                              <div class="form__row form__row_full">
+                                <div class="form__privacy">
+                                  <label class="form__check">
+                                    <input class="check_checked_js" type="checkbox" checked="checked"/><span>Даю согласие на обработку моих <a href="#" target="_blank">персональных данных</a></span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- end form-->
+                          </div>
+                        </div>
+                        <div class="quiz-result__phone img"><img src="../../img/quiz/hand.png" alt="image" loading="lazy"/></div>
+                      </div>
+                      <!-- end quiz-main-->
+                      <!-- start quiz-right-->
+                      <div class="quiz-right desktop">
+                        <div class="quiz-right__persone img"><img src="../../img/quiz/manager.png" alt="image" loading="lazy"/></div>
+                        <div class="quiz-right__content">
+                          <div class="quiz-right__row">
+                            <div class="quiz-right__label">Кучава Нино Важаевна</div><span> Эксперт в области протезирования</span>
+                          </div>
+                          <div class="quiz-right__row">
+                            <div class="quiz-right__label">Здравствуйте!</div><span>Я помогу понять Вам какой бюджет потребуется для восстановления зубов. Все что от Вас нужно, ответить на 8 простых вопросов.</span>
+                          </div>
+                          <div class="quiz-right__row">
+                            <div class="quiz-right__label">Ответьте на вопросы и получите:</div>
+                            <div class="quiz-right__list">
+                              <div class="quiz-right__item">
+                                <div class="quiz-right__img img"><img src="../../img/quiz/photo_sm_1.png" alt="image" loading="lazy"/></div><span>Стоимость имплантации зубов в 3 вариантах</span>
+                              </div>
+                              <div class="quiz-right__item">
+                                <div class="quiz-right__img img"><img src="../../img/quiz/photo_sm_2.png" alt="image" loading="lazy"/></div><span>Консультация стоматолога бесплатно</span>
+                              </div>
+                              <div class="quiz-right__item">
+                                <div class="quiz-right__img img"><img src="../../img/quiz/photo_sm_3.png" alt="image" loading="lazy"/></div><span>КТ снимок в подарок от нашей клиники </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end quiz-right-->
+                    </div>
+                  </div>
+                  <!-- end quiz-result-->
+                </div>
+              </div>
+              <!-- end quiz-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal modalQuiz-->
       <script src="../../js/jquery.js"></script>
       <script src="../../js/jquery.maskedinput.min.js"></script>
       <script src="../../js/modal.js"></script>

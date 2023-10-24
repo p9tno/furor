@@ -115,6 +115,29 @@
 		}
 	}
 
+	&_white {
+		background-color: $color_white;
+		border: 1px solid $color_success;
+		color: $color_success;
+
+		&:hover {
+			background-color: darken($color_white, 2%);
+		}
+
+		&:active {
+			background-color: $color_white;
+		}
+
+		&:disabled {
+			background-color: darken($color_white, 8%);
+			cursor: not-allowed;
+
+			&:before {
+				content: none;
+			}
+		}
+	}
+
 	&_sm {
 		min-height: auto;
 		border-radius: 0.3125em;

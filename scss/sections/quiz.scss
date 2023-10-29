@@ -2,7 +2,7 @@
     &-form {
         padding-top: 0.75em;
         @media (min-width: 768px) {
-            padding-top: 3.4375em;
+            padding-top: 3.5em;
         }
     }
 
@@ -82,7 +82,8 @@
 
         }
 
-        &__bg {
+        &__bg,
+        .quiz-line__bg_modal {
             height: 100%;
             background-color: $color_success;
             transition: 0.3s;

@@ -50,28 +50,3 @@
 		font-display: swap;
 	}
 }
-
-@mixin scrollbar {
-
-	@media (min-width: 768px) {
-		overflow: hidden overlay;
-
-		&::-webkit-scrollbar {
-			width: 1.25em;
-			height: 1.25em;
-
-			&-button {
-				display: none;
-			}
-
-			&-thumb {
-				background: #BEC9D3;
-				border-radius: 1.25em;
-				border: 0.5em solid transparent;
-				background-clip: content-box;
-				min-height: 3em;
-
-			}
-		}
-	}
-}

@@ -92,7 +92,9 @@
         justify-content: space-between;
 
         margin-top: 1.25em;
+        padding: 0 0.75em;
         @media (min-width: 768px) {
+            padding: 0;
             margin-top: 2em;
         }
     }

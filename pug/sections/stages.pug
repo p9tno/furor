@@ -6,6 +6,23 @@ section#stages.stages.section
             each item in ['', '', '', ]
 
                 .stages__item.counter-item
+
+
+
+                    .stages__preview.video-wrap
+                        .stages__video.video-play(style="background-image: url('../../img/advantages.png')")
+                            video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
+                                source(src="../../media/information.mp4" type="video/mp4")
+
+                        .stages__content.video-content
+                            .stages__play
+                                .play.youtubeModal_js#rsDoGqnPE4c
+                                    i.icon_play
+                            .stages__text
+                                span Айк Оганесович Байбурцян
+                                span Рассказывает про 1 этап
+
+
                     .stages__box
                         .stages__title
                             span.counter-el
@@ -24,20 +41,6 @@ section#stages.stages.section
                                 span Или позвоните прямо сейчас
                                 span Ежедневно с 10:00 до 21:00
                                 a(href="tel:+7 (926) 146-00-88") +7 (926) 146-00-88
-
-
-                    .stages__preview.video-wrap
-                        .stages__video.video-play(style="background-image: url('../../img/advantages.png')")
-                            video(width="100%" allowfullscreen="true" muted="muted" autoplay="autoplay" playsinline="playsinline" loop="loop")
-                                source(src="../../media/information.mp4" type="video/mp4")
-
-                        .stages__content.video-content
-                            .stages__play
-                                .play.youtubeModal_js#rsDoGqnPE4c
-                                    i.icon_play
-                            .stages__text
-                                span Айк Оганесович Байбурцян
-                                span Рассказывает про 1 этап
 
 
 

@@ -136,7 +136,7 @@
         ul {
             margin: 1.35em 0;
             line-height: 1.273;
-            font-size: 0.5em;
+            font-size: 0.625em;
 
             .cols & {
                 margin: 0.5em 0;
@@ -179,7 +179,7 @@
     }
 
     &__title {
-        font-size: 0.625em;
+        font-size: 0.75em;
         font-weight: bold;
 
         @media (min-width: 768px) {

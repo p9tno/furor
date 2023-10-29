@@ -63,25 +63,23 @@
                                     .quiz-header
                                         .quiz-label Получите индивидуальный расчет стоимости имплантации в 3-х вариантах
                                     .quiz-line
-                                        .quiz-line__bg(style='width: 5%;')
+                                        .quiz-line__bg_modal(style='width: 5%;')
 
 
                                     .quiz-question__title Выберите услугу для расчёта стоимости
 
                                     .scroll__wrap
-                                        .scroll
-                                            .scroll__content
 
-                                                .modalQuiz__list
+                                        .modalQuiz__list
 
-                                                    each item in ['', '', '', '', '', '']
-                                                        a.modalQuiz__item(href="#")
-                                                            .modalQuiz__img.img
-                                                                img(src=path +'img/quiz/question/photo_1.png' alt="image" loading="lazy")
+                                            each item in ['', '', '', '', '', '']
+                                                a.modalQuiz__item(href="#")
+                                                    .modalQuiz__img.img
+                                                        img(src=path +'img/quiz/question/photo_1.png' alt="image" loading="lazy")
 
-                                                                .modalQuiz__check
-                                                                    i.icon_mark
-                                                            .modalQuiz__title Имплантация зубов
+                                                        .modalQuiz__check
+                                                            i.icon_mark
+                                                    .modalQuiz__title Имплантация зубов
 
 
                                 .quiz-footer

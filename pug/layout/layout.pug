@@ -1,6 +1,6 @@
 block variable
     -var path = '';
-    //- -var page = true;
+    -var quiz = false;
     //- -var pageClass = 'bg';
 
 <!DOCTYPE html>
@@ -23,16 +23,26 @@ html(lang="en")
         //- include preloader.pug
 
         .wrapper#wrapper
-            include header.pug
+            if !quiz
+                include header.pug
 
-            main.main_content
-                block content
 
-            include footer.pug
+            if !quiz
+                main.main_content
+                    block content
+            else
+                main.main_content.main_content_quiz
+                    block content
+
+
+
+
+            if !quiz
+                include footer.pug
 
             //- include widget.pug
-
-            include calculate.pug
+            if !quiz
+                include calculate.pug
 
             include modal.pug
 

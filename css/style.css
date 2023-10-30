@@ -4947,7 +4947,7 @@ a.arrow:before {
   }
 }
 .price__list {
-  margin-top: 0.75em;
+  margin-top: 2em;
 }
 @media (min-width: 768px) {
   .price__list {
@@ -4955,7 +4955,7 @@ a.arrow:before {
   }
 }
 .price__item {
-  margin-bottom: 1em;
+  margin-bottom: 2.5em;
   padding-bottom: 1em;
   border-bottom: 1px solid #F1F1F1;
 }
@@ -5169,7 +5169,7 @@ a.arrow:before {
   }
 }
 .price__btn {
-  margin-top: 0.5em;
+  margin-top: 1em;
 }
 @media (min-width: 768px) {
   .price__btn {
@@ -5835,7 +5835,7 @@ a.arrow:before {
   }
 }
 .stages__item {
-  margin-bottom: 0.9375em;
+  margin-bottom: 2.25em;
 }
 .stages__item:last-child {
   margin-bottom: 0;
